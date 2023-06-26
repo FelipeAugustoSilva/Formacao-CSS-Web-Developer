@@ -1,0 +1,3894 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Playfair+Display:ital@1&family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: 'Bruno Ace SC', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0px;
+}
+
+/* ------ FUNDAMENTOS ------*/
+.fundamentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    border: 2px solid #ffffff;
+    margin: 50px;
+    box-shadow: 5px 5px 5px -5px silver;
+}
+
+.fundamentosHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+.fundamentosHeader h1 {
+    width: 400px;
+    font-family: 'Bruno Ace SC', cursive;
+    padding-right: 50px;
+    font-size: 45px;
+    font-weight: 500;
+    color: #EE4540;
+}
+
+
+/* ------ UNIDADES DE MEDIDA ------*/
+.unidadesCSS {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.unidadesCSS h2 {
+    font-family: 'Bruno Ace SC', cursive;
+    color: #EE4540;
+    border: 2px solid #FFFFFF;
+    box-shadow: 5px 5px 5px -5px silver;
+    padding: 10px;
+    margin: 5px;
+}
+
+.unidadesCSS01 {
+    width: 500px;
+    height: 400px;
+    margin: 5px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 5px 5px 10px -4px silver;
+}
+
+.unidadesCSS01 ul {
+    text-align: left;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.unidadesCSS01 li {
+    padding: 5px;
+    margin: 5px;
+}
+
+
+/* ------ CORES ------*/
+.cores-geral {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 70px auto;
+    border: 2px solid #FFFFFF;
+    box-shadow: 5px 5px 5px -5px silver;
+}
+
+.cores-geral01 {
+    box-shadow: 5px 5px 5px -5px silver;
+}
+
+.cores-geral h2,
+h1 {
+    font-family: 'Bruno Ace SC', cursive;
+    color: #EE4540;
+    padding: 10px;
+    margin: 5px;
+}
+
+.cores {
+    width: 1000px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px -5px silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+#pre-definidas {
+    background: darkslateblue;
+    color: white;
+}
+
+#current-color {
+    background: transparent;
+    color: black;
+}
+
+#rgb {
+    background: rgb(89, 124, 190);
+    color: black;
+}
+
+#rgba {
+    background: rgba(4, 99, 1, 0.9);
+    color: black;
+}
+
+#hex {
+    color: black;
+    background: #f3130b;
+}
+
+#hex-transparente {
+    color: black;
+    background: #f3130b50;
+}
+
+#hsl {
+    color: black;
+    background: hsl(320, 90%, 50%);
+}
+
+#hsla {
+    color: black;
+    background: hsla(320, 90%, 50%, 0.8);
+}
+
+
+
+
+
+/* -------------------------- Trabalhando com imagens -----------------------*/
+.trabalhandoImgs {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 70px auto;
+    border: 2px solid #FFFFFF;
+}
+
+.trabalhandoImgs h2 {
+    font-family: 'Bruno Ace SC', cursive;
+    color: #EE4540;
+    padding: 10px;
+}
+
+/* ------ OBJECT FIT ------*/
+.testeObject00 {
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.testeObject {
+    width: 160px;
+    height: 200px;
+    border: 1px solid #c4c1c1;
+    box-shadow: 5px 5px 5px -5px silver;
+    background-color: #c4c1c1;
+    margin: 20px;
+    text-align: center;
+}
+
+.testeObject img {
+    width: 100%;
+    height: 100%;
+}
+
+.testeObject p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#contain {
+    object-fit: contain;
+}
+
+#cover {
+    object-fit: cover;
+}
+
+#none {
+    object-fit: none;
+}
+
+#scale-down {
+    object-fit: scale-down;
+}
+
+
+/* ------ OBJECT POSITION ------*/
+.ObjectPosition001 {
+    width: 1000px;
+    height: auto;
+    text-align: center;
+    margin: 70px auto;
+}
+.ObjectPosition001 h2 {
+    font-family: 'Bruno Ace SC', cursive;
+    color: #EE4540;
+}
+.ObjectPosition {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.testeObjectPosition {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #c4c1c1;
+    box-shadow: 5px 5px 5px -5px silver;
+    margin: 10px;
+}
+#testeObjectPosition01{
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: 30px 30px;
+}
+#testeObjectPosition02{
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: 120px 150px;
+}
+#testeObjectPosition03{
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: 10px 180px;
+}
+#testeObjectPosition04{
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: 10px 10px;
+}
+
+/* ------ ALTERAR O BACKGROUND(FUNDO) DOS ELEMENTOS ------*/
+.backgroundFlex01 h2 {
+    font-family: 'Bruno Ace SC', cursive;
+    color: #EE4540;
+    padding: 10px;
+    margin: 5px;
+}
+.backgroundFlex01 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+}
+.backgroundFlex01 h2{
+    display: flex;
+    justify-content: center;
+}
+.backgroundFlex {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.background {
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#backgroundFlex02{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.Linear {
+    background-color: #0b0ff37c;
+    background-image: linear-gradient(#ff0fc3, #0ff8ff);
+}
+.Radial {
+    background-color: #0b0ff37c;
+    background-image: radial-gradient(#0ff8ff, #3052e7, #ff0fc3);
+}
+.repeating {
+    background-color: #0b0ff37c;
+    background-image: repeating-linear-gradient(to top, #ff0fc3 0px 20px, #3052e7 20px 40px);
+}
+.verou {
+    background:
+        linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+        linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color: #708090;
+    background-size: 64px 128px;
+}
+.sobrepor {
+    background-image: url(/img/logo\ DIO.webp), url(/img/technology-global-us.width-880.jpg);
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------ ALTERAR A IMAGEM NO FUNDO DOS ELEMENTOS ------*/
+
+.Redimensionar {
+    width: 250px;
+    height: 250px;
+    background-image: url(/img/montanha.webp);
+    margin: 5px;
+}
+
+#cover {
+    background-size: cover;
+}
+
+#contain {
+    background-size: contain;
+}
+
+#exemplo-x-y {
+    background-size: 200px 250px;
+}
+
+/*CAMADAS DE IMAGEM(SOBREPOR)*/
+#exemplocamadas {
+    background-size: contain, cover;
+    /*o logo da DIO que e a  primeira imagem foi aplicado o container, a segunda imagem foi aplicado o cover*/
+}
+
+.camadas {
+    margin: 5px;
+    width: 250px;
+    height: 250px;
+    background-image: url(/img/logo_digital-innovation-one_MlayUW.png), url(/img/montanha.webp);
+}
+
+/* ------ POSICIONAMENTO DE IMAGEM DE FUNDO ------*/
+
+.PosicionamentoImg {
+    width: 250px;
+    height: 100px;
+    background-image: url(/img/logo_digital-innovation-one_MlayUW.png);
+    border: 1.5px solid darkseagreen;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    margin: 5px;
+}
+
+#bottom {
+    background-position: bottom;
+}
+
+#top {
+    background-position: top;
+}
+
+#left {
+    background-position: left;
+}
+
+#right {
+    background-position: right;
+}
+
+#testePosicionamento {
+    background-position: bottom 10px right 15px;
+}
+
+/* ------ BACKGROUND ATTACHMENT ------*/
+
+.attachmentEx {
+    width: 300px;
+    height: 300px;
+    background-image: url(/img/montanha.webp);
+    background-size: cover;
+    border: 1px solid darkslategray;
+    overflow: auto;
+    margin: 5px;
+}
+
+#fixed {
+    background-attachment: fixed;
+}
+
+#scroll {
+    background-attachment: scroll;
+}
+
+#local {
+    background-attachment: local;
+}
+
+
+/* ------ BACKGROUND ATTACHMENT ------*/
+
+.background-origin {
+    width: 400px;
+    height: 200px;
+    background-image: url(/img/montanha.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 7px dashed dimgray;
+    padding: 15px;
+    margin: 5px;
+}
+
+#padding-box {
+    background-origin: padding-box;
+}
+
+#border-box {
+    background-origin: border-box;
+}
+
+#content-box {
+    background-origin: content-box;
+}
+
+/* ------ BACKGROUND CLIP ------*/
+
+.background-clip {
+    width: 250px;
+    height: 200px;
+    color: black;
+    font-size: 70px;
+    font-weight: 900;
+    background-color: #3052e7;
+    border: 7px dashed dimgray;
+    padding: 15px;
+    margin: 5px;
+
+    /*essa parte de baixo so precisa ser add, caso queira aplicar o css3 pattens, caso o fundo seja uma cor solida, deixar so a parte de cima.
+    - tem como tbm adicionar uma img no lugar do css3, que funciona no mesmo efeito.*/
+
+    background-color: hsl(34, 53%, 82%);
+    background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+            hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+            hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+            hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+            hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+            hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px),
+        repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+            hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+            hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+            hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+            hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+            hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px);
+
+}
+
+#text-clip {
+    -webkit-background-clip: text;
+    color: transparent;
+
+    background-clip: text;
+}
+
+#padding-box-clip {
+    background-clip: padding-box;
+}
+
+#border-box-clip {
+    background-clip: border-box;
+}
+
+#content-box-clip {
+    background-clip: content-box;
+}
+
+/* ------ MESCLAGEM ------*/
+
+.mesclagem {
+    width: 200px;
+    height: 200px;
+    color: rgb(109, 102, 102);
+    font-size: 20px;
+    font-weight: 800;
+    background-color: #3052e7;
+    border: 7px solid dimgray;
+    padding: 15px;
+    background-image: url(/img/montanha.webp);
+    background-size: cover;
+    margin: 10px;
+}
+
+#backgroundFlexMesclagem {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#multiply {
+    background-blend-mode: multiply;
+}
+
+#screen {
+    background-blend-mode: screen;
+}
+
+#overlay {
+    background-blend-mode: overlay;
+}
+
+#darken {
+    background-blend-mode: darken;
+}
+
+#lighten {
+    background-blend-mode: lighten;
+}
+
+#color-dogde {
+    background-blend-mode: color-dodge;
+}
+
+#color-burn {
+    background-blend-mode: color-burn;
+}
+
+#hard-light {
+    background-blend-mode: hard-light;
+}
+
+#soft-light {
+    background-blend-mode: soft-light;
+}
+
+#difference {
+    background-blend-mode: difference;
+}
+
+#exclusion {
+    background-blend-mode: exclusion;
+}
+
+#hue {
+    background-blend-mode: hue;
+}
+
+#saturation {
+    background-blend-mode: saturation;
+}
+
+#color {
+    background-blend-mode: color;
+}
+
+#luminosity {
+    background-blend-mode: luminosity;
+}
+
+/* ------ BORDAS ------*/
+
+.tamanhoBorda {
+    background-color: snow;
+    width: 200px;
+    height: 100px;
+    border-style: solid;
+    margin: 5px;
+}
+
+#borda01 {
+    border-width: 5px;
+    border-color: darkslateblue;
+}
+
+#borda02 {
+    border-width: 10px;
+    border-color: palegoldenrod;
+}
+
+#borda03 {
+    border-width: 1rem;
+    border-color: palegreen;
+}
+
+#borda04 {
+    border-width: 1.1em;
+    border-color: paleturquoise;
+}
+
+#borda05 {
+    border-width: 2vh;
+    border-color: palevioletred
+}
+
+/*-----------------------------*/
+
+.estiloBordas {
+    background-color: snow;
+    width: 200px;
+    height: 100px;
+    border-width: 10px;
+    margin: 10px;
+
+}
+
+#backgroundFlexBordas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#solid {
+    border-style: solid;
+    border-color: palegreen
+}
+
+#dashed {
+    border-style: dashed;
+    border-color: blueviolet;
+}
+
+#dotted {
+    border-style: dotted;
+    border-color: rgb(89, 124, 190);
+}
+
+#double {
+    border-style: double;
+    border-color: hsla(197, 62%, 11%, 0.5);
+}
+
+#groove {
+    border-style: groove;
+    border-color: hsl(320, 90%, 50%);
+}
+
+#ridge {
+    border-style: ridge;
+    border-color: hwb(229 19% 9%);
+}
+
+#inset {
+    border-style: inset;
+    border-color: hwb(113 35% 14%);
+}
+
+#outset {
+    border-style: outset;
+    border-color: rgba(4, 99, 1, 0.9);
+}
+
+#mixBordas {
+    border-style: dotted dashed solid;
+    border-color: #3052e7;
+}
+
+#mixBordas2 {
+    border-top: 10px solid hwb(113 35% 14%);
+    border-bottom-style: double;
+    border-bottom-width: 15px;
+}
+
+/*-----------------------------*/
+
+.arredondando {
+    background-color: snow;
+    width: 200px;
+    height: 100px;
+    border-style: solid;
+    border-width: 12px;
+    margin: 5px;
+}
+
+#normal {
+    border-radius: 50px;
+    border-color: paleturquoise;
+}
+
+#quantos {
+    border-radius: 30px 40px 10px 50px;
+    border-color: palegoldenrod;
+}
+
+#oval {
+    border-radius: 50px 80px;
+    border-color: palevioletred;
+}
+
+#porcentagem {
+    border-radius: 50%;
+    border-color: powderblue;
+}
+
+/* ------ BORDER IMAGE ------*/
+
+.source {
+    background-color: black;
+    width: 300px;
+    height: 100px;
+    border: 50px solid;
+    margin: 5px;
+}
+
+#borderImage-img {
+    border-image-source: url(/img/icons8-bullseye-48.png);
+}
+
+#borderImage-linearGradient {
+    border-image-source: linear-gradient(red, blue);
+}
+
+
+/* ------ BORDER IMAGE SLICE ------*/
+
+.slice {
+    background-color: black;
+    width: 300px;
+    height: 100px;
+    border: 50px solid;
+    margin: 5px;
+}
+
+#slice1 {
+    border-image-source: url(/img/icons8-bullseye-48.png);
+    border-image-repeat: round;
+    border-image-slice: 70 fill;
+}
+
+#slice2 {
+    border-image-source: linear-gradient(blue, red);
+    border-image-slice: 50;
+    /*Adicionando o fill apos o 50, estariamos pintando o quadro aotodo ao inves apenas das bordas*/
+}
+
+/* ------ BORDER IMAGE WIDTH ------*/
+
+.width {
+    background-color: black;
+    width: 300px;
+    height: 100px;
+    border: 50px solid;
+    margin: 5px;
+}
+
+#width1 {
+    border-image-source: linear-gradient(hsl(240, 54%, 54%), hsl(293, 56%, 45%));
+    border-image-slice: 50;
+    /*Adicionando o fill apos o 50, estariamos pintando o quadro aotodo ao inves apenas das bordas*/
+    border-image-width: 50px 15px;
+}
+
+#width2 {
+    border-image-source: linear-gradient(hsl(81, 54%, 54%), hsl(293, 56%, 45%));
+    border-image-slice: 50;
+    /*Adicionando o fill apos o 50, estariamos pintando o quadro aotodo ao inves apenas das bordas*/
+    border-image-width: 15px 50px;
+}
+
+/* ------ BORDER IMAGE OUTSET ------*/
+
+.outset {
+    background-color: black;
+    width: 300px;
+    height: 100px;
+    border: 50px solid;
+    margin: 5px;
+}
+
+#outset1 {
+    border-image-source: linear-gradient(hsl(197, 100%, 67%), hsl(320, 58%, 38%));
+    border-image-slice: 50;
+    /*Adicionando o fill apos o 50, estariamos pintando o quadro aotodo ao inves apenas das bordas*/
+    border-image-width: 20px;
+    border-image-outset: 25px;
+    /*com isso voce tira a borda para fora da div.*/
+    margin: 30px;
+}
+
+#outset2 {
+    border-image-source: linear-gradient(hsl(39, 100%, 67%), hsl(320, 58%, 38%));
+    border-image-slice: 50;
+    /*Adicionando o fill apos o 50, estariamos pintando o quadro aotodo ao inves apenas das bordas*/
+    border-image-width: 10px 30px;
+    border-image-outset: 35px;
+    /*com isso voce tira a borda para fora da div.*/
+    margin: 40px;
+}
+
+/* ------ TEXTO ------*/
+
+.textFlex {
+    width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 25%;
+}
+
+.textFlex h4,
+p {
+    text-align: start;
+}
+
+.textFlex p {
+    text-align: start;
+}
+
+
+/* ------ SOMBRA NOS ELEMENTOS ------*/
+
+#shadow {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#box-shadow {
+    width: 350px;
+    height: 100px;
+    border: 10px solid #3052e7;
+    background: #9ba8e4;
+    margin: 15px;
+
+    box-shadow: 20px 20px 5px -5px #0fbbff;
+    /*Box-shadow, os dois primeiros valores são referentes ao tamanho da sombra o 3 valor é o nivel de desfoco da sombra, 4 valor define a propagação da sombra e o 5 valor é a cor da sombra.
+    Colocando o inset apos o box-shadow, voce tras a sombra para dentro do elemento, e é possivel colocar mais de uma camada de sombra, apenas colocando virgula apos o ultimo elemento e repetindo os elementos EX: 20px 20px cor, 20px 20px cor;*/
+}
+
+#drop-shadow {
+    width: 350px;
+    height: 170px;
+    margin: 2px;
+    object-fit: contain;
+    filter: drop-shadow(10px 10px 5px #080808);
+    /*Foi adicionado sombra a imagem png da dio*/
+    /*A tag filter permite usar o drop-show, que adiciona sombra as imagem png*/
+}
+
+/* ------ SOMBRA NOS TEXTOS ------*/
+
+#text-shadow-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#text-shadow {
+    color: #173ff3;
+    font-size: 45px;
+    margin: 25px;
+    text-shadow: 10px 10px 5px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+#text-shadow02 {
+    color: #33e66e;
+    font-size: 45px;
+    margin: 25px;
+    text-shadow: 25px 25px 3px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+/* ------ TRANSPARENCIA ------*/
+
+#opacity {
+    width: 600px;
+    height: 200px;
+    background: #a898a7;
+    margin: 20px;
+    opacity: 0.5;
+    border-image-source: linear-gradient(hsl(197, 100%, 67%), hsl(320, 58%, 38%));
+    border-image-slice: 50;
+    /*Adicionando o fill apos o 50, estariamos pintando o quadro aotodo ao inves apenas das bordas*/
+    border-image-width: 30px;
+}
+
+/* ------ OVERFLOW ------*/
+
+.overflow {
+    background-color: #ee8b09;
+    border: 3px solid purple;
+    padding: 10px;
+    width: 250px;
+    height: 130px;
+    margin: 10px;
+}
+
+#visible {
+    overflow: visible;
+}
+
+#hidden {
+    overflow: hidden;
+}
+
+#scroll {
+    overflow: scroll;
+}
+
+#auto {
+    overflow: auto;
+}
+
+/* ------ DISPLAY ------*/
+
+.block01 {
+    background-color: #3052e7;
+    margin: 5px;
+}
+
+.block02 {
+    display: block;
+    background-color: #48d63e;
+    margin: 5px;
+}
+
+.inline01 {
+    background: #3052e7;
+    letter-spacing: 10px;
+}
+
+.inline02 {
+    display: inline;
+    background: #30e76d;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.inline-block01 {
+    display: inline-block;
+    background: #3052e7;
+    width: 250px;
+    height: 50px;
+    letter-spacing: 2px;
+    margin: 5px;
+}
+
+.inline-block02 {
+    display: inline-block;
+    background: #3052e7;
+    width: 250px;
+    height: 50px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.container {
+    border: 2px solid red;
+    text-align: center;
+    margin: 5px;
+}
+
+#item-01 {
+    height: 30px;
+    width: 30px;
+    vertical-align: top;
+    /*serve para alinharmos o texto com a imagem*/
+}
+
+#item-02 {
+    height: 30px;
+    width: 30px;
+    vertical-align: sub;
+    /*serve para alinharmos o texto com a imagem*/
+}
+
+#item-03 {
+    vertical-align: bottom;
+    /*serve para alinharmos o texto com a imagem*/
+}
+
+/* ------ STATIC ------*/
+
+.inline {
+    display: inline-block;
+}
+
+.eXemplo {
+    width: 125px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#elemento-01 {
+    background-color: orange;
+}
+
+#elemento-02 {
+    background-color: palevioletred;
+}
+
+#elemento-03 {
+    background-color: palegreen;
+}
+
+.flexgeral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#elemento-a {
+    background-color: paleturquoise;
+}
+
+#elemento-b {
+    background-color: palevioletred;
+}
+
+#elemento-c {
+    background-color: palegreen;
+}
+
+/* ------ RELATIVE ------*/
+
+#elemento-d {
+    background-color: paleturquoise;
+}
+
+#elemento-e {
+    background-color: palevioletred;
+    position: relative;
+    top: 20px;
+}
+
+#elemento-f {
+    background-color: palegreen;
+}
+
+/* ------ STICKY ------*/
+
+.elemento-sticky {
+    background-color: rgb(121, 116, 201);
+    position: sticky;
+    /*A propriedade sticky, o html nao funciona dentro da DIV*/
+    top: 30px;
+    /*para essa tag stick funcionar, tem que colocar top ou botton,*/
+    margin: 10;
+    padding: 10px;
+}
+
+/* ------ ABSOLUTE ------*/
+
+.flexgeral01 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#elemento-g {
+    background-color: paleturquoise;
+}
+
+#elemento-h {
+    background-color: palevioletred;
+}
+
+#elemento-i {
+    background-color: palegreen;
+    position: absolute;
+    left: 50%;
+    opacity: 0.7;
+}
+
+#elemento-k {
+    background-color: rgb(149, 236, 127);
+}
+
+#elemento-l {
+    background-color: palevioletred;
+}
+
+#elemento-m {
+    background-color: purple;
+    position: absolute;
+    left: 39%;
+    opacity: 0.8;
+}
+
+.backgroundFlex01 {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+#elemento-pai-01 {
+    width: 500px;
+    height: 400px;
+    border: 1px solid rgb(2, 2, 2);
+    position: relative;
+    /*Aplicando o relative aqui, o position absolute do elemento-filho, passa a respeitar essa div.*/
+}
+
+#elemento-pai-01 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+#elemento-pai-01 h4 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #080808;
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 2%;
+}
+
+#elemento-pai-01 h5 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #080808;
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 20%;
+}
+
+
+#elemento-pai {
+    box-sizing: border-box;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid rgb(15, 15, 15);
+    position: relative;
+    /*Aplicando o relative aqui, o position absolute do elemento-filho, passa a respeitar essa div.*/
+}
+
+#elemento-filho01 {
+    background-color: rgb(79, 219, 219);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5;
+}
+
+#elemento-filho02 {
+    background-color: rgb(79, 219, 219);
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+
+/* ------ FIXED ------*/
+
+
+#elemento-filho-03 {
+    background-color: rgb(167, 60, 158);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 5;
+    opacity: 0.5;
+}
+
+/* ------ Z-INDEX ------*/
+
+#elementoz-pai {
+    width: 300px;
+    height: 200px;
+    border: 1px solid rgb(2, 2, 2);
+    position: relative;
+}
+
+.exemploz {
+    width: 125px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    position: absolute;
+    opacity: 0.8;
+}
+
+#elementoz-01 {
+    background-color: #0fbbff;
+    left: 10px;
+    top: 10px;
+    z-index: 5;
+}
+
+#elementoz-02 {
+    background-color: #0ff8ff;
+    left: 20px;
+    top: 20px;
+    z-index: 4;
+}
+
+#elementoz-03 {
+    background-color: #48d63e;
+    left: 30px;
+    top: 30px;
+    z-index: 3;
+}
+
+#elementoz-04 {
+    background-color: #708090;
+    left: 40px;
+    top: 40px;
+    z-index: 2;
+}
+
+#elementoz-05 {
+    background-color: #ec049f;
+    left: 50px;
+    top: 50px;
+    z-index: 1;
+}
+
+#elementoz-06 {
+    background-color: #ee8b09;
+    left: 60px;
+    top: 60px;
+    z-index: 0;
+}
+
+/* ------ FLEXBOX ------*/
+
+.container-flexbox {
+    background: paleturquoise;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    /* ou inline-flex, no caso do uso de dois container, vai ficar um do lado do outro na mesma linha(desde que tenha espaço na tela.) */
+}
+
+.item-container {
+    background: palevioletred;
+    margin: 10px;
+}
+
+.flex-direction {
+    width: 500px;
+    height: 150px;
+    border: 1px solid powderblue;
+    padding: 10px;
+    margin: 10px;
+}
+
+#container-flexbox-01 {
+    background-color: palegreen;
+    flex-direction: row;
+    margin: 5px;
+}
+
+#container-flexbox-02 {
+    background-color: palegoldenrod;
+    flex-direction: column;
+    margin: 5px;
+}
+
+/* ------ FLEX-WRAP ------*/
+
+.item-wrap {
+    width: 120px;
+    height: 80px;
+    background: palevioletred;
+    margin: 10px;
+}
+
+#flex-wrap-01 {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgb(22, 22, 22);
+    display: flex;
+    flex-wrap: wrap;
+    /* podendo ser nowrap*/
+    flex-direction: row;
+    /*podendo ser column*/
+    margin: 5px;
+}
+
+.item-wrap01 {
+    width: 120px;
+    height: 50px;
+    background: palevioletred;
+    margin: 10px;
+}
+
+#flex-flow-02 {
+    width: 500px;
+    height: 300px;
+    border: 1px solid purple;
+    display: flex;
+    flex-flow: column wrap;
+    /* primeiro valor pode ser row ou column, o segundo valor pode ser nowrap ou wrap*/
+    margin: 5px;
+}
+
+/* ------ JUSTIFY-CONTENT ------*/
+
+.img-justify {
+    width: 500px;
+    height: 350px;
+    object-fit: contain;
+}
+
+.container-justify {
+    background: #9ba8e4;
+    padding: 10px;
+    margin: 5px;
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item-justify {
+    background: rgb(85, 134, 70);
+    width: 70px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#container-justify-01 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#container-justify-02 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#container-justify-03 {
+    display: flex;
+    justify-content: center;
+}
+
+#container-justify-04 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container-justify-05 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#container-justify-06 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* ------ ILIGN-ITEMS ------*/
+
+.img-align {
+    width: 500px;
+    height: 350px;
+    object-fit: scale-down;
+}
+
+.container-align {
+    background: #708090;
+    margin: 10px;
+    width: 490px;
+    height: 200px;
+}
+
+.item-align {
+    background: rgb(95, 127, 189);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#container-align-01 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+#container-align-02 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container-align-03 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
+
+#container-align-04 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: column-reverse;
+}
+
+#container-align-05 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+/* ------ ALIGN-CONTENT ------*/
+.backgroundFlexAligh {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.container-align01 {
+    background: #5b6168;
+    margin: 10px;
+    width: 330px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    /*suporta o column*/
+    flex-wrap: wrap;
+    /*Em vez de inverter a ordem, inverte o top para o botton*/
+}
+
+.item-align01 {
+    background: olive;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.img-align-content {
+    width: 350px;
+    height: 500px;
+    object-fit: scale-down;
+}
+
+#container-align-content-01 {
+    align-content: flex-start;
+}
+
+#container-align-content-02 {
+    align-content: flex-end;
+}
+
+#container-align-content-03 {
+    align-content: center;
+}
+
+#container-align-content-04 {
+    align-content: stretch;
+}
+
+#container-align-content-05 {
+    align-content: space-between;
+}
+
+#container-align-content-06 {
+    align-content: space-around;
+}
+
+#container-align-content-07 {
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+#container-align-content-08 {
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+#container-align-content-09 {
+    flex-direction: column;
+    align-content: center;
+}
+
+#container-align-content-10 {
+    flex-direction: column;
+    align-content: stretch;
+}
+
+#container-align-content-11 {
+    flex-direction: column;
+    align-content: space-between;
+}
+
+#container-align-content-12 {
+    flex-direction: column;
+    align-content: space-around;
+}
+
+/* ------ GAP ------*/
+
+.img-gap {
+    width: 350px;
+    height: 500px;
+    object-fit: scale-down;
+}
+
+#container-gap-01 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 10px;
+    column-gap: 15px;
+}
+
+#container-gap-02 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px 22px;
+    /*Podemos usar assim, dois valores, ex:12px para bottom e 22px para lateral, ou apenas um valor ex: 25px para ser aplicado de ambas as propriedades.*/
+}
+
+/* ------ ORDER ------*/
+
+.img-ordeer {
+    width: 500px;
+    height: 350px;
+    object-fit: scale-down;
+}
+
+.container-flex {
+    background: powderblue;
+    padding: 7px;
+    margin: 15px;
+
+}
+
+.item-flex {
+    background: rgb(70, 175, 70);
+
+}
+
+#container-order-01 {
+    display: flex;
+    gap: 10px;
+    flex-flow: row wrap;
+}
+
+#container-order-02 {
+    display: flex;
+    gap: 10px;
+    flex-flow: column wrap;
+}
+
+.order-09 {
+    order: -1;
+}
+
+.order-05 {
+    order: -2;
+}
+
+/* ------ FLEX-GROW ------*/
+
+#container-grow-01 {
+    background: #bcc1c7;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+    height: 200px;
+}
+
+#container-grow-02 {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+.grow-01 {
+    flex-grow: 1;
+}
+
+/* ------ FLEX-SHRINK ------*/
+
+.item-flex-shrink {
+    background: rgb(238, 101, 197);
+    border-radius: 5px;
+}
+
+#container-shrink-01 {
+    width: 450px;
+    height: 250px;
+    background: #bcc1c7;
+    display: flex;
+    gap: 10px;
+    flex-flow: row nowrap;
+
+}
+
+#container-shrink-02 {
+    width: 450px;
+    height: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    /*Ele so encolhe ate o tamanho da letra, nao prejudicando a leitura.*/
+    gap: 10px;
+}
+
+.shrink-01 {
+    width: 80px;
+    flex-shrink: 2;
+    /*o valor 1 costuma ser padrao, é possivel tbm, diminuir apenas um item no meio dos outros. */
+}
+
+.shrink-02 {
+    height: 30px;
+    flex-shrink: 1;
+    /*o valor 1 costuma ser padrao, é possivel tbm, diminuir apenas um item no meio dos outros. */
+}
+
+/* ------ FLEX-BASIS ------*/
+
+
+.backgroundFlexBasis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+#container-basis-01 {
+    width: 450px;
+    height: 150px;
+    background: #bcc1c7;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#container-basis-02 {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.basis-03 {
+    flex-basis: 170px;
+    text-align: center;
+}
+
+.basis-01 {
+    flex-basis: 115px;
+    text-align: center;
+}
+
+/* ------ SHORTHAND ------*/
+/*     Propredade abreviada flex: grow shrink basis   */
+.backgroundFlexFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+#container-flex-01 {
+    width: 450px;
+    height: 150px;
+    background: #bcc1c7;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#container-flex-02 {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flex-01 {
+    text-align: center;
+    flex: none;
+    /*flex: 1 1 auto;*/
+    /*flex: initial*/
+    /*flex: auto*/
+    /*flex: none*/
+}
+
+/* ------ ALIGN-SELF ------*/
+#container-align-self-01 {
+    width: 450px;
+    height: 150px;
+    background: #a3c8f5;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    text-align: center;
+
+}
+
+#container-align-self-02 {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.align-self-01 {
+    flex: 1;
+}
+
+.align-self-02 {
+    align-self: flex-end;
+    flex: 1;
+}
+
+.align-self-03 {
+    flex: 1;
+}
+
+.img-guide {
+    width: 800px;
+    height: 1000px;
+    object-fit: scale-down;
+}
+
+
+/* ------ GRID LAYOUTS ------*/
+
+.containerGrid {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    display: grid;
+    border-radius: 15px;
+}
+
+.itemExemplo {
+    background-color: palegreen;
+
+}
+
+.containerInline-Grid {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px;
+    display: inline-grid;
+    border-radius: 15px;
+}
+
+/* ------ COLUMNS E LINES AO GRID ------*/
+
+.containerGridColumnLine {
+    background: #9ba8e4;
+    padding: 10px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+}
+
+.itemExemplo01 {
+    border: 1px solid black;
+}
+
+.columnLine01 {
+    background-color: palegoldenrod;
+}
+
+.columnLine02 {
+    background-color: palegreen;
+}
+
+.columnLine03 {
+    background-color: paleturquoise;
+}
+
+.columnLine04 {
+    background-color: palevioletred;
+}
+
+.columnLine05 {
+    background-color: peru;
+}
+
+.columnLine06 {
+    background-color: palegoldenrod;
+}
+
+.containerGridColumnLine01 {
+    background: #9ba8e4;
+    padding: 10px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    /*grid-template-columns: repeat(3, 400px); vai repetir 3 colunas de 400px*/
+    /*grid-template-columns: repeat(auto-fill, 100px);  ele vai colocar na linha o maximo de colunas de 100px, responsivo.*/
+
+    /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  ele vai colocar na linha o maximo de linhas de 100px, responsivo.*/
+    grid-template-rows: 150px 100px;
+    /*grid-template-rows: repeat(3, 400px); vai repetir 3 linhas de 400px*/
+    /*grid-template-rows: repeat(auto-fill, 100px);  ele vai colocar na linha o maximo de linhas de 100px, responsivo.*/
+
+    /*grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));  ele vai colocar na linha o maximo de linhas de 100px, responsivo.*/
+}
+
+.containerGridColumnLine02 {
+    background: #9ba8e4;
+    padding: 10px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 150px;
+}
+
+/* ------ MIN-CONTENT ------*/
+
+.containerMin-Content01 {
+    background: #9ba8e4;
+    padding: 10px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+}
+
+.min-Content01 {
+    background-color: rgb(100, 159, 214);
+}
+
+.containerMax-Content01 {
+    background: #9be4b7;
+    padding: 10px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+}
+
+.max-Content01 {
+    background-color: rgb(100, 214, 128);
+}
+
+.containerAuto-Content01 {
+    background: #d89be4;
+    padding: 10px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.auto-Content01 {
+    background-color: rgb(214, 100, 208);
+}
+
+/* ------ GRID-AUTO-FLOW ------*/
+
+.containerGridFlow01 {
+    background: #d89be4;
+    padding: 10px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+
+    grid-auto-rows: 4fr;
+    grid-auto-flow: row;
+}
+
+.gridFlow01 {
+    background-color: #90a1ec;
+}
+
+/* ------ POSIÇÕES ESPECIFICAS ------*/
+
+.containerPositionItem01 {
+    border: 2px solid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+    grid-template-rows: 50px 100px 200px;
+    margin: 5px;
+}
+
+.positionItem01 {
+    text-align: center;
+    background-color: palegreen;
+    border-radius: 10px;
+    margin: 5px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.containerPositionItem02 {
+    border: 2px solid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+    grid-template-rows: 50px 100px 200px;
+    margin: 5px;
+}
+
+.positionItem02 {
+    text-align: center;
+    background-color: palevioletred;
+    border-radius: 10px;
+    margin: 5px;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* ------ GRID AREAS ------*/
+
+.grid-area {
+    width: 500px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas: "header header header header" "main main . sidebar" "footer footer footer footer";
+}
+
+.area01 {
+    background-color: olive;
+    grid-area: header;
+}
+
+.area02 {
+    background-color: paleturquoise;
+    grid-area: main;
+}
+
+.area03 {
+    background-color: blueviolet;
+    grid-area: sidebar
+}
+
+.area04 {
+    background-color: teal;
+    grid-area: footer;
+}
+
+/* ------ ROW/COLUMNS-GAP ------*/
+
+.rowColumnsGap {
+    width: 500px;
+    margin: 5px;
+    display: grid;
+    border: 3px solid black;
+    grid-template: repeat(3, 100px) / repeat(3, 1fr);
+
+    row-gap: 10px;
+    /*pode usar a propriedade gap:10px 15px; ou gap:10px; */
+    column-gap: 10px;
+    /*pode usar a propriedade gap:10px 15px; ou gap:10px; */
+}
+
+.itemGap01 {
+    background-color: #3052e7;
+}
+
+.itemGap02 {
+    background-color: #d89be4;
+}
+
+.itemGap03 {
+    background-color: #33e66e;
+}
+
+.itemGap04 {
+    background-color: aquamarine;
+}
+
+.itemGap05 {
+    background-color: darkorange;
+}
+
+.itemGap06 {
+    background-color: brown;
+}
+
+.itemGap07 {
+    background-color: darkolivegreen;
+}
+
+.itemGap08 {
+    background-color: darkseagreen;
+}
+
+.itemGap09 {
+    background-color: hotpink;
+}
+
+/* ------ JUSTIFY / ALIGN ------*/
+
+.item001 {
+    background-color: #3052e7;
+}
+
+.item002 {
+    background-color: #d89be4;
+}
+
+.item003 {
+    background-color: #157725;
+}
+
+.justifyAlign {
+    width: 700px;
+    height: 100px;
+    margin: 5px;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.Start {
+    justify-items: start;
+    /*a place-content substitui as duas propriedades*/
+    align-items: start;
+    /*a place-content substitui as duas propriedades*/
+}
+
+.Center {
+    justify-items: center;
+    /*a place-content substitui as duas propriedades*/
+    align-items: center;
+    /*a place-content substitui as duas propriedades*/
+}
+
+.End {
+    justify-items: end;
+    /*a place-content substitui as duas propriedades*/
+    align-items: end;
+    /*a place-content substitui as duas propriedades*/
+}
+
+.Stretch {
+    justify-items: stretch;
+    /*a place-content substitui as duas propriedades*/
+    align-items: stretch;
+    /*a place-content substitui as duas propriedades*/
+}
+
+
+/* ------ JUSTIFY / ALIGN CONTENT ------*/
+
+.item0001 {
+    background-color: #d230e7;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item0002 {
+    background-color: #9be4b1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item0003 {
+    background-color: #33a4e6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item0006 {
+    background-color: #d230e7;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item0004 {
+    background-color: #9be4b1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item0005 {
+    background-color: #33a4e6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.gridJustify-content {
+    width: 1000px;
+    height: 100px;
+    margin: 5px;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    padding: 5px;
+}
+
+.jStart {
+    place-items: center;
+    justify-content: start;
+}
+
+.jCenter {
+    place-items: center;
+    justify-content: center;
+}
+
+.jEnd {
+    place-items: center;
+    justify-content: end;
+}
+
+.jStretch {
+    place-items: center;
+    justify-content: stretch;
+}
+
+.jSpace-around {
+    place-items: center;
+    justify-content: space-around;
+}
+
+.jSpace-between {
+    place-items: center;
+    justify-content: space-between;
+}
+
+.jSpace-evenly {
+    place-items: center;
+    justify-content: space-evenly;
+}
+
+/* Align-Content */
+
+.item00001 {
+    background-color: #98e730;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item00002 {
+    background-color: #b19be4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item00003 {
+    background-color: #bfe633;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item00006 {
+    background-color: #e73085;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item00004 {
+    background-color: #54a5c5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item00005 {
+    background-color: #33e684;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.gridAlign-content {
+    width: 1000px;
+    height: 200px;
+    margin: 5px;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    padding: 5px;
+}
+
+.aStart {
+    place-items: center;
+    justify-content: start;
+    align-content: start;
+}
+
+.aCenter {
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.aEnd {
+    place-items: center;
+    align-content: end;
+    justify-content: end;
+}
+
+.aStretch {
+    align-content: stretch;
+    justify-content: stretch;
+    place-items: center;
+}
+
+.aSpace-around {
+    place-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.aSpace-between {
+    align-content: space-between;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.aSpace-evenly {
+    place-items: center;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+/* ------ JUSTIFY / ALIGN SELF ------*/
+.itemSelf {
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.item000001 {
+    background-color: #e79830;
+    justify-self: start;
+
+}
+
+.item000002 {
+    background-color: #6e45ce;
+    justify-self: center;
+
+}
+
+.item000003 {
+    background-color: #38db17;
+    justify-self: end;
+
+}
+
+.item000004 {
+    background-color: #a83699;
+    justify-self: stretch;
+    align-self: center;
+}
+
+.gridJustifyAlign-self {
+    width: 1000px;
+    height: 200px;
+    margin: 5px;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 5px;
+    place-items: center;
+}
+
+.item0000001 {
+    background-color: #e79830;
+    align-self: start;
+}
+
+.item0000002 {
+    background-color: #6e45ce;
+    align-self: center;
+}
+
+.item0000003 {
+    background-color: #38db17;
+    align-self: end;
+}
+
+.item0000004 {
+    background-color: #a83699;
+    align-self: stretch;
+}
+
+/* ------ RESPONSIVIDADE ------*/
+
+/* ------ MULTICOLUNAS ------*/
+
+.responsividadeMultiColunas {
+    column-count: 3;
+    /*Determina o numero de colunas*/
+    column-width: 200px;
+    /*Determina a largura da coluna, nao funciona junto com o column-count e nem com a medida em % */
+    column-rule: 1px solid gray;
+    column-gap: 250px;
+    padding: 10px;
+}
+
+/* ------ FLEXBOX RESPONSIVO ------*/
+.respoFlex {
+    background-color: lightblue;
+    font-size: larger;
+    padding: 40px;
+
+}
+
+.flexboxResposivo div {
+    background-color: lightblue;
+    display: flex;
+    margin: 20px;
+}
+
+.flexboxResposivo {
+    display: flex;
+}
+
+.flexRespCard {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.flexGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexImage-card {
+    background-color: lightblue;
+    border: 1px solid #e2e2e2;
+    padding: 10px;
+    margin: 10px;
+    flex-basis: 200px;
+}
+
+.flexImage-card img {
+    width: 300px;
+    height: 300px;
+}
+
+main {
+    max-width: 1500px;
+    /* controla o tamanho da tela */
+    margin: auto;
+}
+
+/* ------ GRID RESPONSIVO ------*/
+
+.gridResp {
+    max-width: 1500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px repeat(3, 300px);
+    grid-template-areas:
+        "header header header header"
+        "navbar main main main"
+        "navbar content1 content2 content3"
+        "navbar footer footer footer"
+    ;
+}
+
+.gridRespHeader {
+    padding: 20px;
+    background-color: #3052e7;
+    grid-area: header;
+}
+
+.gridRespNav {
+    padding: 20px;
+    background-color: #30e76d;
+    grid-area: navbar;
+}
+
+.gridRespNav li {
+    background-color: #30e76d;
+    list-style: none;
+    color: #080808;
+}
+
+.gridRespMain {
+    background-color: #6e45ce;
+    grid-area: main;
+}
+
+.gridRespContent01 {
+    background-color: #e79830;
+    grid-area: content1;
+}
+
+.gridRespContent02 {
+    background-color: #b19be4;
+    grid-area: content2;
+}
+
+.gridRespContent03 {
+    background-color: #bfe633;
+    grid-area: content3;
+}
+
+.gridRespFooter {
+    background-color: #33a4e6;
+    grid-area: footer;
+}
+
+/* ------ MEDIA QUERIES ------*/
+.mediaQueries {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.mediaQueries li {
+    text-align: start;
+    background-color: white;
+}
+
+
+/* ------------------ PSEUDO - ELEMENTOS --------------*/
+
+
+/* ------ first-letter ------*/
+.first-latterTag {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.first-latterTag li {
+    text-align: start;
+    background-color: white;
+
+}
+
+.first-latter01::first-letter {
+    color: red;
+}
+
+.first-latter02::first-letter {
+    background-color: paleturquoise;
+}
+
+.first-latter03::first-letter {
+    margin: 10px;
+}
+
+.first-latter04::first-letter {
+    padding: 10px;
+}
+
+.first-latter05::first-letter {
+    border: 1px solid red;
+    padding: 8px;
+}
+
+.first-latter06::first-letter {
+    font-size: larger;
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+/* ------ first-line ------*/
+.first-lineTag {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.first-lineTag li {
+    text-align: start;
+    background-color: white;
+
+}
+
+.first-line01::first-line {
+    color: red;
+}
+
+.first-line02::first-line {
+    background-color: palegreen;
+}
+
+.first-line03::first-line {
+    font-variant: small-caps;
+}
+
+/* ------ backdrop ------*/
+.backdropVideoTest::backdrop {
+    width: 800px;
+    background: #090909;
+}
+
+
+/* ------ marker ------*/
+.makerTag {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.makerTag li {
+    text-align: start;
+    background-color: white;
+    padding: 5px;
+}
+
+.makerTag01::marker {
+    content: "⚡" "⏭";
+    color: #173ff3;
+}
+
+.makerTag02::marker {
+    content: "➩" "😁" "✈";
+    color: #157725;
+}
+
+.makerTag03::marker {
+    content: "🔜" "😛" "💲";
+    color: #c21b66;
+}
+
+.makerTag04::marker {
+    content: "👉" "😆" "🏀";
+    color: #1b95c2;
+}
+
+.makerTag05::marker {
+    content: "⇛" "😼" "✞";
+    color: #4dc21b;
+}
+
+.makerTag06::marker {
+    content: "↬" "😂" "🌟";
+    color: #581bc2;
+}
+
+.makerTag07::marker {
+    content: "⇀" "😜" "🚔";
+    color: #1b4dc2;
+}
+
+/* ------ placeholder ------*/
+.placeholderTag {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.placeholderTag li {
+    text-align: start;
+    background-color: white;
+    padding: 5px;
+}
+
+input::placeholder {
+    color: rgb(67, 43, 226);
+    text-transform: capitalize;
+}
+
+input {
+    color: #5b6168;
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    background: paleturquoise;
+}
+
+/* ------ selection ------*/
+.selectionTag {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.selectionTag li {
+    text-align: start;
+    background-color: white;
+    padding: 5px;
+}
+
+.selectionTag01::selection {
+    background-color: palegreen;
+    color: #0e0d0d;
+}
+
+.selectionTag02::selection {
+    background-color: palevioletred;
+    color: white;
+}
+
+.selectionTag03::selection {
+    background-color: burlywood;
+    color: rgb(78, 67, 67);
+}
+
+/* ------ file-selector-button ------*/
+.FSBTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.FSBTag02 {
+    background: #fcfcfc;
+    width: 300px;
+    height: 30px;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+}
+
+.FSBTag02::file-selector-button {
+    width: 90px;
+    height: 29px;
+    color: white;
+    background-color: #080808;
+    border: 1px solid #080808;
+}
+
+/* ------ before e after ------*/
+.beforeTag::before {
+    content: '🎲';
+    background-color: #f3130b;
+    padding: 3px;
+    border-radius: 1px;
+    border: 1px solid #f3130b;
+
+}
+
+.afterTag::after {
+    content: '♟';
+    background-color: #f3130b;
+    padding: 3px;
+    border: 1px solid #f3130b;
+    border-radius: 1px;
+
+
+}
+
+.beforeAfterTagImg {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.beforeAfterCard-image {
+    width: 300px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background: url(/img/montanha.webp) no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.beforeAfterCard-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgb(215, 84, 156));
+}
+
+.beforeAfterCard-image02 {
+    width: 300px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background: url(/img/montanha.webp) no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.beforeAfterCard-image02::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgb(84, 88, 215));
+}
+
+
+/* ------------------ PSEUDO - CLASSES --------------*/
+/* ------ hover ------*/
+.hoverTag {
+    background-color: #6e45ce;
+    border: 2px solid black;
+    padding: 10px 16px;
+    color: white;
+}
+
+.hoverTag:hover {
+    background-color: #0e0d0d;
+    color: white;
+    border: 3px solid gray;
+    cursor: pointer;
+}
+
+.hoverTag01 {
+    display: flex;
+    justify-content: center;
+}
+
+.hoverTag02 {
+    width: 600px;
+    height: 250px;
+    border: 1px solid black;
+    background: linear-gradient(transparent, rgb(132, 216, 235));
+}
+
+.hoverTag02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hoverTag02:hover {
+    background: url(/img/technology-global-us.width-880.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* ------ active ------*/
+
+.activeTag02 {
+    width: 300px;
+    height: 80px;
+    background-color: #1b4dc2;
+    color: white;
+    border: none;
+}
+
+.activeTag02:hover {
+    background-color: palevioletred;
+    color: white;
+    border: 0.1px solid palevioletred;
+    border-radius: 5px;
+}
+
+.activeTag02:active {
+    background-color: green;
+    color: rgb(9, 9, 9);
+    border: 0.1px solid green;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+.activeTag03:hover {
+    background-color: rgb(33, 35, 39);
+    color: white;
+}
+
+/* ------ focus ------*/
+.focusTag {
+
+    display: flex;
+    margin: 1px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.focusTag01 {
+    width: 250px;
+    height: 40px;
+}
+
+.focusTag01:focus {
+    outline: 3px dashed paleturquoise;
+    outline-offset: 2px;
+}
+
+.focusTag02 {
+    padding: 5px;
+    margin: 5px;
+}
+
+.focusTag02:focus {
+    background-color: palegreen;
+}
+
+.focusTag03 {
+    width: 250px;
+    height: 40px;
+}
+
+.focusTag03:focus {
+    outline: 3px solid palegoldenrod;
+    outline-offset: 3px;
+    background-color: peachpuff;
+    color: #0e0d0d;
+}
+
+/* ------ target ------*/
+.targetTag {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.targetTag li {
+    text-align: start;
+    background-color: white;
+    padding: 5px;
+}
+
+.targetTag p {
+    text-align: start;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+}
+
+.targetTag02:target {
+    background-color: silver;
+}
+
+.targetTag02:target::before {
+    content: "▹";
+    color: #5b6168;
+    margin-right: 10px;
+}
+
+/* ------ enabled e disabled ------*/
+.enabledDisabled01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enabledDisabled {
+    border: 1px solid black;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.enabledDisabled button {
+    width: 200px;
+    height: 35px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+/* ------ link e visited ------*/
+.linkVisitedTag03 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.linkVisitedTag03:link {
+
+    color: #173ff3;
+}
+
+.linkVisitedTag03:visited {
+
+    color: black;
+}
+
+/* ------ checked e indeterminate ------*/
+.checkedIndeterminate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.checkedIndeterminate input {
+    width: 20px;
+}
+
+.checkedIndeterminate01 {
+    width: 140px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkedIndeterminate02:checked {
+    box-shadow: 0 0 5px 2px rgb(39, 43, 237);
+}
+
+.checkedIndeterminate02 {
+    accent-color: snow;
+}
+
+.checkedIndeterminate02:checked+label {
+    text-decoration: line-through;
+}
+
+/* ------ valid e invalid, in-range e out-ofrange ------*/
+.testPseudoClass label,
+button {
+    display: block;
+    margin-top: 12px;
+}
+
+.testPseudoClass input {
+    width: 200px;
+    height: 16px;
+    padding: 4px 14px;
+    margin-top: 8px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.testPseudoClass {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 300px;
+    padding: 40px;
+    margin: auto;
+    background-color: whitesmoke;
+}
+
+.testPseudoClass {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.testPseudoClass02 {
+    margin: 0px;
+}
+
+.testPseudoClass02:valid {
+    border: 1px solid green;
+    color: green;
+}
+
+.testPseudoClass02:valid+p {
+    border: 1px solid green;
+    color: green;
+}
+
+.testPseudoClass02:invalid {
+    border: 1px solid red;
+    color: red;
+}
+
+.testPseudoClass02:invalid+p {
+    border: 1px solid red;
+    color: red;
+}
+
+.error {
+    color: orangered;
+    font-size: 0.75rem;
+    display: none;
+    margin-top: 2px;
+}
+
+.testPseudoClass02:invalid+.error {
+    display: block;
+
+}
+
+/* ------ required e optional ------*/
+.testRequiredOptional label,
+button {
+    display: block;
+    margin-top: 12px;
+}
+
+.testRequiredOptional input {
+    width: 200px;
+    height: 16px;
+    padding: 4px 14px;
+    margin-top: 8px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.testRequiredOptional {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 300px;
+    padding: 40px;
+    margin: auto;
+    background-color: whitesmoke;
+}
+
+.testRequiredOptional {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.testRequiredOptional02 {
+    margin: 0px;
+}
+
+.testRequiredOptional02:required {
+    border-color: #ee8b09;
+}
+
+.testRequiredOptional02:optional {
+    border-color: #1809ee;
+}
+
+/* ------ autofill ------*/
+.testAutofill label,
+button {
+    display: block;
+    margin-top: 12px;
+}
+
+.testAutofill input {
+    width: 200px;
+    height: 16px;
+    padding: 4px 14px;
+    margin-top: 8px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.testAutofill {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 300px;
+    padding: 40px;
+    margin: auto;
+    background-color: #E4EfE9;
+}
+
+.testAutofill {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.testAutofill02 {
+    margin: 0px;
+}
+
+/* ------ :nth-child  ------*/
+.nthTest {
+    width: 1200px;
+    margin: auto;
+}
+
+.nthTest1 p {
+    padding: 5px;
+    text-align: left;
+}
+
+.nthTestlist {
+    width: 150px;
+    margin: 25px;
+
+}
+
+.nthTestlist-01 li {
+    background-color: white;
+    text-align: left;
+}
+
+.nthTestlist-02 li {
+    background-color: white;
+    text-align: left;
+
+}
+
+.nthTest1 p:nth-child(1) {
+    font-size: larger;
+    color: #3052e7;
+}
+
+.nthTestlist-01 li:nth-child(even) {
+    background-color: #ACB5A0;
+}
+
+.nthTestlist-01 li:nth-child(odd) {
+    background-color: #D8E1D3;
+}
+
+
+/* ------------------ TRANSFORMAÇÃO 2D --------------*/
+.tranformacoes2D {
+    border: 2px solid gray;
+    margin: 50px;
+}
+
+/* ------ translate()  ------*/
+.translateTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.translateTag01 {
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 2vh;
+}
+
+.translateTag01:hover {
+    transform: translate(-50px, 0);
+}
+
+.translateTag02 {
+    background: linear-gradient(90deg, #6CD0FF 0%, #1C2E4C 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 2vh;
+}
+
+.translateTag02:hover {
+    transform: translate(50px, 0);
+}
+
+/* ------ rotate()  ------*/
+.rotateTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.rotateTag01 {
+    background: linear-gradient(90deg, #737DFE 0%, #FFCAC9 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin: 4vh;
+}
+
+.rotateTag01:hover {
+    transform: rotate(20deg);
+}
+
+.rotateTag02 {
+    background: linear-gradient(90deg, #333333 0%, #73CCB1 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin: 4vh;
+}
+
+.rotateTag02:hover {
+    transform: rotate(-45deg);
+}
+
+/* ------ rotateX() e  rotateY()  ------*/
+.rotateXYTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.rotateXTag01 {
+    background: linear-gradient(90deg, #F8A4D8 0%, #6C63FF 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    margin: 4vh;
+}
+
+.rotateXTag01:hover {
+    transform: rotateX(40deg);
+}
+
+.rotateYTag02 {
+    background: linear-gradient(90deg, #5680E9 0%, #C1C8E4 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    margin: 4vh;
+}
+
+.rotateYTag02:hover {
+    transform: rotateY(45deg);
+}
+
+.rotateXTag03 {
+    background-image: url(/img/c078ce740e287430a020147a7cc9c7f2.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    margin: 4vh;
+}
+
+.rotateXTag03:hover {
+    transform: rotateX(50deg);
+}
+
+.rotateYTag04 {
+    background-image: url(/img/c860174606d3ce00cd41c0cdbac7c318.jpg);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    margin: 4vh;
+}
+
+.rotateYTag04:hover {
+    transform: rotateY(55deg);
+}
+
+/* ------ scale()  ------*/
+.scaleTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.scaleTag01 {
+    background: linear-gradient(90deg, #f4d4bd 0%, #b48b84 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 4vh;
+}
+
+.scaleTag01:hover {
+    transform: scale(1.1, 2.1);
+}
+
+.scaleTag02 {
+    background: linear-gradient(90deg, #def4e4 0%, #f4f4bd 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 4vh;
+}
+
+.scaleTag02:hover {
+    transform: scale(1.5);
+}
+
+.scaleTag03 {
+    background: linear-gradient(90deg, #caf0f8 0%, #90e0ef 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 4vh;
+}
+
+.scaleTag03:hover {
+    transform: scaleX(1.5);
+}
+
+.scaleTag04 {
+    background: linear-gradient(90deg, #03045e 0%, #0077b6 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 4vh;
+}
+
+.scaleTag04:hover {
+    transform: scaleY(1.5);
+}
+
+/* ------ skew()  ------*/
+.skewTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.skewTagGenerica {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 4vh;
+}
+
+#skewXTag01 {
+    background: linear-gradient(90deg, #f4d4bd 0%, #b48b84 100%);
+}
+
+#skewXTag01:hover {
+    background: linear-gradient(90deg, #ff686b 0%, #ffa69e 100%);
+    transform: skewX(35deg);
+}
+
+#skewXTag02 {
+    background: linear-gradient(90deg, #f4d4bd 0%, #b48b84 100%);
+}
+
+#skewXTag02:hover {
+    background: linear-gradient(90deg, #84dcc6 0%, #a5ffd6 100%);
+    transform: skewX(-35deg);
+}
+
+#skewYTag03 {
+    background: linear-gradient(90deg, #616f39 0%, #ffd98e 100%);
+}
+
+#skewYTag03:hover {
+    transform: skewY(-35deg);
+}
+
+#skewYTag04 {
+    background: linear-gradient(90deg, #ffb677 0%, #ff8364 100%);
+}
+
+#skewYTag04:hover {
+    transform: skewY(-35deg);
+}
+
+#skewXYTag05 {
+    background: linear-gradient(90deg, #aee4ff 0%, #6a9cfd 100%);
+}
+
+#skewXYTag05:hover {
+    transform: skew(-15deg, -15deg);
+}
+
+#skewXYTag06 {
+    background: linear-gradient(90deg, #ffb8d0 0%, #033495 100%);
+}
+
+#skewXYTag06:hover {
+    background: linear-gradient(90deg, #aee4ff 0%, #6a9cfd 100%);
+    transform: skew(15deg, 15deg);
+}
+
+#skewTag07 {
+    background: linear-gradient(90deg, #6a888c 0%, #5f7174 100%);
+}
+
+#skewTag07:hover {
+    transform: skew(55deg);
+}
+
+/* ------ matrix()  ------*/
+/* matrix (
+    scaleX(),
+    skewY(),
+    skewX(),
+    scaleY(),
+    translateX(),
+    translateY(),
+)*/
+.matrixTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.matrixTagGenerica {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 4vh;
+}
+
+#matrixScaleXTag01 {
+    background: linear-gradient(90deg, #edc3a6 0%, #a86b60 100%);
+}
+
+#matrixScaleXTag01:hover {
+    transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+}
+
+#matrixSkewYTag02 {
+    background: linear-gradient(90deg, #907460 0%, #bb361e 100%);
+}
+
+#matrixSkewYTag02:hover {
+    transform: matrix(1.2, 0.2, 0.5, 1.2, 0, 0);
+}
+
+#matrixSkewXTag03 {
+    background: linear-gradient(90deg, #616f39 0%, #ffd98e 100%);
+}
+
+#matrixSkewXTag03:hover {
+    transform: matrix(1.2, 0, 1.5, 1.2, 0, 0);
+}
+
+#matrixScaleYTag04 {
+    background: linear-gradient(90deg, #6c4a2c 0%, #5a2619 100%);
+}
+
+#matrixScaleYTag04:hover {
+    transform: matrix(1.2, 0, 0, 2.2, 50, 0);
+}
+
+#matrixTranslateXTag05 {
+    background: linear-gradient(90deg, #aee4ff 0%, #6a9cfd 100%);
+}
+
+#matrixTranslateXTag05:hover {
+    transform: matrix(1.2, 0, 0, 1.2, 50, -50);
+}
+
+#matrixTranslateYTag06 {
+    background: linear-gradient(90deg, #ffb8d0 0%, #033495 100%);
+}
+
+#matrixTranslateYTag06:hover {
+    transform: matrix(1.2, 0, 0, 1.2, 75, 75)
+}
+
+
+
+/* ------------------ TRANSFORMAÇÃO 3D --------------*/
+.tranformacoes3D {
+    border: 2px solid gray;
+    margin: 50px;
+}
+
+/* ------ perpectiva  ------*/
+.perpectivaTag p {
+    margin-bottom: 25px;
+}
+
+.perpectivaTag {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    perspective: 200px;
+    perspective-origin: right bottom;
+}
+
+.perpectivaTag02 {
+    margin: 30px;
+    perspective: 200px;
+
+}
+
+.perpectivaTag01 {
+    background: url(/img/3D02.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateY(10deg);
+}
+
+.perpectivaTag03 {
+    margin: 30px;
+    perspective: 100px;
+
+}
+
+.perpectivaTag04 {
+    background: url(/img/3D03.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateX(10deg);
+}
+
+.perpectivaTag05 {
+    margin: 30px;
+    perspective: 100px;
+
+}
+
+.perpectivaTag06 {
+    background: url(/img/3D02.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateY(-20deg);
+}
+
+.perpectivaTag07 {
+    margin: 30px;
+    perspective: 200px;
+
+}
+
+.perpectivaTag08 {
+    background: url(/img/3D03.jpg);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateX(-15deg);
+}
+
+.perpectivaTag09 {
+    margin: 30px;
+    perspective: 200px;
+    perspective-origin: left;
+}
+
+.perpectivaTag10 {
+    background: linear-gradient(90deg, #aee4ff 0%, #6a9cfd 100%);
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateX(15deg);
+}
+
+.perpectivaTag11 {
+    margin: 25px;
+    perspective: 200px;
+    perspective-origin: bottom right;
+}
+
+.perpectivaTag12 {
+    background: linear-gradient(90deg, #ffb677 0%, #ff8364 100%);
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateX(-50deg);
+}
+
+.perpectivaTag13 {
+    margin: 25px;
+    perspective: 200px;
+    perspective-origin: -50%;
+}
+
+.perpectivaTag14 {
+    background: linear-gradient(90deg, #616f39 0%, #ffd98e 100%);
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateX(15deg);
+}
+
+
+
+/* ------ rotate Z  ------*/
+.rotateZTag p {
+    margin-bottom: 25px;
+}
+
+.rotateZTag {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    perspective: 300px;
+}
+
+.rotateZTag02 {
+    margin: 30px;
+    perspective: 300px;
+}
+
+.rotateZTag01 {
+    background: linear-gradient(90deg, #aee4ff 0%, #6a9cfd 100%);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateZ(20deg);
+}
+
+.rotateZTag03 {
+    margin: 30px;
+    perspective: 50px;
+}
+
+.rotateZTag04 {
+    background: linear-gradient(90deg, #616f39 0%, #ffd98e 100%);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateX(5deg) rotateY(5deg) rotateZ(5deg);
+}
+
+.rotateZTag05 {
+    margin: 30px;
+    perspective: 100px;
+}
+
+.rotateZTag06 {
+    background: linear-gradient(90deg, #edc3a6 0%, #a86b60 100%);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateX(-5deg) rotateY(-5deg) rotateZ(-20deg);
+}
+
+.rotateZTag07 {
+    margin: 30px;
+    perspective: 100px;
+}
+
+.rotateZTag08 {
+    background: linear-gradient(90deg, #907460 0%, #bb361e 100%);
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateZ(-400deg);
+}
+
+
+/* ------ Escalando elementos de forma tridimensional  ------*/
+.EscalandoTag p {
+    margin-bottom: 25px;
+}
+
+.EscalandoTag {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    perspective: 300px;
+}
+
+.EscalandoTag02 {
+    margin: 30px;
+    perspective: 300px;
+}
+
+.EscalandoTag01 {
+    background: linear-gradient(90deg, #aee4ff 0%, #6a9cfd 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateX(10deg);
+}
+
+.EscalandoTag01:hover {
+    transform: scale(2) rotateX(20deg);
+}
+
+.EscalandoTag03 {
+    margin: 30px;
+    perspective: 50px;
+}
+
+.EscalandoTag04 {
+    background: linear-gradient(90deg, #616f39 0%, #ffd98e 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateZ(10deg);
+}
+
+.EscalandoTag04:hover {
+    transform: scaleZ(1) rotateX(20deg);
+}
+
+.EscalandoTag05 {
+    margin: 30px;
+    perspective: 100px;
+}
+
+.EscalandoTag06 {
+    background: linear-gradient(90deg, #edc3a6 0%, #a86b60 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transform: rotateY(10deg);
+}
+
+.EscalandoTag06:hover {
+    transform: scaleZ(3) rotateY(20deg);
+}
+
+
+/* ------ transform-style  ------*/
+.transform-styleTag p {
+    margin-bottom: 25px;
+}
+
+.transform-styleTag {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    perspective: 300px;
+    perspective-origin: top;
+    transform-style: preserve-3d;
+}
+
+.transform-styleTag01 {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    position: absolute;
+}
+
+.transform-styleTag01:nth-child(1) {
+    background: linear-gradient(90deg, #6FC3F7 0%, #1813A2 100%);
+    transform: rotateY(50deg);
+}
+
+.transform-styleTag01:nth-child(2) {
+    background: linear-gradient(90deg, #F8A4D8 0%, #6C63FF 100%);
+    transform: rotateY(-50deg);
+}
+
+
+
+
+/* ------------------ ANIMAÇÔES --------------*/
+.animaçoes {
+    border: 2px solid gray;
+    margin: 50px;
+}
+
+/* ------ transition ------*/
+.transitionTag {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    perspective: 300px;
+}
+
+.transitionTag01 {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin: 20px;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+
+}
+
+#transitionTag00001 {
+    background: linear-gradient(90deg, #6FC3F7 0%, #1813A2 100%);
+    transition: 2s;
+
+}
+
+#transitionTag00001:hover {
+    background: linear-gradient(90deg, #F8A4D8 0%, #6C63FF 100%);
+
+}
+
+#transitionTag00002 {
+    background: linear-gradient(90deg, #F8A4D8 0%, #6C63FF 100%);
+    transition: 1s;
+
+}
+
+#transitionTag00002:hover {
+    background-color: #616f39;
+    transform: rotateX(50deg);
+}
+
+#transitionTag00003 {
+    background: linear-gradient(90deg, #616f39 0%, #ffd98e 100%);
+    transition: 3s;
+}
+
+#transitionTag00003:hover {
+    background-color: #1813A2;
+    transform: rotateY(50deg);
+}
+
+
+.transition-timingTag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    perspective: 300px;
+}
+
+.transition-timingTag01 {
+    width: 150px;
+    height: 70px;
+    border-radius: 8px;
+    margin: 10px;
+
+    background-color: #5AB9EA;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: 2s;
+}
+
+.transition-timingTag01:hover {
+    width: 300px;
+}
+
+#transition-timingTag02 {
+    transition-timing-function: ease;
+}
+
+#transition-timingTag03 {
+    transition-timing-function: linear;
+}
+
+#transition-timingTag04 {
+    transition-timing-function: ease-in;
+}
+
+#transition-timingTag05 {
+    transition-timing-function: ease-out;
+}
+
+#transition-timingTag06 {
+    transition-timing-function: ease-in-out;
+}

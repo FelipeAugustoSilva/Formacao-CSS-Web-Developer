@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<title>Como Linkar CSS no HTML (Passo a Passo Simples)</title>
+<meta name="description" content="Você pode conectar quantas stylesheets desejar com esta sintaxe para linkar CSS no HTML. Confira o tutorial." />
+<link rel="canonical" href="https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Como linkar CSS no HTML" />
+<meta property="og:description" content="Você pode conectar quantas stylesheets desejar com esta sintaxe para linkar CSS no HTML. Confira o tutorial." />
+<meta property="og:url" content="https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html" />
+<meta property="og:site_name" content="Hostinger Tutoriais" />
+<meta property="article:publisher" content="https://www.facebook.com/Hostinger.com.br/" />
+<meta property="article:published_time" content="2018-11-28T10:24:24+00:00" />
+<meta property="article:modified_time" content="2022-05-17T14:10:14+00:00" />
+<meta property="og:image" content="https://www.hostinger.com/tutorials/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg" /><meta property="og:image" content="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.png" />
+<meta property="og:image:width" content="900" />
+<meta property="og:image:height" content="520" />
+<meta property="og:image:type" content="image/png" />
+<meta name="author" content="Ariane G." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.hostinger.com/tutorials/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg" />
+<meta name="twitter:creator" content="@HostingerBrasil" />
+<meta name="twitter:site" content="@HostingerBrasil" />
+<meta name="twitter:label1" content="Escrito por" />
+<meta name="twitter:data1" content="Ariane G." />
+<meta name="twitter:label2" content="Est. tempo de leitura" />
+<meta name="twitter:data2" content="5 minutos" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html","url":"https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html","name":"Como Linkar CSS no HTML (Passo a Passo Simples)","isPartOf":{"@id":"https://www.hostinger.com.br/tutoriais/#website"},"primaryImageOfPage":{"@id":"https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html#primaryimage"},"image":{"@id":"https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html#primaryimage"},"thumbnailUrl":"https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.png","datePublished":"2018-11-28T10:24:24+00:00","dateModified":"2022-05-17T14:10:14+00:00","author":{"@id":"https://www.hostinger.com.br/tutoriais/#/schema/person/bad72516ca117c6128ed770d0a1aa30e"},"description":"Você pode conectar quantas stylesheets desejar com esta sintaxe para linkar CSS no HTML. Confira o tutorial.","breadcrumb":{"@id":"https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html"]}]},{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html#primaryimage","url":"https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.png","contentUrl":"https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.png","width":900,"height":520,"caption":"como linkar css no html"},{"@type":"BreadcrumbList","@id":"https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.hostinger.com.br/tutoriais"},{"@type":"ListItem","position":2,"name":"Como linkar CSS no HTML"}]},{"@type":"WebSite","@id":"https://www.hostinger.com.br/tutoriais/#website","url":"https://www.hostinger.com.br/tutoriais/","name":"Hostinger Tutoriais","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.hostinger.com.br/tutoriais/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"pt-BR"},{"@type":"Person","@id":"https://www.hostinger.com.br/tutoriais/#/schema/person/bad72516ca117c6128ed770d0a1aa30e","name":"Ariane G.","image":{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https://www.hostinger.com.br/tutoriais/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/bf95b007e70f514d10932901964df32d?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/bf95b007e70f514d10932901964df32d?s=96&d=mm&r=g","caption":"Ariane G."},"description":"A Ariane é SEO Team Leader com experiência em conteúdo, localização e SEO. Seu desafio é levar a Hostinger ao topo dos resultados no Brasil, França e Reino Unido. Eventualmente ela compartilha seu conhecimento no blog e nos tutoriais da Hostinger e no tempo livre ela gosta de explorar lugares novos e viver intencionalmente.","url":"https://www.hostinger.com.br/tutoriais/author/arianegoncalves"}]}</script>
+
+<link rel='dns-prefetch' href='//facebook.net' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Hostinger Tutoriais &raquo;" href="https://www.hostinger.com.br/tutoriais/feed" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Hostinger Tutoriais &raquo;" href="https://www.hostinger.com.br/tutoriais/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Hostinger Tutoriais &raquo; Como linkar CSS no HTML" href="https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html/feed" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.hostinger.com.br/tutoriais/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://www.hostinger.com.br/tutoriais/wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='ppress-frontend-css' href='https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/tutoriais/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=1665765579' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css' href='https://www.hostinger.com.br/tutoriais/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=4.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css' href='https://www.hostinger.com.br/tutoriais/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=6.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css' href='https://www.hostinger.com.br/tutoriais/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=6.1.1' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}div#ez-toc-container nav ul ul li ul li {font-size: 90%!important;}
+</style>
+<link data-minify="1" rel='stylesheet' id='understrap-styles-css' href='https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/tutoriais/wp-content/themes/tutorialsthemeuplift/public/css/theme.min.css?ver=1665765579' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='prismCSS-css' href='https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/tutoriais/wp-content/themes/tutorialsthemeuplift/resources/prism.css?ver=1665765579' type='text/css' media='all' />
+<script type='text/javascript' id='yoast-seo-base-site-url_js-js-extra'>
+/* <![CDATA[ */
+var yoastSeoBaseSiteUrl = {"base_url":"https:\/\/www.hostinger.com.br\/tutoriais"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/tutoriais/wp-content/themes/tutorialsthemeuplift/resources/js/yoast-seo-base-site-url.js?ver=1665765579' id='yoast-seo-base-site-url_js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=4.3.2' id='ppress-flatpickr-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=4.3.2' id='ppress-select2-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/tutoriais/wp-content/themes/tutorialsthemeuplift/resources/prism.js?ver=1665765579' id='prismJS-js' defer></script>
+<link rel="https://api.w.org/" href="https://www.hostinger.com.br/tutoriais/wp-json/" /><link rel="alternate" type="application/json" href="https://www.hostinger.com.br/tutoriais/wp-json/wp/v2/posts/13570" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hostinger.com.br/tutoriais/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hostinger.com.br/tutoriais/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.1.1" />
+<link rel='shortlink' href='https://www.hostinger.com.br/tutoriais/?p=13570' />
+<link rel="alternate" type="application/json+oembed" href="https://www.hostinger.com.br/tutoriais/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hostinger.com.br%2Ftutoriais%2Fcomo-linkar-css-no-html" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.hostinger.com.br/tutoriais/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hostinger.com.br%2Ftutoriais%2Fcomo-linkar-css-no-html&#038;format=xml" />
+
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KL4FQVG');</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html"
+    },
+    "headline": "Como linkar CSS no HTML",
+    "datePublished": "2018-11-28T08:24:24-0200",
+    "dateModified": "2022-05-17T11:10:14-0300",
+    "author": {
+        "@type": "Person",
+        "name": "Ariane G."
+    },
+    "description": "Todo site moderno precisa ter um arquivo stylesheet em que todas as classes dos objetos HTML são definidas. Es",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.png",
+        "width": 900,
+        "height": 520
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hostinger",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/09/hostinger-tutorials-logo-retina.png",
+            "width": 452,
+            "height": 56
+        }
+    }
+}
+</script>
+
+<style></style> <script type="rocketlazyloadscript">
+            document.addEventListener('DOMContentLoaded', function () {
+                let anchorTags = document.querySelectorAll('.ez-toc-link');
+                anchorTags.forEach(function(element) {
+                    element.text = element.text.replace(':','');
+                });
+            }, false);
+        </script>
+<link rel="icon" href="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2017/06/cropped-cropped-hostinger-fav-1-32x32.webp" sizes="32x32" />
+<link rel="icon" href="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2017/06/cropped-cropped-hostinger-fav-1-192x192.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2017/06/cropped-cropped-hostinger-fav-1-180x180.webp" />
+<meta name="msapplication-TileImage" content="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2017/06/cropped-cropped-hostinger-fav-1-270x270.png" />
+<style type="text/css" id="wp-custom-css">
+			#ez-toc-container nav ul li {
+    padding-top: 10px;
+}		</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+<body class="post-template-default single single-post postid-13570 single-format-standard wp-embed-responsive">
+<div id="navigation-new">
+<hmenu-new :menu-items="[{&quot;id&quot;:&quot;mainMenu&quot;,&quot;title&quot;:&quot;Website Hosting&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Hospedagem&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-hosting&quot;,&quot;dropDown&quot;:true,&quot;items&quot;:[{&quot;title&quot;:&quot;Hospedagem de Site&quot;,&quot;text&quot;:&quot;Para sites pequenos e m\u00e9dios.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/shared-hosting.svg&quot;,&quot;href&quot;:&quot;\/hospedagem-de-sites&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-web-hosting&quot;},{&quot;title&quot;:&quot;Hospedagem Cloud&quot;,&quot;text&quot;:&quot;Para projetos de grande escala.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/cloud-hosting.svg&quot;,&quot;href&quot;:&quot;\/hospedagem-cloud&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-cloud-hosting&quot;},{&quot;title&quot;:&quot;Hospedagem WordPress&quot;,&quot;text&quot;:&quot;Solu\u00e7\u00f5es otimizadas para hospedagem WordPress.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/wordpress-hosting.svg&quot;,&quot;href&quot;:&quot;\/hospedagem-wordpress&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-wordpress-hosting&quot;}],&quot;opened&quot;:false},{&quot;title&quot;:&quot;VPS&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-vps&quot;,&quot;dropDown&quot;:true,&quot;items&quot;:[{&quot;title&quot;:&quot;Servidor VPS&quot;,&quot;text&quot;:&quot;Recursos dedicados para escalar.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/vps-hosting.svg&quot;,&quot;href&quot;:&quot;\/servidor-vps&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-vps-hosting&quot;},{&quot;title&quot;:&quot;CyberPanel&quot;,&quot;text&quot;:&quot;Painel de controle com Webserver Open\/LiteSpeed&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/cyberpanel-hosting.svg&quot;,&quot;href&quot;:&quot;\/hospedagem-vps-cyberpanel&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-cyberpanel-hosting&quot;},{&quot;title&quot;:&quot;Host Minecraft&quot;,&quot;text&quot;:&quot;Compartilhe sua experi\u00eancia com Minecraft&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/minecraft-hosting.svg&quot;,&quot;href&quot;:&quot;\/servidores-de-minecraft&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-minecraft-hosting&quot;}],&quot;opened&quot;:false},{&quot;title&quot;:&quot;Email&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-email&quot;,&quot;dropDown&quot;:true,&quot;items&quot;:[{&quot;title&quot;:&quot;Google Workspace&quot;,&quot;text&quot;:&quot;Obtenha um email customizado e 30GB de armazenamento.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/email\/google-workspace-hosting.svg&quot;,&quot;href&quot;:&quot;\/google-workspace&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-google-workspace&quot;},{&quot;title&quot;:&quot;Email Profissional&quot;,&quot;text&quot;:&quot;Promova seu neg\u00f3cio em cada alcance.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/email\/email-hosting.svg&quot;,&quot;href&quot;:&quot;\/email-profissional&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-email-hosting&quot;}],&quot;opened&quot;:false},{&quot;title&quot;:&quot;Dom\u00ednio&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-domain&quot;,&quot;dropDown&quot;:true,&quot;items&quot;:[{&quot;title&quot;:&quot;Pesquisar Nome de Dom\u00ednio&quot;,&quot;text&quot;:&quot;Encontre um dom\u00ednio perfeito.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/domain\/domain-checker.svg&quot;,&quot;href&quot;:&quot;\/registro-de-dominio&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-domain-checker&quot;},{&quot;title&quot;:&quot;WHOIS&quot;,&quot;text&quot;:&quot;Ferramenta de consulta para encontrar informa\u00e7\u00f5es WHOIS.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/domain\/whois-database.svg&quot;,&quot;href&quot;:&quot;\/whois&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-whois&quot;},{&quot;title&quot;:&quot;Transferir Dom\u00ednio&quot;,&quot;text&quot;:&quot;Quer transferir um dom\u00ednio para a Hostinger?&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/domain\/domain-transfer.svg&quot;,&quot;href&quot;:&quot;\/transferencia-de-dominio&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-transfer-domain&quot;}],&quot;opened&quot;:false},{&quot;title&quot;:&quot;Login&quot;,&quot;href&quot;:&quot;\/cpanel-login&quot;,&quot;nameIsLogin&quot;:true,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-cpanel-login&quot;,&quot;material&quot;:&quot;lock&quot;}]},{&quot;id&quot;:&quot;secondaryMenu&quot;,&quot;title&quot;:&quot;Article topics&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;WordPress&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wordpress&quot;},{&quot;title&quot;:&quot;VPS&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/vps&quot;},{&quot;title&quot;:&quot;Website&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/website&quot;},{&quot;title&quot;:&quot;Escola de Afiliados&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/escola-de-afiliados&quot;},{&quot;title&quot;:&quot;Tutoriais em V\u00eddeo&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/video&quot;},{&quot;title&quot;:&quot;Webinars&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/webinar&quot;}]}]" cart-path="/cart" home-path="/" blog-path="https://www.hostinger.com.br/tutoriais" tutorials-name="Tutoriais" cart="Carrinho" theme-tld=".com.br">
+</hmenu-new>
+</div>
+<div class="h-pb-2 h-pt-2 justify-content-center primary l700 position-relative w-100 position-absolute" id="submenu">
+<div class="container d-flex w-100 align-items-center height-16px justify-content-between">
+<div class="d-flex">
+<span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.com.br/tutoriais/wordpress" data-wpel-link="internal">WordPress</a>
+</span>
+<span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.com.br/tutoriais/vps" data-wpel-link="internal">VPS</a>
+ </span>
+<span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.com.br/tutoriais/website" data-wpel-link="internal">Website</a>
+</span>
+<span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.com.br/tutoriais/escola-de-afiliados" data-wpel-link="internal">Escola de Afiliados</a>
+</span>
+<span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.com.br/tutoriais/video" data-wpel-link="internal">Tutoriais em Vídeo</a>
+</span>
+<span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.com.br/tutoriais/webinar" data-wpel-link="internal">Webinars</a>
+</span>
+</div>
+<div class="d-flex align-items-center">
+<form id="searchbox" method="get" action="https://www.hostinger.com.br/tutoriais/" role="search" class="w-100">
+<input class="label text-content-grey w-100 mr-20 pr-40" id="s" name="s" type="text" placeholder="Pesquisar" value="" />
+</form>
+<i onclick="toggleSearch()" id="searchIcon" class="position-relative material-icons ml-auto cursor-pointer">
+search
+</i>
+</div>
+</div>
+</div>
+<script type="rocketlazyloadscript">
+    var searchbox = document.getElementById("searchbox");
+    var searchBoxVisible = false;
+    if (searchbox) {
+        searchbox.style.display = "none";
+    }
+
+    function toggleSearch() {
+        if (searchbox.style.display === "none") {
+            searchbox.style.display = "block";
+            searchbox.classList.add("fade-in");
+            document.getElementById("s").focus();
+            searchBoxVisible = true;
+        } else {
+            searchbox.style.display = "none";
+            searchBoxVisible = false;
+
+        }
+    }
+
+    function onClickOutside(e) {
+        if (searchBoxVisible && e.target.id !== "searchbox" && e.target.id !== "searchIcon" && e.target.id !== "s") {
+            searchbox.style.display = "none";
+        }
+    }
+
+    window.addEventListener("click", onClickOutside);
+</script>
+<div id="gdpr-consent">
+<gdpr-banner-bottom :strings="{&quot;banner&quot;:{&quot;body&quot;:{&quot;firstHeading&quot;:&quot;N\u00f3s nos Importamos com sua Privacidade&quot;,&quot;firstBody&quot;:&quot;N\u00f3s e nossos parceiros utilizamos cookies para armazenar e acessar informa\u00e7\u00f5es pessoais, como dados de navega\u00e7\u00e3o, com o prop\u00f3sito de servir e personalizar conte\u00fados e an\u00fancios, e analisar o tr\u00e1fego do site. Voc\u00ea pode verificar mais detalhes sobre nosso prop\u00f3sito em utilizar cookies, e exercer suas prefer\u00eancias, clicando abaixo no bot\u00e3o de \&quot;Configura\u00e7\u00e3o de Cookies.\&quot; Voc\u00ea pode revisitar suas prefer\u00eancias ou remover o consentimento a qualquer momento clicando no link de suas configura\u00e7\u00f5es de cookies na nossa Pol\u00edtica de Cookies. N\u00f3s trabalhamos em conson\u00e2ncia com uma estrat\u00e9gia da ind\u00fastria, sinalizando suas prefer\u00eancias globalmente para todos os sites participantes. Voc\u00ea pode ajustar as prefer\u00eancias de cookies nas &lt;span id='hgr-cookie_consent-show_settings_btn' class='link fs-14 fs-15-sm cursor-pointer'&gt;Configura\u00e7\u00f5es de Cookies&lt;\/span&gt;.&quot;,&quot;secondHeading&quot;:&quot;N\u00f3s e nossos parceiros processamos dados:&quot;,&quot;secondBody&quot;:&quot;Armazenar e\/ou acessar informa\u00e7\u00f5es em um dispositivo. An\u00fancios personalizados.  Conte\u00fado personalizado. Mensura\u00e7\u00e3o de an\u00fancios e conte\u00fado, entendimento da audi\u00eancia, e desenvolvimento de produtos. Para mais informa\u00e7\u00f5es, favor ler nossa &lt;a id='hgr-cookie_consent-cookie_policy_btn' class='link fs-14 fs-15-sm cursor-pointer' target='_blank' ref='someLink' rel='noopener noreferrer nofollow' href='\/politica-de-cookies'&gt;Pol\u00edtica de Cookies&lt;\/a&gt;.&quot;},&quot;acceptBtn&quot;:&quot;Aceitar cookies&quot;,&quot;settingsBtn&quot;:&quot;Configura\u00e7\u00f5es de cookies&quot;},&quot;popup&quot;:{&quot;header&quot;:{&quot;title&quot;:&quot;Cookies settings&quot;,&quot;body&quot;:&quot;N\u00f3s processamos seus dados com objetivos como o de entregar conte\u00fado ou an\u00fancios, e mensurar a entrega desses conte\u00fados e an\u00fancios para extrair entendimentos sobre nosso site. N\u00f3s podemos compartilhar essas informa\u00e7\u00f5es com nossos parceiros. Cookies configurados pela Hostinger s\u00e3o nomeados \&quot;cookies propriet\u00e1rios\&quot;, e voc\u00ea pode gerenciar suas prefer\u00eancias com rela\u00e7\u00e3o a esses cookies ao habilitar e desabilitar as funcionalidades abaixo. O restante dos cookies s\u00e3o \&quot;cookies de terceiros\&quot;; voc\u00ea pode gerenciar suas prefer\u00eancias com rela\u00e7\u00e3o a cada prop\u00f3sito ao habilitar e desabilitar a referida funcionalidade abaixo, ou com rela\u00e7\u00e3o a cada fornecedor ao clicar em \&quot;Lista de Fornecedores IAB.\&quot; Essas escolhas ser\u00e3o globalmente sinalizadas para outros sites participantes da Estrat\u00e9gia de Consentimento e Transpar\u00eancia. &lt;a id='hgr-cookie_consent-settings-cookie_policy_btn' class='link fs-14' target='_blank' rel='noopener noreferrer nofollow' href='\/politica-de-cookies'&gt;Pol\u00edtica de Cookies&lt;\/a&gt;.&quot;,&quot;btn&quot;:&quot;Aceitar todos&quot;},&quot;cookies&quot;:[{&quot;title&quot;:&quot;Cookies obrigat\u00f3rios&quot;,&quot;body&quot;:&quot;Eles s\u00e3o necess\u00e1rios para garantir o funcionamento adequado do site.&quot;,&quot;btn&quot;:&quot;Sempre ativo&quot;},{&quot;title&quot;:&quot;Cookies de estat\u00edsticas&quot;,&quot;body&quot;:&quot;S\u00e3o importantes para melhorarmos as funcionalidades e estrutura do site, baseados em como o site est\u00e1 usando dados.&quot;,&quot;cookieName&quot;:&quot;statistics&quot;},{&quot;title&quot;:&quot;Cookies de marketing&quot;,&quot;body&quot;:&quot;Eles s\u00e3o usados para coletar informa\u00e7\u00f5es para exibir publicidade ou conte\u00fados espec\u00edficos para um navegador em particular ao criar diferentes grupos-alvo.&quot;,&quot;cookieName&quot;:&quot;advertising&quot;}],&quot;buttonTxt&quot;:&quot;Aceitar Selecionados&quot;}}">
+</div>
+<div class="h-pt-3">
+<div class="container">
+<div class="row col-12 col-lg-9">
+<div class="text-h-primary label position-relative top-3rem">
+</div>
+</div>
+</div>
+</div> <div class="pt-30 pt-0-lg pb-40">
+<div id="blog-post-container" class="w-100 flex-column d-flex flex-lg-row position-relative pt-20-lg">
+<div id="post" class="d-flex flex-column flex-lg-row col-12 col-lg-9 col-xxl-7 offset-lg-1 offset-xxl-2 position-relative justify-content-center sidebar-left__wrapper">
+<div class="stories-margin mt-150-lg sidebar-left">
+<div class="widget-area row d-table mr-50-lg" style="height: 100%">
+<div class="dynamic-sidebar col-12 col-md-6 col-lg-12 sticky-widget mx-auto px-0 pb-30">
+<div id="block-4" class="widget widget_block sticky-banner-margin"><div id="om-md8fnunkcpwvo0kgbytl-holder"></div>
+<div id="om-bwafcyqbj7mtoet9kr4m-holder"></div>
+<div id="om-jgzcku8dqzjakqjc44a6-holder"></div>
+<div id="om-zpwneppajv9kbygmxuao-holder"></div>
+<div id="om-cy92vrrlwkri1sqydhag-holder"></div>
+</div> </div>
+</div>
+</div> <div class="post-content">
+<div class="d-flex label text-content-grey mb-20 mb-sm-30 flex-wrap">
+<div class="d-flex align-items-center h-mr-2 category">
+<a class="category-name mr-5" href="https://www.hostinger.com.br/tutoriais/website" id="category-name" data-wpel-link="internal">
+Website </a>
+</div>
+<div class="d-flex align-items-center mr-sm-4 mr-1">
+<p class="post-info">
+maio 17, 2022 </p>
+</div>
+<div class="d-flex align-items-center mr-sm-4 mr-1">
+<p class="ml-2 post-info">
+Ariane G. </p>
+</div>
+<div class="d-flex align-items-center">
+<p class="ml-2 post-info">3min de leitura </p>
+</div>
+</div>
+<h1>Como linkar CSS no HTML</h1>
+<div class="social-container d-flex d-xl-none">
+<a class="social-link text-light-black cursor-pointer d-flex align-items-center justify-content-center">
+<svg width="28" height="28" class="link" viewBox="0 0 28 14" onclick="copyToClipboard('www.hostinger.com.br/tutoriais/como-linkar-css-no-html');linkClick(event)" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.364 0.5C2.85 0.5 0 3.41 0 7C0 10.59 2.85 13.5 6.364 13.5H11.454V10.9H6.364C4.254 10.9 2.545 9.154 2.545 7C2.545 4.846 4.255 3.1 6.364 3.1H11.454V0.5H6.364V0.5ZM16.545 0.5V3.1H21.636C23.746 3.1 25.455 4.846 25.455 7C25.455 9.154 23.745 10.9 21.636 10.9H16.546V13.5H21.636C25.15 13.5 28 10.59 28 7C28 3.41 25.15 0.5 21.636 0.5H16.546H16.545ZM7.636 5.7V8.3H20.364V5.7H7.636Z" />
+</svg>
+<div id="copyLink" style="display: none;" class="copy-link">Copiar link</div>
+<div id="copiedLink" style="display: none;" class="copied-link">Copiado</div>
+</a>
+<a href="https://twitter.com/intent/tweet?text=Como linkar CSS no HTML&amp;url=www.hostinger.com.br/tutoriais/como-linkar-css-no-html" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+<svg width="28" height="28" class="twitter" viewBox="0 0 28 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 3.222C26.97 3.685 25.862 3.996 24.7 4.137C25.9034 3.4078 26.801 2.26638 27.226 0.925C26.0996 1.60097 24.8652 2.07794 23.577 2.335C23.0427 1.75645 22.3944 1.29475 21.673 0.978948C20.9515 0.663145 20.1725 0.500076 19.385 0.5C16.212 0.5 13.641 3.1 13.641 6.306C13.641 6.761 13.693 7.206 13.789 7.629C9.016 7.387 4.784 5.075 1.95 1.56C1.43967 2.44841 1.17205 3.45545 1.174 4.48C1.17133 5.43314 1.40284 6.37235 1.84817 7.21507C2.2935 8.05778 2.93903 8.7782 3.728 9.313C2.81494 9.28354 1.92242 9.03451 1.126 8.587V8.66C1.126 11.474 3.106 13.82 5.734 14.353C4.8886 14.5858 4.00082 14.62 3.14 14.453C3.871 16.76 5.993 18.439 8.506 18.486C7.31857 19.431 5.95501 20.1305 4.49471 20.5435C3.0344 20.9566 1.50652 21.075 0 20.892C2.62075 22.596 5.68001 23.502 8.806 23.5C19.372 23.5 25.148 14.652 25.148 6.98C25.1481 6.72925 25.1428 6.47852 25.132 6.228C26.2588 5.40415 27.23 4.38627 28 3.222V3.222Z" />
+</svg>
+</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=www.hostinger.com.br/tutoriais/como-linkar-css-no-html" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+<svg width="28" height="28" class="facebook" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3307_57195)">
+<path d="M24.889 1.60787e-07H3.11C2.7015 1.39669e-07 2.29701 0.0804758 1.91962 0.23683C1.54224 0.393185 1.19935 0.622355 0.910544 0.911252C0.621741 1.20015 0.392681 1.54311 0.236448 1.92055C0.0802144 2.29799 -0.000131188 2.70251 1.60787e-07 3.111V24.89C1.39669e-07 25.2985 0.0804758 25.703 0.23683 26.0804C0.393185 26.4578 0.622355 26.8007 0.911252 27.0895C1.20015 27.3783 1.54311 27.6073 1.92055 27.7636C2.29799 27.9198 2.70251 28.0001 3.111 28H14.966V17.172H11.321V12.932H14.966V9.815C14.966 6.2 17.176 4.229 20.403 4.229C21.4898 4.22651 22.5759 4.28092 23.657 4.392V8.172H21.436C19.678 8.172 19.336 9.003 19.336 10.229V12.928H23.536L22.99 17.167H19.31V28H24.889C25.2976 28.0001 25.7022 27.9198 26.0797 27.7635C26.4572 27.6072 26.8002 27.378 27.0891 27.0891C27.378 26.8002 27.6072 26.4572 27.7635 26.0797C27.9198 25.7022 28.0001 25.2976 28 24.889V3.11C28 2.7015 27.9195 2.29701 27.7632 1.91962C27.6068 1.54224 27.3776 1.19935 27.0887 0.910544C26.7999 0.621741 26.4569 0.392681 26.0795 0.236448C25.702 0.0802144 25.2975 -0.000131188 24.889 1.60787e-07Z" />
+</g>
+<defs>
+<clipPath id="clip0_3307_57195">
+<rect width="28" height="28" fill="white" />
+</clipPath>
+</defs>
+</svg>
+</a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=www.hostinger.com.br/tutoriais/como-linkar-css-no-html" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+<svg width="28" height="28" class="linkedin h-p-0-lg h-mb-3-lg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3302_57044)">
+<path d="M24.889 1.60787e-07H3.11C2.7015 1.39669e-07 2.29701 0.0804758 1.91962 0.23683C1.54224 0.393185 1.19935 0.622355 0.910544 0.911252C0.621741 1.20015 0.392681 1.54311 0.236448 1.92055C0.0802144 2.29799 -0.000131188 2.70251 1.60787e-07 3.111V24.89C1.39669e-07 25.2985 0.0804758 25.703 0.23683 26.0804C0.393185 26.4578 0.622355 26.8007 0.911252 27.0895C1.20015 27.3783 1.54311 27.6073 1.92055 27.7636C2.29799 27.9198 2.70251 28.0001 3.111 28H24.89C25.2985 28 25.703 27.9195 26.0804 27.7632C26.4578 27.6068 26.8007 27.3776 27.0895 27.0887C27.3783 26.7999 27.6073 26.4569 27.7636 26.0795C27.9198 25.702 28.0001 25.2975 28 24.889V3.11C28 2.7015 27.9195 2.29701 27.7632 1.91962C27.6068 1.54224 27.3776 1.19935 27.0887 0.910544C26.7999 0.621741 26.4569 0.392681 26.0795 0.236448C25.702 0.0802144 25.2975 -0.000131188 24.889 1.60787e-07ZM9.333 21.778H5.41V10.888H9.334V21.778H9.333ZM7.302 8.893C6.102 8.893 5.302 8.093 5.302 7.026C5.302 5.959 6.1 5.16 7.433 5.16C8.633 5.16 9.433 5.96 9.433 7.026C9.433 8.094 8.633 8.893 7.301 8.893H7.302ZM23.333 21.778H19.535V15.826C19.535 14.18 18.522 13.801 18.142 13.801C17.762 13.801 16.497 14.054 16.497 15.826V21.778H12.572V10.888H16.497V12.408C17.002 11.522 18.015 10.888 19.914 10.888C21.814 10.888 23.334 12.408 23.334 15.826V21.778H23.333Z" />
+</g>
+<defs>
+<clipPath id="clip0_3302_57044">
+<rect width="28" height="28" fill="white" />
+</clipPath>
+</defs>
+</svg>
+</a>
+<a href="mailto:?subject=Como linkar CSS no HTML&amp;body=Article:%20www.hostinger.com.br/tutoriais/como-linkar-css-no-html" class="social-link" target="_blank" rel="nofollow noopener noreferrer">
+<svg width="28" height="28" class="mail h-p-0-lg h-mb-3-lg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8 3.00001C2.12163 2.99621 1.4654 3.24121 0.955496 3.68864C0.445591 4.13608 0.117389 4.7549 0.033 5.42801L14 14L27.967 5.42801C27.8826 4.7549 27.5544 4.13608 27.0445 3.68864C26.5346 3.24121 25.8784 2.99621 25.2 3.00001H2.8ZM0 8.15901V22.25C0 23.77 1.253 25 2.8 25H25.2C26.747 25 28 23.77 28 22.25V8.15901L14.741 16.296C14.5178 16.4323 14.2615 16.5043 14 16.5043C13.7385 16.5043 13.4822 16.4323 13.259 16.296L0 8.16001V8.15901Z" />
+</svg>
+</a>
+</div>
+<script type="rocketlazyloadscript">
+    function linkHover() {
+        var socialLinkHover = document.getElementById("copyLink");
+        if (socialLinkHover.style.display === "none") {
+            socialLinkHover.style.display = "inline-block";
+        } else {
+            socialLinkHover.style.display = "none";
+        }
+    }
+
+    function linkClick(e) {
+        var parent = e.target.parentElement;
+        var socialLinkClick = Array.from(parent.children).find(elem => elem.id == "copiedLink");
+        if (socialLinkClick.style.display === "none") {
+            socialLinkClick.style.display = "inline-block";
+            document.getElementById("copyLink").style.display = "none";
+        } else {
+            socialLinkClick.style.display = "none";
+        }
+        setTimeout(() => { socialLinkClick.style.display = "none" }, 2000);
+    }
+
+    function copyToClipboard(str) {
+        var el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style = {
+            position: 'absolute',
+            left: '-9999px'
+        };
+
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+</script> <div id="thumbnail-image" class="d-flex justify-content-center">
+<img width="786" height="454" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20786%20454'%3E%3C/svg%3E" class="attachment-1110x454 size-1110x454 wp-post-image" alt="Como linkar CSS no HTML" decoding="async" data-lazy-srcset="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.webp 900w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html-150x87.webp 150w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html-300x173.webp 300w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html-768x444.webp 768w" data-lazy-sizes="(max-width: 786px) 100vw, 786px" data-lazy-src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.webp" /><noscript><img width="786" height="454" src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.webp" class="attachment-1110x454 size-1110x454 wp-post-image" alt="Como linkar CSS no HTML" decoding="async" srcset="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html.webp 900w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html-150x87.webp 150w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html-300x173.webp 300w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/11/Como-linkar-css-no-html-768x444.webp 768w" sizes="(max-width: 786px) 100vw, 786px" /></noscript> </div>
+<p><span style="font-weight: 400">Todo site moderno precisa ter um arquivo stylesheet em que todas as classes dos objetos HTML são definidas. Este tutorial ensina a maneira mais popular de linkar o CSS dentro do HTML. Com este método todos os estilos são colocados em um único arquivo de extensão .CSS para que você não precise escrever todos os estilos em um documento HTML. O arquivo CSS fica salvo no servidor e tudo que você precisa fazer é criar um link para vincular com o documento HTML.</span></p>
+<figure class="wp-block-image size-large"><a href="https://app.monstercampaigns.com/c/brvlrz5wllprtbkb8ebn/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><img decoding="async" width="1024" height="283" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20283'%3E%3C/svg%3E" alt="" class="wp-image-30342" data-lazy-srcset="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR.webp 1024w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-300x83.png 300w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-150x41.png 150w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-768x212.png 768w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-1536x425.png 1536w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-1024x283.png" /><noscript><img decoding="async" width="1024" height="283" src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-1024x283.png" alt="" class="wp-image-30342" srcset="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR.webp 1024w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-300x83.png 300w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-150x41.png 150w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-768x212.png 768w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/12/eBook_-Build-website-BR-1536x425.png 1536w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></a></figure>
+<div><p class="important"><strong>Hospedagem VPS</strong> simples, rápida e confiável com até <strong>63% de desconto</strong>! Escolha entre CentOS, Ubuntu, Fedora, Debian ou Suse para o seu SO.<br />
+<p class="hgr-button-center"><a href="/servidor-vps" id="hgr-tutorials-cta" class="hgr-button red" data-wpel-link="internal">Comece Agora</a></p></p></div>
+<h2 id="h-o-que-voc-vai-precisar"><b>O que você vai precisar</b></h2>
+<p><span style="font-weight: 400">Antes de iniciar o tutorial você vai precisar de:</span></p>
+<ul><li style="font-weight: 400"><span style="font-weight: 400">Acesso ao servidor;</span></li><li style="font-weight: 400"><span style="font-weight: 400">Documento HTML (extensão .html ou .htm);</span></li><li style="font-weight: 400"><span style="font-weight: 400">Arquivo CSS (com extensão .css);</span></li><li style="font-weight: 400"><span style="font-weight: 400">Conhecimento básico de HTML e CSS.</span></li></ul>
+<h2 id="h-1-passo-verificando-o-caminho-do-arquivo-css-e-inserindo-a-linha-no-documento-html"><b>1º Passo — Verificando o Caminho do Arquivo CSS e Inserindo a Linha no Documento HTML</b></h2>
+<p><span style="font-weight: 400">Este link é uma linha simples entre as tags </span><span style="font-weight: 400">&lt;head&gt;</span><span style="font-weight: 400"> e </span><span style="font-weight: 400">&lt;/head&gt;</span><span style="font-weight: 400"> do seu documento HTML, neste estilo:</span></p>
+<pre class="wp-block-preformatted"><span style="font-weight: 400">&lt;link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" /&gt;</span></pre>
+<p><span style="font-weight: 400">O seu código HTML vai ficar desta maneira:</span></p>
+<pre class="wp-block-preformatted"><i><span style="font-weight: 400">&lt;!DOCTYPE html&gt;</span></i><i>
+</i><i><span style="font-weight: 400">&lt;html&gt;</span></i><i>
+</i><i><span style="font-weight: 400">&lt;head&gt;</span></i><i>
+</i><i><span style="font-weight: 400">&lt;link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" /&gt;</span></i><i>
+</i><i><span style="font-weight: 400">&lt;/head&gt;</span></i><i>
+</i><i><span style="font-weight: 400">&lt;body&gt;</span></i><i>
+</i><i><span style="font-weight: 400">&lt;/body&gt;</span></i><i>
+</i><i><span style="font-weight: 400">&lt;/html&gt;</span></i></pre>
+<p><span style="font-weight: 400">Certifique de informar o caminho correto do CSS no href. É recomendado que o arquivo CSS esteja no mesmo diretório do arquivo HTML ou que seja criado um subdiretório chamado </span><i><span style="font-weight: 400">CSS</span></i><span style="font-weight: 400"> para armazenar os arquivos (se os arquivos forem armazenados no diretório </span><i><span style="font-weight: 400">CSS</span></i><span style="font-weight: 400">, o </span><b>href</b><span style="font-weight: 400"> deve ser mudado para </span><span style="font-weight: 400">href=&#8221;CSS/stylesheet.css&#8221;</span><span style="font-weight: 400"> no exemplo acima).</span></p>
+<h3 id="h-explica-o-dos-atributos-do-link"><b>Explicação dos atributos do link:</b></h3>
+<p><b>rel</b><span style="font-weight: 400"> – Esse atributo define o relacionamento entre o arquivo em que o comando está escrito e o arquivo que é definido no caminho do </span><b>href</b><span style="font-weight: 400">. Geralmente será apenas um </span><span style="font-weight: 400">stylesheet</span><span style="font-weight: 400"> se conectamos um arquivo CSS (stylesheet).</span></p>
+<p><b>type</b><span style="font-weight: 400"> – Esse atributo define o conteúdo do arquivo para qual está linkado. O valor do atributo deve ser um MIME como text/html, text/css e similares. Este tutorial ensina o uso de um stylesheet, então deve ser </span><span style="font-weight: 400">text/css</span><span style="font-weight: 400">.</span></p>
+<p><b>href</b><span style="font-weight: 400"> – O atributo Href especifica a localização do arquivo que você precisa criar um link. Como você está tentando linkar um arquivo CSS, o caminho deve ser um subdiretório do CSS (caso não seja o mesmo diretório do arquivo HTML) e o nome do arquivo CSS. Se o arquivo estiver no mesmo diretório, então você precisa inserir somente o nome do arquivo.</span></p>
+<p><span style="font-weight: 400">Exemplo da sintaxe href quando o stylesheet está em um subdiretório:</span></p>
+<ul><li style="font-weight: 400"><b>Condição 1:</b><span style="font-weight: 400"> O arquivo HTML está no diretório </span><b>public_html</b><span style="font-weight: 400">.</span></li><li style="font-weight: 400"><b>Condição 2:</b><span style="font-weight: 400"> O arquivo stylesheet (vamos nomeá-lo stylesheet.css) está localizado no subdiretório CSS dentro da pasta </span><b>public_html</b><span style="font-weight: 400">.</span></li></ul>
+<p><b>Sintaxe correta:</b><span style="font-weight: 400"> a definição do href no arquivo HTML deve ser </span><span style="font-weight: 400">CSS/stylesheet.css</span></p>
+<p><b>media</b><span style="font-weight: 400"> – Este atributo define a mídia. O seu valor deve ser uma query de mídia. Ocasionalmente stylesheets externos são utilizados e esse atributo é útil quando um stylesheet específico é necessário de acordo com o dispositivo que o visitante está utilizando.</span></p>
+<p><span style="font-weight: 400">O atributo mídia e determina quando as regras do CSS devem ser utilizadas. “screen” indica o uso em uma tela de computador.</span><span style="font-weight: 400"><br></span><span style="font-weight: 400">Caso </span><span style="font-weight: 400">print</span><span style="font-weight: 400"> seja especificado, então as regras só se aplicam quando a página está sendo impressa.</span><span style="font-weight: 400"><br></span><span style="font-weight: 400">Você também podem incluir diversos arquivos CSS se necessário.</span></p>
+<h2 id="h-2-passo-salvando-o-arquivo-html-e-verificando-as-altera-es"><b>2º Passo — Salvando o Arquivo HTML e Verificando as Alterações</b></h2>
+<p><span style="font-weight: 400">Salve as alterações no HTML e acesse a URL no navegador. Os estilos escritos no arquivo CSS devem aparecer no seu site.</span></p>
+<h2 id="h-conclus-o"><b>Conclusão</b></h2>
+<p><span style="font-weight: 400">Esta é uma maneira simples de linkar o CSS dentro do HTML. Você pode linkar quantas stylesheets desejar com esta sintaxe. Cada arquivo CSS deve ter seu próprio atributo.</span></p>
+<p><span style="font-weight: 400">Estas são algumas vantagens deste método:</span></p>
+<ul><li style="font-weight: 400"><span style="font-weight: 400">O método permite que você economize tempo porque se a mesma classe é utilizada em diversas páginas você precisa somente definir esta classe no arquivo CSS e não em todas as páginas.</span></li><li style="font-weight: 400"><span style="font-weight: 400">O CSS torna seu site mais rápido porque o arquivo é carregado e armazenado em cache no navegador do visitante. Na próxima vez que ele visitar o mesmo site algumas informações sobre o site já estão no histórico do navegador.</span></li><li style="font-weight: 400"><span style="font-weight: 400">Seu site irá ranquear melhor nos mecanismos de busca. Como os códigos de stylesheet são definidos no arquivo .CSS, então sua página será praticamente texto simples fazendo com que os mecanismos de busca não tenham dificuldades para ler. A clareza do conteúdo é um dos principais fatores para ter sucesso no ranqueamento do seu site.</span></li></ul>
+<div id="the-author-section" class="col-12 bg-ghost-white">
+<div class="d-flex flex-column flex-sm-row ml-0 justify-content-center justify-content-sm-start">
+<div class="author-avatar">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="border-radius-50" alt="Author" data-lazy-src="https://secure.gravatar.com/avatar/bf95b007e70f514d10932901964df32d?s=96&d=mm&r=g" /><noscript><img src="https://secure.gravatar.com/avatar/bf95b007e70f514d10932901964df32d?s=96&d=mm&r=g"
+                   class="border-radius-50"
+                   alt="Author"/></noscript>
+</div>
+<div class="author-info align-items-sm-start pl-20-sm">
+<span class="author">O autor</span>
+<p class="author-name">Ariane G.</p>
+</div>
+</div>
+<div class="description mt-15 mt-30-md">
+<p class="text-center text-sm-left">
+A Ariane é SEO Team Leader com experiência em conteúdo, localização e SEO. Seu desafio é levar a Hostinger ao topo dos resultados no Brasil, França e Reino Unido. Eventualmente ela compartilha seu conhecimento no blog e nos tutoriais da Hostinger e no tempo livre ela gosta de explorar lugares novos e viver intencionalmente. </p>
+</div>
+<div class="more-from-author">
+<a class="links-hover mt-5" href="https://www.hostinger.com.br/tutoriais/author/arianegoncalves" data-wpel-link="internal">
+Mais de Ariane G. </a>
+</div>
+</div>
+</div>
+<div class="social-container position-sticky d-none d-xl-block">
+<a class="social-link text-light-black cursor-pointer d-flex align-items-center justify-content-center">
+<svg width="28" height="28" class="link" viewBox="0 0 28 14" onclick="copyToClipboard('www.hostinger.com.br/tutoriais/como-linkar-css-no-html');linkClick(event)" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.364 0.5C2.85 0.5 0 3.41 0 7C0 10.59 2.85 13.5 6.364 13.5H11.454V10.9H6.364C4.254 10.9 2.545 9.154 2.545 7C2.545 4.846 4.255 3.1 6.364 3.1H11.454V0.5H6.364V0.5ZM16.545 0.5V3.1H21.636C23.746 3.1 25.455 4.846 25.455 7C25.455 9.154 23.745 10.9 21.636 10.9H16.546V13.5H21.636C25.15 13.5 28 10.59 28 7C28 3.41 25.15 0.5 21.636 0.5H16.546H16.545ZM7.636 5.7V8.3H20.364V5.7H7.636Z" />
+</svg>
+<div id="copyLink" style="display: none;" class="copy-link">Copiar link</div>
+<div id="copiedLink" style="display: none;" class="copied-link">Copiado</div>
+</a>
+<a href="https://twitter.com/intent/tweet?text=Como linkar CSS no HTML&amp;url=www.hostinger.com.br/tutoriais/como-linkar-css-no-html" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+<svg width="28" height="28" class="twitter" viewBox="0 0 28 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 3.222C26.97 3.685 25.862 3.996 24.7 4.137C25.9034 3.4078 26.801 2.26638 27.226 0.925C26.0996 1.60097 24.8652 2.07794 23.577 2.335C23.0427 1.75645 22.3944 1.29475 21.673 0.978948C20.9515 0.663145 20.1725 0.500076 19.385 0.5C16.212 0.5 13.641 3.1 13.641 6.306C13.641 6.761 13.693 7.206 13.789 7.629C9.016 7.387 4.784 5.075 1.95 1.56C1.43967 2.44841 1.17205 3.45545 1.174 4.48C1.17133 5.43314 1.40284 6.37235 1.84817 7.21507C2.2935 8.05778 2.93903 8.7782 3.728 9.313C2.81494 9.28354 1.92242 9.03451 1.126 8.587V8.66C1.126 11.474 3.106 13.82 5.734 14.353C4.8886 14.5858 4.00082 14.62 3.14 14.453C3.871 16.76 5.993 18.439 8.506 18.486C7.31857 19.431 5.95501 20.1305 4.49471 20.5435C3.0344 20.9566 1.50652 21.075 0 20.892C2.62075 22.596 5.68001 23.502 8.806 23.5C19.372 23.5 25.148 14.652 25.148 6.98C25.1481 6.72925 25.1428 6.47852 25.132 6.228C26.2588 5.40415 27.23 4.38627 28 3.222V3.222Z" />
+</svg>
+</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=www.hostinger.com.br/tutoriais/como-linkar-css-no-html" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+<svg width="28" height="28" class="facebook" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3307_57195)">
+<path d="M24.889 1.60787e-07H3.11C2.7015 1.39669e-07 2.29701 0.0804758 1.91962 0.23683C1.54224 0.393185 1.19935 0.622355 0.910544 0.911252C0.621741 1.20015 0.392681 1.54311 0.236448 1.92055C0.0802144 2.29799 -0.000131188 2.70251 1.60787e-07 3.111V24.89C1.39669e-07 25.2985 0.0804758 25.703 0.23683 26.0804C0.393185 26.4578 0.622355 26.8007 0.911252 27.0895C1.20015 27.3783 1.54311 27.6073 1.92055 27.7636C2.29799 27.9198 2.70251 28.0001 3.111 28H14.966V17.172H11.321V12.932H14.966V9.815C14.966 6.2 17.176 4.229 20.403 4.229C21.4898 4.22651 22.5759 4.28092 23.657 4.392V8.172H21.436C19.678 8.172 19.336 9.003 19.336 10.229V12.928H23.536L22.99 17.167H19.31V28H24.889C25.2976 28.0001 25.7022 27.9198 26.0797 27.7635C26.4572 27.6072 26.8002 27.378 27.0891 27.0891C27.378 26.8002 27.6072 26.4572 27.7635 26.0797C27.9198 25.7022 28.0001 25.2976 28 24.889V3.11C28 2.7015 27.9195 2.29701 27.7632 1.91962C27.6068 1.54224 27.3776 1.19935 27.0887 0.910544C26.7999 0.621741 26.4569 0.392681 26.0795 0.236448C25.702 0.0802144 25.2975 -0.000131188 24.889 1.60787e-07Z" />
+</g>
+<defs>
+<clipPath id="clip0_3307_57195">
+<rect width="28" height="28" fill="white" />
+</clipPath>
+</defs>
+</svg>
+</a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=www.hostinger.com.br/tutoriais/como-linkar-css-no-html" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+<svg width="28" height="28" class="linkedin h-p-0-lg h-mb-3-lg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3302_57044)">
+<path d="M24.889 1.60787e-07H3.11C2.7015 1.39669e-07 2.29701 0.0804758 1.91962 0.23683C1.54224 0.393185 1.19935 0.622355 0.910544 0.911252C0.621741 1.20015 0.392681 1.54311 0.236448 1.92055C0.0802144 2.29799 -0.000131188 2.70251 1.60787e-07 3.111V24.89C1.39669e-07 25.2985 0.0804758 25.703 0.23683 26.0804C0.393185 26.4578 0.622355 26.8007 0.911252 27.0895C1.20015 27.3783 1.54311 27.6073 1.92055 27.7636C2.29799 27.9198 2.70251 28.0001 3.111 28H24.89C25.2985 28 25.703 27.9195 26.0804 27.7632C26.4578 27.6068 26.8007 27.3776 27.0895 27.0887C27.3783 26.7999 27.6073 26.4569 27.7636 26.0795C27.9198 25.702 28.0001 25.2975 28 24.889V3.11C28 2.7015 27.9195 2.29701 27.7632 1.91962C27.6068 1.54224 27.3776 1.19935 27.0887 0.910544C26.7999 0.621741 26.4569 0.392681 26.0795 0.236448C25.702 0.0802144 25.2975 -0.000131188 24.889 1.60787e-07ZM9.333 21.778H5.41V10.888H9.334V21.778H9.333ZM7.302 8.893C6.102 8.893 5.302 8.093 5.302 7.026C5.302 5.959 6.1 5.16 7.433 5.16C8.633 5.16 9.433 5.96 9.433 7.026C9.433 8.094 8.633 8.893 7.301 8.893H7.302ZM23.333 21.778H19.535V15.826C19.535 14.18 18.522 13.801 18.142 13.801C17.762 13.801 16.497 14.054 16.497 15.826V21.778H12.572V10.888H16.497V12.408C17.002 11.522 18.015 10.888 19.914 10.888C21.814 10.888 23.334 12.408 23.334 15.826V21.778H23.333Z" />
+</g>
+<defs>
+<clipPath id="clip0_3302_57044">
+<rect width="28" height="28" fill="white" />
+</clipPath>
+</defs>
+</svg>
+</a>
+<a href="mailto:?subject=Como linkar CSS no HTML&amp;body=Article:%20www.hostinger.com.br/tutoriais/como-linkar-css-no-html" class="social-link" target="_blank" rel="nofollow noopener noreferrer">
+<svg width="28" height="28" class="mail h-p-0-lg h-mb-3-lg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+ <path d="M2.8 3.00001C2.12163 2.99621 1.4654 3.24121 0.955496 3.68864C0.445591 4.13608 0.117389 4.7549 0.033 5.42801L14 14L27.967 5.42801C27.8826 4.7549 27.5544 4.13608 27.0445 3.68864C26.5346 3.24121 25.8784 2.99621 25.2 3.00001H2.8ZM0 8.15901V22.25C0 23.77 1.253 25 2.8 25H25.2C26.747 25 28 23.77 28 22.25V8.15901L14.741 16.296C14.5178 16.4323 14.2615 16.5043 14 16.5043C13.7385 16.5043 13.4822 16.4323 13.259 16.296L0 8.16001V8.15901Z" />
+</svg>
+</a>
+</div>
+<script type="rocketlazyloadscript">
+    function linkHover() {
+        var socialLinkHover = document.getElementById("copyLink");
+        if (socialLinkHover.style.display === "none") {
+            socialLinkHover.style.display = "inline-block";
+        } else {
+            socialLinkHover.style.display = "none";
+        }
+    }
+
+    function linkClick(e) {
+        var parent = e.target.parentElement;
+        var socialLinkClick = Array.from(parent.children).find(elem => elem.id == "copiedLink");
+        if (socialLinkClick.style.display === "none") {
+            socialLinkClick.style.display = "inline-block";
+            document.getElementById("copyLink").style.display = "none";
+        } else {
+            socialLinkClick.style.display = "none";
+        }
+        setTimeout(() => { socialLinkClick.style.display = "none" }, 2000);
+    }
+
+    function copyToClipboard(str) {
+        var el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style = {
+            position: 'absolute',
+            left: '-9999px'
+        };
+
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+</script> </div>
+</div>
+</div>
+<div class="related-tutorials-section">
+<div class="container">
+<div class="d-flex flex-column flex-md-row align-items-center justify-content-center h-mb-5">
+<h2 class="pb-30">
+Tutoriais relacionados </h2>
+</div>
+<div class="row">
+<div class="content-item d-flex flex-column col-md-4 h-mb-2" id="post-29864">
+<div class="col-12 h-p-0 height-20rem d-contents">
+<a class="height-inherit" href="/tutoriais/sites-mais-acessados" data-wpel-link="internal">
+<img width="640" height="281" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20281'%3E%3C/svg%3E" class="object-fit-cover border-radius-10px wp-post-image" alt="Os Sites Mais Acessados de Cada País (Excluindo Buscadores)" decoding="async" data-lazy-srcset="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/11/sites-mais-visitados.webp 721w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/11/sites-mais-visitados-300x132.png 300w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/11/sites-mais-visitados-150x66.png 150w" data-lazy-sizes="(max-width: 640px) 100vw, 640px" data-lazy-src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/11/sites-mais-visitados.webp" /><noscript><img width="640" height="281" src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/11/sites-mais-visitados.webp" class="object-fit-cover border-radius-10px wp-post-image" alt="Os Sites Mais Acessados de Cada País (Excluindo Buscadores)" decoding="async" loading="lazy" srcset="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/11/sites-mais-visitados.webp 721w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/11/sites-mais-visitados-300x132.png 300w,https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2022/11/sites-mais-visitados-150x66.png 150w" sizes="(max-width: 640px) 100vw, 640px" /></noscript> </a>
+</div>
+<div class="d-flex flex-column h-pt-2 h-pb-3">
+<div class="d-flex justify-content-sm-between justify-content-center h-mb-1">
+<p class="label text-h-meteorite-dark fw-800 fs-14 related-posts__date-category">
+03 nov •
+<a class="text-h-meteorite-dark text-uppercase fw-800 fs-14 links-hover" href="https://www.hostinger.com.br/tutoriais/website" data-wpel-link="internal">
+Website </a>
+<span class="related-posts__separator">•</span>
+</p>
+</div>
+<h5 class="text-center text-sm-left pb-10">
+<a href="/tutoriais/sites-mais-acessados" data-wpel-link="internal">
+Os Sites Mais Acessados de Cada País (Excluindo Buscadores) </a>
+</h5>
+<p class="text-content-grey text-center text-sm-left">
+A internet permitiu a conexão entre pessoas e culturas de praticamente todos os cantos do planeta. Com ela, podemos acessar notícias e veículos de... </p>
+<div class="d-flex justify-content-center justify-content-sm-start">
+<a class="subtitle  font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com.br/tutoriais/author/larissafolch">
+<p class="author-name text-center text-sm-left">
+Por Larissa Folch </p>
+</a>
+</div>
+</div>
+</div>
+<div class="content-item d-flex flex-column col-md-4 h-mb-2" id="post-29555">
+<div class="col-12 h-p-0 height-20rem d-contents">
+<a class="height-inherit" href="/tutoriais/como-escolher-um-dominio" data-wpel-link="internal">
+<img width="730" height="319" class="width-100p object-fit-cover border-radius-10px" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20730%20319'%3E%3C/svg%3E" data-lazy-src="https://www.hostinger.com.br/tutoriais/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg" /><noscript><img width="730" height="319" class="width-100p object-fit-cover border-radius-10px" src="https://www.hostinger.com.br/tutoriais/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg"/></noscript>
+</a>
+</div>
+<div class="d-flex flex-column h-pt-2 h-pb-3">
+<div class="d-flex justify-content-sm-between justify-content-center h-mb-1">
+<p class="label text-h-meteorite-dark fw-800 fs-14 related-posts__date-category">
+13 out •
+<a class="text-h-meteorite-dark text-uppercase fw-800 fs-14 links-hover" href="https://www.hostinger.com.br/tutoriais/website" data-wpel-link="internal">
+Website </a>
+<span class="related-posts__separator">•</span>
+</p>
+</div>
+<h5 class="text-center text-sm-left pb-10">
+<a href="/tutoriais/como-escolher-um-dominio" data-wpel-link="internal">
+Como Escolher um Domínio? Conheça as Melhores Práticas </a>
+</h5>
+<p class="text-content-grey text-center text-sm-left">
+Um nome de domínio é o que os visitantes escrevem na barra de pesquisa de seus navegadores para acessar um site.&nbsp; Por isso é essencial... </p>
+<div class="d-flex justify-content-center justify-content-sm-start">
+<a class="subtitle  font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com.br/tutoriais/author/brunab">
+<p class="author-name text-center text-sm-left">
+Por Bruna B. Barro </p>
+</a>
+</div>
+</div>
+</div>
+<div class="content-item d-flex flex-column col-md-4 h-mb-2" id="post-29409">
+<div class="col-12 h-p-0 height-20rem d-contents">
+<a class="height-inherit" href="https://www.hostinger.com.br/tutoriais/descobrir-hospedagem-de-site" data-wpel-link="internal">
+<img width="730" height="319" class="width-100p object-fit-cover border-radius-10px" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20730%20319'%3E%3C/svg%3E" data-lazy-src="https://www.hostinger.com.br/tutoriais/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg" /><noscript><img width="730" height="319" class="width-100p object-fit-cover border-radius-10px" src="https://www.hostinger.com.br/tutoriais/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg"/></noscript>
+</a>
+</div>
+<div class="d-flex flex-column h-pt-2 h-pb-3">
+<div class="d-flex justify-content-sm-between justify-content-center h-mb-1">
+<p class="label text-h-meteorite-dark fw-800 fs-14 related-posts__date-category">
+03 out •
+<a class="text-h-meteorite-dark text-uppercase fw-800 fs-14 links-hover" href="https://www.hostinger.com.br/tutoriais/website" data-wpel-link="internal">
+Website </a>
+<span class="related-posts__separator">•</span>
+</p>
+</div>
+<h5 class="text-center text-sm-left pb-10">
+<a href="https://www.hostinger.com.br/tutoriais/descobrir-hospedagem-de-site" data-wpel-link="internal">
+Como Descobrir a Hospedagem de um Site e Quais as Melhores Ferramentas para Isso </a>
+</h5>
+<p class="text-content-grey text-center text-sm-left">
+Descobrir onde um site está hospedado, incluindo a localização do servidor e qual a empresa contratada para esse serviço, pode ser útil por... </p>
+<div class="d-flex justify-content-center justify-content-sm-start">
+<a class="subtitle  font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com.br/tutoriais/author/brunosantana">
+<p class="author-name text-center text-sm-left">
+Por Bruno Santana </p>
+</a>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/bootstrap/v5/tp.widget.bootstrap.min.js?ver=1665765579" async></script>
+<div class="pb-80 pb-120-lg">
+<h2 class="text-center mb-40 mt-50">O que dizem nossos clientes</h2>
+<div class="container">
+<div class="trustpilot-widget" data-locale="pt-BR" data-template-id="53aa8912dec7e10d38f59f36" data-review-languages="pt-BR" data-businessunit-id="580cbf960000ff0005966f44" data-stars="4,5" data-style-height="140px" data-style-width="100%" data-theme="light">
+<a href="https://www.trustpilot.com/review/hostinger.com" target="_blank" rel="noopener noreferrer" data-wpel-link="exclude">Trustpilot</a>
+</div>
+</div>
+</div>
+<div class="container justify-content-center">
+<div class="comments h-pb-10 h-pt-12">
+<div class="d-flex row justify-content-between ml-0 mr-0 pb-60">
+<div class="d-flex align-items-center">
+<h3 class="d-flex fw-800 fs-44 h-100 align-items-center">Comentários</h3>
+</div>
+<div class="d-flex align-items-center">
+<a href="#comment-form" class="new-h-button-secondary mh-50 fs-16 fw-800 pl-30 pr-30 align-items-center d-none d-sm-flex ">Faça um comentário</a>
+</div>
+</div>
+<div id="comment-12392" class="comment h-pt-3 h-pb-3 border-bottom border-dark ">
+<div class="d-flex ml-0 justify-content-center  justify-content-between">
+<div class="d-flex flex-wrap">
+ <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2050%2050'%3E%3C/svg%3E" class="border-radius-50" height="50px" width="50px" alt="Author" data-lazy-src="https://secure.gravatar.com/avatar/10ceacc6fb72209c56b37d8280f659c2?s=96&d=mm&r=g"><noscript><img src="https://secure.gravatar.com/avatar/10ceacc6fb72209c56b37d8280f659c2?s=96&d=mm&r=g"
+             class="border-radius-50"
+             height="50px" width="50px"
+             alt="Author"></noscript>
+<div class="comment-info d-flex flex-column justify-content-between pl-20-sm pl-10">
+<span class="fw-800 fs-16">Helio Dias da Cunha</span>
+<p class="text-muted fw-400">
+abril 11 2021 </p>
+</div>
+</div>
+<div class="reply">
+<p class="h3 font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between">
+<a rel="nofollow" class="comment-reply-link hover-text-primary-400 text-uppercase label" href="https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html?replytocom=12392#comment-form" data-commentid="12392" data-postid="13570" data-belowelement="comment-12392" data-respondelement="comment-form" data-replyto="Responder para Helio Dias da Cunha" aria-label="Responder para Helio Dias da Cunha" data-wpel-link="internal">Responder</a> </p>
+</div>
+</div>
+<div class="mt-15 mt-30-md">
+<p class="text-sm-left fw-600 text-h-dark-gray">
+Não estou conseguindo linkar no index.html, que cria um grid de linha X coluns, mesmo colocando meu css no mesmo diretório do index.html, poderia, por favor me ajudar? </p>
+</div>
+</div>
+<ul class="children">
+<div id="comment-12428" class="comment h-pt-3 h-pb-3 border-bottom border-dark reply-comment flex-column flex-md-row align-items-center">
+<div class="d-flex ml-0 justify-content-center  justify-content-between">
+<div class="d-flex flex-wrap">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2050%2050'%3E%3C/svg%3E" class="border-radius-50" height="50px" width="50px" alt="Author" data-lazy-src="https://secure.gravatar.com/avatar/f188c853cf01d74f82e7c4cc4c165283?s=96&d=mm&r=g"><noscript><img src="https://secure.gravatar.com/avatar/f188c853cf01d74f82e7c4cc4c165283?s=96&d=mm&r=g"
+             class="border-radius-50"
+             height="50px" width="50px"
+             alt="Author"></noscript>
+<div class="comment-info d-flex flex-column justify-content-between pl-20-sm pl-10">
+<span class="fw-800 fs-16">Carlos E.</span>
+<p class="text-muted fw-400">
+abril 16 2021 </p>
+</div>
+</div>
+<div class="reply">
+<p class="h3 font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between">
+</p>
+</div>
+</div>
+<div class="mt-15 mt-30-md">
+<p class="text-sm-left fw-600 text-h-dark-gray">
+Olá Helio, <a href="https://support.hostinger.com.br/pt-BR/" rel="nofollow ugc noopener noreferrer" data-wpel-link="exclude" target="_blank">dá uma conversada</a> com nosso time de sucesso do cliente! </p>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<div id="comment-23210" class="comment h-pt-3 h-pb-3 border-bottom border-dark ">
+<div class="d-flex ml-0 justify-content-center  justify-content-between">
+<div class="d-flex flex-wrap">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2050%2050'%3E%3C/svg%3E" class="border-radius-50" height="50px" width="50px" alt="Author" data-lazy-src="https://secure.gravatar.com/avatar/dc280a152d8dd42f83de483bd2887217?s=96&d=mm&r=g"><noscript><img src="https://secure.gravatar.com/avatar/dc280a152d8dd42f83de483bd2887217?s=96&d=mm&r=g"
+             class="border-radius-50"
+             height="50px" width="50px"
+             alt="Author"></noscript>
+<div class="comment-info d-flex flex-column justify-content-between pl-20-sm pl-10">
+<span class="fw-800 fs-16">Marcel Diogo</span>
+<p class="text-muted fw-400">
+abril 26 2022 </p>
+</div>
+</div>
+<div class="reply">
+<p class="h3 font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between">
+<a rel="nofollow" class="comment-reply-link hover-text-primary-400 text-uppercase label" href="https://www.hostinger.com.br/tutoriais/como-linkar-css-no-html?replytocom=23210#comment-form" data-commentid="23210" data-postid="13570" data-belowelement="comment-23210" data-respondelement="comment-form" data-replyto="Responder para Marcel Diogo" aria-label="Responder para Marcel Diogo" data-wpel-link="internal">Responder</a> </p>
+</div>
+</div>
+<div class="mt-15 mt-30-md">
+<p class="text-sm-left fw-600 text-h-dark-gray">
+Oi, eu também preciso de ajuda. Ja procurei em diversos sites. Eu faço sempre do mesmo modelo, presto atenção nos detalhes para ver se esta correto, mas nunca consigo linkar ambos, simplesmente não vai. Deixo na mesma pasta, conforme alguns dizem, ou em pastas separadas como outros dizem, faço sempre certinho e não vai! Existe alguma extensão que eu deva atualizar ou realizar para dar certo? </p>
+</div>
+</div>
+<ul class="children">
+<div id="comment-25453" class="comment h-pt-3 h-pb-3 border-bottom border-dark reply-comment flex-column flex-md-row align-items-center">
+<div class="d-flex ml-0 justify-content-center  justify-content-between">
+<div class="d-flex flex-wrap">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2050%2050'%3E%3C/svg%3E" class="border-radius-50" height="50px" width="50px" alt="Author" data-lazy-src="https://secure.gravatar.com/avatar/f188c853cf01d74f82e7c4cc4c165283?s=96&d=mm&r=g"><noscript><img src="https://secure.gravatar.com/avatar/f188c853cf01d74f82e7c4cc4c165283?s=96&d=mm&r=g"
+             class="border-radius-50"
+             height="50px" width="50px"
+             alt="Author"></noscript>
+<div class="comment-info d-flex flex-column justify-content-between pl-20-sm pl-10">
+<span class="fw-800 fs-16">Carlos E.</span>
+<p class="text-muted fw-400">
+maio 13 2022 </p>
+</div>
+</div>
+<div class="reply">
+<p class="h3 font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between">
+</p>
+</div>
+</div>
+<div class="mt-15 mt-30-md">
+<p class="text-sm-left fw-600 text-h-dark-gray">
+Olá, eles devem estar na mesma pasta sim. De qualquer jeito, nós achamos que é possível definir o caminho completo do diretório na parte do href! Vê se <a href="https://www.youtube.com/watch?v=3XXNxTpw5Dg&amp;ab_channel=Edutoria" rel="ugc nofollow external noopener noreferrer" data-wpel-link="external" target="_blank">este vídeo aqui</a> te ajuda! Se você falar inglês, <a href="https://www.youtube.com/watch?v=b3_n5UPYvMo&amp;ab_channel=HostingerAcademy" rel="ugc nofollow external noopener noreferrer" data-wpel-link="external" target="_blank">este tutorial aqui</a> é mais completinho 😊 </p>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<div id="comment-form" class="bg-white h-pt-7-lg h-pt-2 h-pb-7-lg h-mt-2 w-100">
+<div class="d-flex flex-column">
+<div id="respond" class="comment-respond">
+<h3 class="text-h-meteorite-dark fw-800 fs-44 mb-5">Deixe uma resposta <small><a rel="nofollow" id="cancel-comment-reply-link" href="/tutoriais/como-linkar-css-no-html#respond" style="display:none;" data-wpel-link="internal">Cancelar resposta</a></small></h3><div id="comment-error" class="error-message d-none fs-14 fs-18-sm fs-20-xl pl-15 pl-20-sm pr-15 pr-20-sm"><img width="32" height="32" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E" data-lazy-src="https://www.hostinger.com.br/tutoriais/wp-content/themes/tutorialsthemeuplift/public/images/icons/alert.svg" /><noscript><img width="32" height="32" src="https://www.hostinger.com.br/tutoriais/wp-content/themes/tutorialsthemeuplift/public/images/icons/alert.svg"/></noscript><span id="required-fields" class="d-none">Por gentileza, preencha os campos solicitados.</span><span id="required-checkbox" class="d-none">Marque o campo de aceitação da privacidade.</span><span id="required-form" class="d-none">Preencha os campos necessários e marque a opção de aceitar termos de privacidade.</span></div><form action="https://www.hostinger.com.br/tutoriais/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><div id="comment-texarea-input-border" class="new-input-border position-relative mt-20 mt-30-sm"><textarea id="comment" name="comment" placeholder="Comentário*" style="outline: 0; height: 200px !important;" class="w-100 dark border-0 noresize bg-transparent h-pl-2 h-pt-2 label text-content-grey" style="height: 200px !important;"></textarea></div><p class="mb-20"></p><div id="comment-name-input-border" class="new-input-border position-relative"><input id="comment-name-input" style="outline: 0;" class="dark height-46px bg-transparent border-0 w-100 h-pl-2 label text-content-grey" id="author" name="author" type="text" placeholder="Nome*" value="" aria-required='true'></div>
+<p class="mb-20"></p><div id="comment-email-input-border" class="new-input-border position-relative"><input id="comment-email-input" style="outline: 0;" class="dark height-46px border-0 bg-transparent w-100 h-pl-2 label text-content-grey" id="email" name="email" placeholder="Email*" type="email" value="" aria-required='true'></div>
+<p class="comment-form-cookies-consent mt-20 fs-14 d-flex align-items-center"><input id="wp-comment-cookies-consent" class="mr-5 mb-2" name="wp-comment-cookies-consent" type="checkbox" value="yes" /><label for="wp-comment-cookies-consent">Ao inserir seu e-mail, você concorda em receber a newsletter da Hostinger. Você pode cancelar a inscrição a qualquer momento. Confira nossa <a href="/privacidade " target="_blank" data-wpel-link="internal">Política de Privacidade</a>.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit-comment new-h-button-primary button text-white mt-40 float-right w-100 w-30-sm" value="Enviar" /> <input type='hidden' name='comment_post_ID' value='13570' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9ebf46976b" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="204" /><script type="rocketlazyloadscript">document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form> </div>
+<p class="akismet_comment_form_privacy_notice">Esse site utiliza o Akismet para reduzir spam. <a href="https://akismet.com/privacy/" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">Aprenda como seus dados de comentários são processados</a>.</p> <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+              var label = document.querySelector("[for='wpgdprc'");
+              var warning = document.getElementsByClassName("akismet_comment_form_privacy_notice");
+              if(label && warning && warning.length > 0) {
+                  label.innerText += " " + warning[0].innerText;
+                  warning[0].innerText = "";
+              }
+
+
+              document.getElementById("submit").addEventListener("click", function displayDate(event) {
+                  var textFieldContainer = document.getElementById("comment-texarea-input-border");
+                  var textField = document.getElementById("comment");
+                  var emailFieldContainer = document.getElementById("comment-email-input-border");
+                  var emailField = document.getElementById("comment-email-input");
+                  var nameFieldContainer = document.getElementById("comment-name-input-border");
+                  var nameField = document.getElementById("comment-name-input");
+                  var checkbox = document.getElementById("wp-comment-cookies-consent");
+                  var errorMessage = document.getElementById("comment-error");
+                  var errorExists = false;
+
+                  textFieldContainer.classList.remove("error");
+                  nameFieldContainer.classList.remove("error");
+                  emailFieldContainer.classList.remove("error");
+                  if(checkbox) checkbox.classList.remove("error");
+                  document.getElementById("required-fields").classList.add("d-none");
+                  document.getElementById("required-checkbox").classList.add("d-none");
+                  document.getElementById("required-form").classList.add("d-none");
+                  errorMessage.classList.add("d-none");
+
+                  if(textField && !textField.value) {
+                      textFieldContainer.classList.add("error");
+                      document.getElementById("required-fields").classList.remove("d-none");
+                      errorExists = true;
+                  }
+                  if(nameField && !nameField.value) {
+                      nameFieldContainer.classList.add("error");
+                      document.getElementById("required-fields").classList.remove("d-none");
+                      errorExists = true;
+                  }
+                  if(emailField && (!emailField.value || !emailField.value.includes('@'))) {
+                      emailFieldContainer.classList.add("error");
+                      document.getElementById("required-fields").classList.remove("d-none");
+                      errorExists = true;
+                  }
+                  if(checkbox && !checkbox.checked) {
+                      checkbox.classList.add("error");
+                      if(errorExists) {
+                          document.getElementById("required-fields").classList.add("d-none");
+                          document.getElementById("required-form").classList.remove("d-none");
+                      }
+                      else {
+                          document.getElementById("required-checkbox").classList.remove("d-none");
+                      }
+                      errorExists = true;
+                  }
+                  if(errorExists) {
+                      event.preventDefault();
+                      errorMessage.classList.remove("d-none");
+                  }
+              });
+
+              var commentForm = document.getElementById('commentform');
+
+              commentForm.addEventListener('submit', function (event) {
+                  event.preventDefault();
+
+                  var submitUrl = commentForm.getAttribute('action');
+
+                  var textField = document.getElementById('comment');
+                  var emailField = document.getElementById('comment-email-input');
+                  var nameField = document.getElementById('comment-name-input');
+                  var checkbox = document.getElementById('wp-comment-cookies-consent');
+                  var commentPostId = 13570;
+                  var commentParentField = document.getElementById('comment_parent');
+                  var commentParentId = commentParentField ? commentParentField.value : 0;
+                  var akismetCommentNonceField = document.getElementById('akismet_comment_nonce');
+                  var akismetCommentNonce = akismetCommentNonceField ? akismetCommentNonceField.value : '';
+                  var akJsField = document.getElementById('ak_js');
+                  var akJsFieldValue = akJsField ? akJsField.value : '';
+
+                  var commentFormData = [];
+
+                  if (textField && textField.value) {
+                      commentFormData.push('comment=' + encodeURIComponent(textField.value));
+                  }
+
+                  if (nameField && nameField.value) {
+                      commentFormData.push('author=' + encodeURIComponent(nameField.value));
+                  }
+
+                  if (emailField && emailField.value) {
+                      commentFormData.push('email=' + encodeURIComponent(emailField.value));
+                  }
+
+                  if (checkbox && checkbox.checked) {
+                      commentFormData.push('wp-comment-cookies-consent=yes');
+                  }
+
+                  commentFormData.push('comment_post_ID=' + commentPostId);
+                  commentFormData.push('comment_parent=' + commentParentId);
+                  commentFormData.push('akismet_comment_nonce=' + akismetCommentNonce);
+                  commentFormData.push('ak_js=' + akJsFieldValue);
+
+                  var encodedFormData = commentFormData.join('&').replace(/%20/g, '+');
+
+                  var httpClient = new XMLHttpRequest();
+
+                  httpClient.onreadystatechange = function () {
+                      if(httpClient.readyState === 4 && httpClient.status === 200) {
+                          var replyNoticeText = document.getElementById('comment-post-notice');
+
+                          replyNoticeText.classList.remove('d-none');
+                          replyNoticeText.classList.add('d-flex');
+
+                          if (textField) {
+                              textField.value = '';
+                          }
+
+                          if (nameField && nameField.value) {
+                              nameField.value = '';
+                          }
+
+                          if (emailField && emailField.value) {
+                              emailField.value = '';
+                          }
+                      }
+                  };
+
+                  httpClient.open('POST', submitUrl, true);
+                  httpClient.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                  httpClient.send(encodedFormData);
+              });
+          </script>
+</div>
+<div id="comment-post-notice" class="d-none bg-light w-100 mt-30 p-20">
+<span class="d-block icon-info w-26-px h-20"></span>
+<span class="color-primary font-14 line-height-20 ml-10 ">Thank you! Your comment has been successfully submitted. It will be approved within the next 24 hours.</span>
+</div>
+</div>
+</div>
+</div>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+      
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'tutorialsCategory': "Website"
+      });
+
+      window.optinMonsterCategory = "Website";
+  </script>
+<footer id="footer">
+<div id="footer-new" class="footer-new">
+<Footer-new :menu-items="{&quot;hosting&quot;:{&quot;category&quot;:&quot;Hospedagem&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/hospedagem-de-sites&quot;,&quot;title&quot;:&quot;Hospedagem de Site&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;\/servidor-vps&quot;,&quot;title&quot;:&quot;Servidor VPS&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/servidores-de-minecraft&quot;,&quot;title&quot;:&quot;Host Minecraft&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:4},{&quot;pattern&quot;:&quot;\/hospedagem-vps-cyberpanel&quot;,&quot;title&quot;:&quot;CyberPanel&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:4},{&quot;pattern&quot;:&quot;\/hospedagem-cloud&quot;,&quot;title&quot;:&quot;Hospedagem Cloud&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:5},{&quot;pattern&quot;:&quot;\/hospedagem-wordpress&quot;,&quot;title&quot;:&quot;Hospedagem WordPress&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:6},{&quot;pattern&quot;:&quot;\/email-profissional&quot;,&quot;title&quot;:&quot;Email Profissional&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:7},{&quot;pattern&quot;:&quot;\/hospedagem-cms&quot;,&quot;title&quot;:&quot;Hospedagem CMS&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:8},{&quot;pattern&quot;:&quot;\/hospedagem-de-loja-virtual&quot;,&quot;title&quot;:&quot;Hospedagem de Loja Virtual&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:9},{&quot;pattern&quot;:&quot;\/hospedagem-gratis&quot;,&quot;title&quot;:&quot;Hospedagem Gr\u00e1tis&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:11},{&quot;pattern&quot;:&quot;\/loja-virtual&quot;,&quot;title&quot;:&quot;Loja Virtual&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:12},{&quot;pattern&quot;:&quot;\/criador-de-sites&quot;,&quot;title&quot;:&quot;Criador de Sites&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:13},{&quot;pattern&quot;:&quot;\/comprar-hospedagem&quot;,&quot;title&quot;:&quot;Comprar Hospedagem&quot;,&quot;category&quot;:&quot;Hospedagem&quot;,&quot;priority&quot;:14}]},&quot;domains&quot;:{&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/registro-de-dominio&quot;,&quot;title&quot;:&quot;Registro de Dom\u00ednio&quot;,&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;\/transferencia-de-dominio&quot;,&quot;title&quot;:&quot;Transferir Dom\u00ednio&quot;,&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;priority&quot;:2},{&quot;pattern&quot;:&quot;\/dominio-gratis&quot;,&quot;title&quot;:&quot;Dom\u00ednio Gr\u00e1tis&quot;,&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/tld\/dominio-xyz&quot;,&quot;title&quot;:&quot;Dom\u00ednio .XYZ&quot;,&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;priority&quot;:4},{&quot;pattern&quot;:&quot;\/dominio-barato&quot;,&quot;title&quot;:&quot;Dom\u00ednio Barato&quot;,&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;priority&quot;:5},{&quot;pattern&quot;:&quot;\/tld&quot;,&quot;title&quot;:&quot;Extens\u00f5es de Dom\u00ednios&quot;,&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;priority&quot;:7},{&quot;pattern&quot;:&quot;\/whois&quot;,&quot;title&quot;:&quot;WHOIS&quot;,&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;priority&quot;:8},{&quot;pattern&quot;:&quot;\/certificado-ssl-gratis&quot;,&quot;title&quot;:&quot;Certificado SSL Gr\u00e1tis&quot;,&quot;category&quot;:&quot;Dom\u00ednios&quot;,&quot;priority&quot;:30}]},&quot;information&quot;:{&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/migracao-de-site&quot;,&quot;title&quot;:&quot;Migra\u00e7\u00e3o de Site&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;https:\/\/statuspage.hostinger.com\/&quot;,&quot;title&quot;:&quot;Status do Sistema&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:2},{&quot;pattern&quot;:&quot;\/afiliados&quot;,&quot;title&quot;:&quot;Programa de Afiliados&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/pagamentos&quot;,&quot;title&quot;:&quot;Formas de Pagamento&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/migracao&quot;,&quot;title&quot;:&quot;Termos de Migra\u00e7\u00e3o&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/premio&quot;,&quot;title&quot;:&quot;Pr\u00eamio&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:4},{&quot;pattern&quot;:&quot;\/review&quot;,&quot;title&quot;:&quot;Opini\u00f5es de Clientes&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:5},{&quot;pattern&quot;:&quot;\/precos&quot;,&quot;title&quot;:&quot;Pre\u00e7os&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:6},{&quot;pattern&quot;:&quot;\/sitemap&quot;,&quot;title&quot;:&quot;Mapa do Site&quot;,&quot;category&quot;:&quot;Informa\u00e7\u00f5es&quot;,&quot;priority&quot;:7}]},&quot;legal&quot;:{&quot;category&quot;:&quot;legal&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/politica-de-privacidade&quot;,&quot;title&quot;:&quot;Pol\u00edtica de Privacidade&quot;,&quot;category&quot;:&quot;legal&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;\/termos-de-servico-universal&quot;,&quot;title&quot;:&quot;Termos de Servi\u00e7o&quot;,&quot;category&quot;:&quot;legal&quot;,&quot;priority&quot;:2}]},&quot;company&quot;:{&quot;category&quot;:&quot;Sobre N\u00f3s&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/sobre&quot;,&quot;title&quot;:&quot;Sobre a Hostinger&quot;,&quot;category&quot;:&quot;Sobre N\u00f3s&quot;,&quot;priority&quot;:10},{&quot;pattern&quot;:&quot;\/tecnologia&quot;,&quot;title&quot;:&quot;Nossa Tecnologia&quot;,&quot;category&quot;:&quot;Sobre N\u00f3s&quot;,&quot;priority&quot;:20},{&quot;pattern&quot;:&quot;\/carreiras&quot;,&quot;title&quot;:&quot;Carreira&quot;,&quot;category&quot;:&quot;Sobre N\u00f3s&quot;,&quot;priority&quot;:30},{&quot;pattern&quot;:&quot;https:\/\/roadmap.hostinger.com\/&quot;,&quot;title&quot;:&quot;Roadmap (em ingl\u00eas)&quot;,&quot;category&quot;:&quot;Sobre N\u00f3s&quot;,&quot;priority&quot;:50},{&quot;pattern&quot;:&quot;\/contatos&quot;,&quot;title&quot;:&quot;Fale Conosco&quot;,&quot;category&quot;:&quot;Sobre N\u00f3s&quot;,&quot;priority&quot;:60},{&quot;pattern&quot;:&quot;https:\/\/www.hostinger.com.br\/blog\/&quot;,&quot;title&quot;:&quot;Blog &quot;,&quot;category&quot;:&quot;Sobre N\u00f3s&quot;,&quot;priority&quot;:70}]},&quot;help&quot;:{&quot;category&quot;:&quot;Ajuda&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/&quot;,&quot;title&quot;:&quot;Tutoriais&quot;,&quot;category&quot;:&quot;Ajuda&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;https:\/\/support.hostinger.com.br\/pt-BR\/&quot;,&quot;title&quot;:&quot;Base de Conhecimento&quot;,&quot;category&quot;:&quot;Ajuda&quot;,&quot;priority&quot;:2},{&quot;pattern&quot;:&quot;\/denunciar-abuso&quot;,&quot;title&quot;:&quot;Denunciar Abuso&quot;,&quot;category&quot;:&quot;Ajuda&quot;,&quot;priority&quot;:3}]}}" :payment-methods="[&quot;pix&quot;,&quot;boleto&quot;,&quot;visa&quot;,&quot;mastercard&quot;,&quot;amex&quot;,&quot;elo&quot;,&quot;hipercard&quot;]" payment-url="https://www.hostinger.com.br/tutoriais/wp-content/themes/tutorialsthemeuplift/public/images/payments/2020/" payment-path="/pagamentos" payment-btn="E Mais" about="Somos uma provedora de hospedagem de sites e nossa missão é promover o sucesso a todos que querem começar sua jornada online. Para isso, buscamos sempre melhorar a tecnologia dos nossos servidores, oferecer um suporte profissional e tornar a experiência dos nossos clientes com a hospedagem de sites a melhor de todas." :social-links="[{&quot;id&quot;:&quot;social_linkedin&quot;,&quot;url&quot;:&quot;https:\/\/www.linkedin.com\/company\/hostingerbrasil&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/linked-in.svg&quot;,&quot;alt&quot;:&quot;Linked-in logo&quot;},{&quot;id&quot;:&quot;social_facebook&quot;,&quot;url&quot;:&quot;https:\/\/www.facebook.com\/Hostinger.com.br\/&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/facebook.svg&quot;,&quot;alt&quot;:&quot;Facebook logo&quot;},{&quot;id&quot;:&quot;social_instagram&quot;,&quot;url&quot;:&quot;https:\/\/www.instagram.com\/hostinger.br\/&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/instagram.svg&quot;,&quot;alt&quot;:&quot;Instagram logo&quot;},{&quot;id&quot;:&quot;social_twitter&quot;,&quot;url&quot;:&quot;https:\/\/twitter.com\/Hostinger&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/twitter.svg&quot;,&quot;alt&quot;:&quot;Twitter logo&quot;},{&quot;id&quot;:&quot;social_youtube&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/channel\/UCFtySEk9ArhCuuD22FNWa0g?sub_confirmation=1&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/youtube.svg&quot;,&quot;alt&quot;:&quot;Youtube logo&quot;}]" copyright="© 2004-2022 hostinger.com.br - Hospedagem de Sites, Cloud e VPS premium e Serviços de Registro de Domínio." no-vat-txt="Preços listados sem IVA">
+</Footer-new>
+</div>
+</footer>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL4FQVG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="rocketlazyloadscript">
+  window.intercomSettings = {
+    app_id: "wqcuqgj9"
+  };
+</script>
+<script type="rocketlazyloadscript">
+(function () {
+  var w = window;
+  var ic = w.Intercom;
+  if (typeof ic === "function") {
+    ic('reattach_activator');
+    ic('update', w.intercomSettings);
+  } else {
+    var d = document;
+    var i = function () {
+      i.c(arguments);
+    };
+    i.q = [];
+    i.c = function (args) {
+      i.q.push(args);
+    };
+    w.Intercom = i;
+    var l = function () {
+      setTimeout(function () {
+        var s = d.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://widget.intercom.io/widget/wqcuqgj9';
+        var x = d.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }, 5000);
+    };
+    if (w.attachEvent) {
+      w.attachEvent('onload', l);
+    } else {
+      w.addEventListener('load', l, false);
+    }
+  }
+})();
+</script>
+<script type="rocketlazyloadscript">(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,71036,79832);</script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">/* <![CDATA[ */!function(e,n){var r={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":2,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":false,"theme":"classic","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""},"resources":["https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/plugins\/enlighter\/cache\/X12_enlighterjs.min.css?q7xaugjA\/Zokvdm","https:\/\/www.hostinger.com.br\/tutoriais\/wp-content\/plugins\/enlighter\/resources\/enlighterjs\/enlighterjs.min.js"]},o=document.getElementsByTagName("head")[0],t=n&&(n.error||n.log)||function(){};e.EnlighterJSINIT=function(){!function(e,n){var r=0,l=null;function c(o){l=o,++r==e.length&&(!0,n(l))}e.forEach(function(e){switch(e.match(/\.([a-z]+)(?:[#?].*)?$/)[1]){case"js":var n=document.createElement("script");n.onload=function(){c(null)},n.onerror=c,n.src=e,n.async=!0,o.appendChild(n);break;case"css":var r=document.createElement("link");r.onload=function(){c(null)},r.onerror=c,r.rel="stylesheet",r.type="text/css",r.href=e,r.media="all",o.appendChild(r);break;default:t("Error: invalid file extension",e)}})}(r.resources,function(e){e?t("Error: failed to dynamically load EnlighterJS resources!",e):"undefined"!=typeof EnlighterJS?EnlighterJS.init(r.selectors.block,r.selectors.inline,r.options):t("Error: EnlighterJS resources not loaded yet!")})},(document.querySelector(r.selectors.block)||document.querySelector(r.selectors.inline))&&e.EnlighterJSINIT()}(window,console); /* ]]> */</script><script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/tutoriais/wp-content/themes/tutorialsthemeuplift/resources/js/web-font-loader.js?ver=1665765579' id='fontloader_js-js' defer></script>
+<script type='text/javascript' id='ppress-frontend-script-js-extra'>
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/www.hostinger.com.br\/tutoriais\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"21a8062757","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=4.3.2' id='ppress-frontend-script-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-content/themes/tutorialsthemeuplift/public/js/theme.min.js?ver=1.0.0.1669281291' id='understrap-scripts-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-includes/js/comment-reply.min.js?ver=6.1.1' id='comment-reply-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" defer data-rocket-type='text/javascript' src='https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/tutoriais/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1665765579' id='akismet-frontend-js'></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.hostinger.com.br/tutoriais/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+<script data-minify="1" src="https://www.hostinger.com.br/tutoriais/wp-content/cache/min/12/tutoriais/wp-content/themes/tutorialsthemeuplift/public/js/vueapp.js?ver=1665765579" defer></script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'7763f5918b2b0315',m:'K8tItVFGTLX7Ab4q3JFB.mlhbor5ewczUCWpqWZHksY-1670486343-0-ATeI6tX/xabGBVY46+7liG2yvWc2n2PayvNzzePNVAjyGuE5DKuzR5MMx5oxQCGXPLqddFxsl1rv6m4iOajX3korsfns5EzxW12CNyguWue+pxb2XllRRyAR5lutnukQQM9oDrfTMv8F+m7QKjJ5myppenx+5mR0NKveIC4CDDjk',s:[0xca08ca2e1c,0x24ebc4616c],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>

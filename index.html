@@ -1,0 +1,2633 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Formação CSS</title>
+</head>
+
+<body>
+    <!------------------  Base do CSS   ------------------>
+    <div class="fundamentos">
+        <div class="fundamentosHeader">
+            <h1>Fundamentos do CSS</h1>
+            <p>CSS é uma linguagem de estilo, também conhecida como folhas de estilo em cascata. É usada para
+                personalização visual de um site. Ou seja, elas servem para otimizar o conteúdo das páginas e
+                permitir uma apresentação mais amigável para o usuário.
+            </p>
+        </div>
+    </div>
+
+    <div class="unidadesCSS">
+        <div class="unidadesCSS01">
+            <h2>Unidades de Medidas no CSS</h2>
+            <h3>Unidade de medidas absolutas:</h3>
+            <ul>
+                <li>cm - Centrimetros</li>
+                <li>mm - Milimetros</li>
+                <li>q - Quarto de Milimetros</li>
+                <li>in - Polegadas</li>
+                <li>pc - Paica</li>
+                <li>pt - Pontos</li>
+                <li>px - Pixels, unidade de medida absoluta mais utilizada;</li>
+            </ul>
+        </div>
+        <div class="unidadesCSS01">
+            <h2>Unidades de medidas relativa</h2>
+            <h3>Porcentagem:</h3>
+            <ul>
+                <li>"em" - define o tamanho da fonte(font-size) do elemento, vai utilizar como referencia o elemento
+                    pai.
+                    "1em" = 16px, "2em" = 32px, "3em" = 64px, caso voce aplique "em" sobre uma fonte de 50px,
+                    o "2em" =
+                    100px e assim por diante.
+                    HTML, style="font-size: 1em;".
+                <li>"rem" - tem funcionamento semelhante á unidade de medida "em"</li>
+                <li>viewports - é a area visivel de uma pagina web, podendo variar de dispositivos para dispositivos
+
+                    1vw = 1% do tamanho da largura da area visivel da pagina.
+                    1vh = 1% do tamanho da altura da area visivel da pagina
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+
+    <div class="cores-geral">
+        <h2>Cores</h2>
+        <div class="cores-geral01">
+            <div class="cores" title="são mais de 140 cores, ja definidas, classificadas por nome." id="pre-definidas">
+                Cores pré-definidas</div>
+            <div class="cores" id="current-color">
+                <p>Palavra-chave: current-color, deixa a cor transparente.</p>
+            </div>
+            <div class="cores" title=" abre uma gama infinita de cores" id="rgb">RGB</div>
+            <div class="cores"
+                title="abre auma gama infinita de cores, com a adição de transparencia de 0.0 que e 100% transparente a 1.0 que não aplica transparencia."
+                id="rgba">RGBA</div>
+            <div class="cores"
+                title="abre auma gama infinita de cores, com combina de 6 digitos, que varia de numeros a letras, apos o #."
+                id="hex">Hexadecimal #</div>
+            <div class="cores"
+                title=", abre auma gama infinita de cores, com combina de 6 digitos, que varia de numeros a letras, apos o #, adicionando mais 2 digitos que vai de 00 a 99, é possivel determinar a transparencia, sendo 00 100% transparente."
+                id="hex-transparente">Hexadecimal transparente #</div>
+            <div class="cores" id="hsl">HSL</div>
+            <div class="cores" id="hsla">HSLA</div>
+        </div>
+    </div>
+
+
+
+    <!------------------  Trabalhando com imagens   ------------------>
+    <!------------------  Object Fit   ------------------>
+    <div class="trabalhandoImgs">
+        <h1>Trabalhando Imagens no CSS</h1>
+        <h2
+            title="é utilizada para especificar como um objeto (imagem, vídeo, iframe ou embed) deve ser redimensionado para se ajustar ao seu contêiner.">
+            Object Fit</h2>
+        <div class="testeObject00">
+            <div class="testeObject">
+                <img src="/img/img.webp" alt="" id="fill">
+                <p>object-fit: fill ;</p>
+            </div>
+            <div class="testeObject">
+                <img src="/img/img.webp" alt="" id="contain">
+                <p>object-fit: contain ;</p>
+            </div>
+            <div class="testeObject">
+                <img src="/img/img.webp" alt="" id="cover">
+                <p>object-fit: cover ;</p>
+            </div>
+            <div class="testeObject">
+                <img src="/img/img.webp" alt="" id="none">
+                <p>object-fit: none ;</p>
+            </div>
+            <div class="testeObject">
+                <img src="/img/img.webp" alt="" id="scale-down">
+                <p>object-fit: scale-down ;</p>
+            </div>
+        </div>
+    </div>
+
+    <!------------------  Object Position   ------------------>
+    <div class="ObjectPosition001">
+        <h2 title="Nos perminite alterar a posição da IMG dentro de um quadro.">Object Position</h2><br>
+        <div class="ObjectPosition">
+
+            <div class="testeObjectPosition">
+                <img class="imgpPosition" src="/img/icons8-bullseye-48.png" alt="teste" id="testeObjectPosition01">
+            </div>
+            <div class="testeObjectPosition">
+                <img class="imgpPosition" src="/img/icons8-bullseye-48.png" alt="teste" id="testeObjectPosition02">
+            </div>
+            <div class="testeObjectPosition">
+                <img class="imgpPosition" src="/img/icons8-bullseye-48.png" alt="teste" id="testeObjectPosition03">
+            </div>
+            <div class="testeObjectPosition">
+                <img class="imgpPosition01" src="/img/icons8-bullseye-48.png" alt="teste" id="testeObjectPosition04">
+            </div>
+            
+        </div>
+    </div>
+
+    <!------------------  Alterar o elemento background   ------------------>
+    <div class="backgroundFlex01">
+        <h2>Alterar o fundos dos elementos.</h2>
+        <div class="backgroundFlex">
+            <div id="backgroundFlex02">
+                <div class="background Linear"></div>
+                <p>Linear Gradient</p>
+            </div>
+            <div  id="backgroundFlex02">
+                <div class="background Radial"></div>
+                <p>Radial Gradient</p>
+            </div>
+            <div  id="backgroundFlex02">
+                <div class="background repeating"></div>
+                <p>Repeating</p>
+            </div>
+            <div  id="backgroundFlex02">
+                <div class="background sobrepor"></div>
+                <p>Sobrepor IMG</p>
+            </div>
+            <div  id="backgroundFlex02">
+                <div class="background verou"></div>
+                <p>https://projects.verou.me/css3patterns/</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <hr><br>
+
+    <div>
+        <h1>Redimensionar as imagens de fundo dos elementos</h1>
+        <div class="backgroundFlex">
+            <div>
+                <div class="Redimensionar"></div>
+                <p>background-size: auto;</p>
+            </div>
+            <div>
+                <div class="Redimensionar" id="cover"></div>
+                <p>background-size: cover;</p>
+            </div>
+            <div>
+                <div class="Redimensionar" id="contain"></div>
+                <p>background-size: contain</p>
+            </div>
+            <div>
+                <div class="Redimensionar" id="exemplo-x-y"></div>
+                <p>background-size: valor x e y;</p>
+            </div>
+
+            <div>
+                <div id="exemplocamadas" class="camadas"></div>
+                <p>background-size: exemplo camadas;</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Posicionamento das Imagens de Fundo</h1>
+        <div class="backgroundFlex">
+            <div>
+                <div class="PosicionamentoImg" id="bottom"></div>
+                <p>Bottom</p>
+            </div>
+            <div>
+                <div class="PosicionamentoImg" id="top"></div>
+                <p>Top</p>
+            </div>
+            <div>
+                <div class="PosicionamentoImg" id="left"></div>
+                <p>Left</p>
+            </div>
+            <div>
+                <div class="PosicionamentoImg" id="right"></div>
+                <p>Right</p>
+            </div>
+            <div>
+                <div class="PosicionamentoImg" id="testePosicionamento"></div>
+                <p>Bottom 10px right 15px</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Propriedade Background Attachment</h1>
+        <p>Attachment define como nossa imagem de fundo vai se movimenta conforme a janela do navegador.</p>
+        <div class="backgroundFlex">
+            <div>
+                <div class="attachmentEx"></div>
+                <p>sem background-attachment</p>
+            </div>
+            <div>
+                <div class="attachmentEx" id="fixed"></div>
+                <p>background-attachment: fixed;</p>
+            </div>
+            <div>
+                <div class="attachmentEx" id="scroll"></div>
+                <p>background-attachment: scroll;</p>
+            </div>
+            <div>
+                <div class="attachmentEx" id="local"></div>
+                <p>background-attachment: local;</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Propriedade Background Origin</h1><br>
+        <div class="backgroundFlex">
+            <div>
+                <div id="padding-box" class="background-origin"></div>
+                <p>background-origin: padding-box;</p>
+            </div>
+            <div>
+                <div id="border-box" class="background-origin"></div>
+                <p>background-origin: border-box;</p>
+            </div>
+            <div>
+                <div id="content-box" class="background-origin"></div>
+                <p>background-origin: content-box;</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Propriedade Background Clip</h1><br>
+        <p>Pdemos usar esse efeito para fundos com cores solidas, ate aplicar esse efeito em css3 parttens, ou deixar o
+            text estilizado.</p>
+        <div class="backgroundFlex">
+            <div>
+                <div id="text-clip" class="background-clip">Trilha de CSS</div>
+                <p>background-clip: text;</p>
+            </div>
+            <div>
+                <div id="content-box-clip" class="background-clip"></div>
+                <p>background-clip: content-box;</p>
+            </div>
+            <div>
+                <div id="border-box-clip" class="background-clip"></div>
+                <p>background-clip: border-box;</p>
+            </div>
+            <div>
+                <div id="padding-box-clip" class="background-clip"></div>
+                <p>background-clip: padding-box;</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Mesclagem</h1>
+        <div class="backgroundFlex" id="backgroundFlexMesclagem">
+            <div>
+                <div id="multiply" class="mesclagem"></div>
+                <p>background-blend-mode: multiply;</p>
+            </div>
+            <div>
+                <div id="screen" class="mesclagem"></div>
+                <p>background-blend-mode: screen;</p>
+            </div>
+            <div>
+                <div id="overlay" class="mesclagem"></div>
+                <p>background-blend-mode: overlay;</p>
+            </div>
+            <div>
+                <div id="darken" class="mesclagem"></div>
+                <p>background-blend-mode: darken;</p>
+            </div>
+            <div>
+                <div id="lighten" class="mesclagem"></div>
+                <p>background-blend-mode: lighten ;</p>
+            </div>
+            <div>
+                <div id="color-dogde" class="mesclagem"></div>
+                <p>background-blend-mode: color-dogde;</p>
+            </div>
+            <div>
+                <div id="color-burn" class="mesclagem"></div>
+                <p>background-blend-mode: color-burn;</p>
+            </div>
+            <div>
+                <div id="hard-light" class="mesclagem"></div>
+                <p>background-blend-mode: hard-light;</p>
+            </div>
+            <div>
+                <div id="soft-light" class="mesclagem"></div>
+                <p>background-blend-mode: soft-light;</p>
+            </div>
+            <div>
+                <div id="difference" class="mesclagem"></div>
+                <p>background-blend-mode: difference;</p>
+            </div>
+            <div>
+                <div id="exclusion" class="mesclagem"></div>
+                <p>background-blend-mode: exclusion;</p>
+            </div>
+            <div>
+                <div id="hue" class="mesclagem"></div>
+                <p>background-blend-mode: hue;</p>
+            </div>
+            <div>
+                <div id="saturation" class="mesclagem"></div>
+                <p>background-blend-mode: saturation;</p>
+            </div>
+            <div>
+                <div id="color" class="mesclagem"></div>
+                <p>background-blend-mode: color;</p>
+            </div>
+            <div>
+                <div id="luminosity" class="mesclagem"></div>
+                <p>background-blend-mode: luminosity;</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Bordas</h1>
+        <h4>Espessura das bordas</h4>
+        <div class="backgroundFlex">
+            <div>
+                <div id="borda01" class="tamanhoBorda"></div>
+                <p>border-width: 5px;</p>
+            </div>
+            <div>
+                <div id="borda02" class="tamanhoBorda"></div>
+                <p>border-width: 10px;</p>
+            </div>
+            <div>
+                <div id="borda03" class="tamanhoBorda"></div>
+                <p>border-width: 1rem;</p>
+            </div>
+            <div>
+                <div id="borda04" class="tamanhoBorda"></div>
+                <p>border-width: 1.1em;</p>
+            </div>
+            <div>
+                <div id="borda05" class="tamanhoBorda"></div>
+                <p>border-width: 2vh;</p>
+            </div>
+        </div>
+        <br><br>
+        <h4>Estilo de bordas</h4>
+        <div class="backgroundFlex" id="backgroundFlexBordas">
+            <div>
+                <div id="solid" class="estiloBordas"></div>
+                <p>border-style: solid;</p>
+            </div>
+            <div>
+                <div id="dashed" class="estiloBordas"></div>
+                <p>border-style: dashed;</p>
+            </div>
+            <div>
+                <div id="dotted" class="estiloBordas"></div>
+                <p>border-style: dotted;</p>
+            </div>
+            <div>
+                <div id="double" class="estiloBordas"></div>
+                <p>border-style: double;</p>
+            </div>
+            <div>
+                <div id="groove" class="estiloBordas"></div>
+                <p>border-style: groove;</p>
+            </div>
+            <div>
+                <div id="ridge" class="estiloBordas"></div>
+                <p>border-style: ridge;</p>
+            </div>
+            <div>
+                <div id="inset" class="estiloBordas"></div>
+                <p>border-style: inset;</p>
+            </div>
+            <div>
+                <div id="outset" class="estiloBordas"></div>
+                <p>border-style: outset;</p>
+            </div>
+            <div>
+                <div id="mixBordas" class="estiloBordas"></div>
+                <p>border-style: dotted dashed solid;</p>
+            </div>
+            <div>
+                <div id="mixBordas2" class="estiloBordas"></div>
+                <p>misturando as bordas</p>
+            </div>
+        </div>
+        <br><br>
+        <h4>Arredondando os Cantos com a Propriedade Border Radius</h4>
+        <div class="backgroundFlex">
+            <div>
+                <div id="normal" class="arredondando"></div>
+                <p>border-radius: 50px</p>
+            </div>
+            <div>
+                <div id="quantos" class="arredondando"></div>
+                <p>border-radius: 30px 40px 10px 50px</p>
+            </div>
+            <div>
+                <div id="oval" class="arredondando"></div>
+                <p>border-radius: 50px 80px;</p>
+            </div>
+            <div>
+                <div id="porcentagem" class="arredondando"></div>
+                <p>border-radius: 50%;</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Propriedade Border Image</h1>
+        <h4>border-image-source</h4>
+        <div class="backgroundFlex">
+            <div>
+                <div id="borderImage-img" class="source"></div>
+                <p>Ex:border-image-source</p>
+            </div>
+            <div>
+                <div id="borderImage-linearGradient" class="source"></div>
+                <p>Ex:border-image-source</p>
+            </div>
+        </div>
+        <br><br>
+        <h4>border-image-slice</h4>
+        <div class="backgroundFlex">
+            <div>
+                <div id="slice1" class="slice"></div>
+                <p>border-image-slice: 70 fill;</p>
+            </div>
+            <div>
+                <div id="slice2" class="slice"></div>
+                <p>border-image-slice: 50;</p>
+            </div>
+        </div>
+        <br><br>
+        <h4>Propriedade Border Image Width</h4>
+        <div class="backgroundFlex">
+            <div>
+                <div id="width1" class="width"></div>
+                <p>border-image-width: 50px 15px</p>
+            </div>
+            <div>
+                <div id="width2" class="width"></div>
+                <p>border-image-width: 15px 50px</p>
+            </div>
+        </div>
+        <br><br>
+        <h4>Propriedade Border Image Outset</h4>
+        <div class="backgroundFlex">
+            <div>
+                <div title="border-image-width: 20px;" id="outset1" class="outset"></div>
+                <p>border-image-outset: 25px</p>
+            </div>
+            <div>
+                <div title="border-image-width: 10px 30px;" id="outset2" class="outset"></div>
+                <p>border-image-outset: 25px</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Texto</h1>
+        <div>
+            <div>
+                <div class="textFlex">
+                    <h4>Onde Encontrar Fontes Personalizadas?</h4>
+                    <p>https://fonts.google.com/</p>
+                    <p>Aplicando Fontes Personalizadas com @Font-Face</p>
+                    <p>Aplicando Fontes Personalizadas com @import url()</p>
+                    <p>Voce tbm tem a opção de criar um arquivo Global.css e adicionar todos os @import la, e ir apenas
+                        puxando
+                        as Fonts desejadas. </p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Alterando o Tamanho das Fontes com Font-Size</h4>
+                    <p>Usar a tag Font-size</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Estilo de Fontes (Font-Style)</h4>
+                    <p>Possui 3 estilos, normal, italic e oblique</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Espessura das Fontes com Font-Weight</h4>
+                    <p>Possui 2 estilos normal e bold, podendo aceitar valores de 100 a 1000.</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Variação das Fontes com Font-Variant</h4>
+                    <p>Aplicando o Font-variant: small-caps, os texto fica em maiúsculo, com um estilo mais bonito</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade Font-Stretch</h4>
+                    <p>Trabalha o espaço da palavra, com os estilos, ultra-condensed, extra-condensed, semi-condensed,
+                        normal,
+                        semi-expanded, expanded, extra-expanded e ultra-expanded.</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Customizando a Altura da Linha com Line-Height</h4>
+                    <p>Trabalha a altura da linha, podendo ser em px </p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade Text-Transform</h4>
+                    <p>Transforma os caracteres em maiusculo e minusculo.</p>
+                    <p>none: fica tudo normal;</p>
+                    <p>capitalize: transforma a primeira letra de cada palavra em maiuscula;</p>
+                    <p>uppercase: fica todas as letras maiusculas;</p>
+                    <p>lowercase: deixa tudo minusculo;</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade Text-Align</h4>
+                    <p>Responsavel pelo alinhamento do texto dentro do elemento.</p>
+                    <p>left: fica alinhado a esquerda;</p>
+                    <p>right: fica alinhado a direta;</p>
+                    <p>center: fica alinhado no centro;</p>
+                    <p>justify: ele tenta otimizar o elemento distribuindo o texto de forma uniforme;</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade Text-Decoration</h4>
+                    <p>adiciona ou remove linhas no nosso texto.</p>
+                    <p>none: tira as do texto;</p>
+                    <p>line-through: corta as palavras ao meio com uma linha;</p>
+                    <p>overline: cria uma linha em cima do texto;</p>
+                    <p>text-decoration-color: altera a cor da linha;</p>
+                    <p>text-decoration-style: altera o tipo de linha;</p>
+                    <p>text-decoration-thickness: altera a expessura da linha;</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade Text-Ident</h4>
+                    <p>Define o recuo da primeira linha do nosso texto, como o inicio de um paragrafo.</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedades Letter-Spacing e Word-Spacing</h4>
+                    <p>Letter aplica um espaçamento entre cada caractere do texto;</p>
+                    <p>word aplica um espaçamento entre cada palavra do texto;</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade White-Space</h4>
+                    <p>Define como os espaços em branco do texto de um determinado elemento é tratado.</p>
+                    <p>nowrap: é retirada a quebra de linha do texto, deixando tudo em apenas uma linha;</p>
+                    <p>pre: ele respeita o espaco conforme digitado, exemplo pode ser usado para escrever um poema;</p>
+                    <p>pre-line: o texto é quebrado quando necessario e quando há uma quebra de linha no texto original;
+                    </p>
+                    <p>pre-wrap: respeita os espaços originais, texto é quebrado quando necessario e quando há uma
+                        quebra de
+                        linha no texto original;</p>
+                    <p>break-spaces: igual o pre-wrap, mas respeita a div;</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade Word-Wrap</h4>
+                    <p>Define a quebra da palavra.</p>
+                    <p>normal, a palavra sendo maior que a div, a pralavra vai ficar para fora.</p>
+                    <p>break-word; quebra a palabra respeitando a div.</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade Writing-Mode</h4>
+                    <p>Define a orientação do texto(vertical ou horizontal)</p>
+                    <p>horizontal-tb: padrao normal.</p>
+                    <p>vertical-rl: vira o texto verticalmente, a proxima linha se posiciona a esquerda;</p>
+                    <p>vertical-lr: vira o texto verticalmente, a proxima linha se posiciona a direita;</p>
+                </div><br>
+                <div class="textFlex">
+                    <h4>Propriedade Text-Overflow</h4>
+                    <p>Define a orientação do texto(vertical ou horizontal)</p>
+                    <p>clip: é o valor padrao;</p>
+                    <p>ellipsis: vai ser adicionado ... no final do texto, para indicar que há mais conteudo para
+                        leitura;</p>
+                    <p>string: so funciona no firefox</p>
+                </div><br>
+            </div>
+        </div>
+
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>SOMBRAS</h1>
+        <h4>Efeito de Sombra nos Elementos</h3>
+            <div class="backgroundFlex" id="shadow">
+                <div>
+                    <div title="box-shadow: 20px 20px 5px -5px #0fbbff;" id="box-shadow"></div>
+                    <p>box-shadow</p>
+                </div>
+                <div><img title=" filter: drop-shadow(10px 10px 5px #080808);" id="drop-shadow" src="/img/logo DIO.webp"
+                        alt="">
+                    <p>Add sombra a img formato .png</p>
+                </div>
+            </div><br><br>
+            <div>
+                <h3>Efeito de Sombra nos Textos</h3>
+                <div class="backgroundFlex" id="text-shadow-flex">
+                    <div>
+                        <h4 title="text-shadow: 10px 10px 5px;" id="text-shadow">Testando text-shadow, trilha CSS.</h4>
+                    </div>
+                    <div>
+                        <h4 title="text-shadow: 25px 25px 3px;" id="text-shadow02">Testando text-shadow, trilha CSS.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <hr><br>
+
+    <div>
+        <h1>Aplicando Transparência aos Elementos</h1>
+        <div class="backgroundFlex">
+            <div id="opacity">
+                <p class="opacityText">Define o nivel de opacidade(transparencia) de um elemento.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Propriedade Overflow</h1>
+        <p>Define como o conteudo deve se comportar caso ultrapasse os limites do container.</p>
+        <div class="backgroundFlex">
+            <p class="overflow" id="visible"> "visible" : Lorem Ipsum is simply dummy text of the printing and
+                typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <p class="overflow" id="hidden"> "hidden" : Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <p class="overflow" id="scroll"> "scroll" : Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <p class="overflow" id="auto"> "auto" : Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. </p>
+
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Redefinindo as Propriedades Padrões dos Navegadores</h1>
+        <div>
+            <p>Reset CSS é uma folha de estilos que irá sobrepor todas as propriedades de estilos CSS que os navegadores
+                colocam por padrao.</p>
+            <p>é possivel pegar esse arquivo na web de forma gratuita.</p>
+            <p>https://meyerweb.com/eric/tools/css/reset/</p>
+            <p>Aplicação do Reset.css, salva o arquivo reset, e dentro do arquivo style.css, voce aplicar um @import
+                url(/Reset.css).</p>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Propriedade Display</h1>
+        <p>a propriedade display vai determinar como as caixas dos elementos devem se comportar no momento de serem
+            exibidas na tela.</p>
+        <div>
+            <h3>display: block; ocupa uma linha inteira no display</h3>
+            <div class="block01">Tag <b>div</b>, vem com o paramentro block natural, nao sendo necessario a aplicação.
+            </div>
+            <span class="block02">Tag <b>span</b>, nao vem com o paramentro block, sendo necessario a aplicação.</span>
+        </div>
+        <hr><br>
+        <div>
+            <h3>display: inline; ela permite dois container na mesma linha, sendo nativo da tag span, ja na tag div e
+                necessario a aplicação no inline no css.</h3>
+            <span class="inline01">Exemplo inline 01</span>
+            <div class="inline02">Exemplo inline 02</div>
+            <p>obs. o inline nao aceita a alteração de width nem de height, voce so pode mudar a altura e espaçamento da
+                fonte, como no exemplos acima. </p>
+        </div>
+        <hr><br>
+        <div>
+            <h3>display: inline-block</h3>
+            <p>diferente do inline, o inline-block nos permite alterar a propriedade de width e height dos elementos.
+            </p><br>
+            <span class="inline-block01">Exemplo inline-block 01</span>
+            <div class="inline-block02">Exemplo inline-block 02</div>
+        </div>
+        <hr><br>
+        <div>
+            <h3>display:none vs visibility: hidden;</h3>
+            <p>Ambos escondem os elementos, tornando os invisiveis, a diferença é que o visibility respeita o espaco
+                como do elemento invisivel.</p>
+        </div>
+        <hr><br>
+        <div>
+            <h3>Alinhando elemetos inline</h3>
+            <div class="container">
+                <img id="item-01" src="/img/logo_digital-innovation-one_MlayUW.png" alt="">
+                <span id="item-02">item 02</span>
+                <span id="item-03">item 03</span>
+                <span id="item-04">item 04</span>
+            </div>
+        </div>
+
+        <hr><br>
+        <div>
+            <h1>Grid Layout</h1>
+            <p>Grid:trabalha em 2 dimensão, sendo ela horizontal, vertical, podendo colocar uma ou mais colunas do lado
+                do container.</p>
+            <div>
+                <h3>Position: static;</h3>
+                <p>Valor padrão.</p>
+                <div class="eXemplo inline" id="elemento-01">Elemento 01</div>
+                <div class="eXemplo inline" id="elemento-02">Elemento 02</div>
+                <div class="eXemplo inline" id="elemento-03">Elemento 02</div>
+                <hr>
+                <div class="flexgeral">
+                    <div class="eXemplo" id="elemento-a">Elemento A</div>
+                    <div class="eXemplo" id="elemento-b">Elemento B</div>
+                    <div class="eXemplo" id="elemento-c">Elemento C</div>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h3>Position: relative;</h3>
+                <p>Valor padrão, mas a aplicação da tag relative, permite deslocar os elementos utilizando top, bottom,
+                    left e right.</p>
+                <div class="eXemplo inline" id="elemento-d">Elemento D</div>
+                <div class="eXemplo inline" id="elemento-e">Elemento E</div>
+                <div class="eXemplo inline" id="elemento-f">Elemento F</div>
+                <p>Foi aplicado um position relative no Elemento E, um Top de 20px como exemplo.</p>
+            </div>
+            <hr>
+            <h3>Position: Sticky;</h3>
+            <p>Ela funciona como tag fixed, mas melhorada, quando voce scrola a tela ate ela, ela cola o container
+                na tela, veja o exemplo abaixo.</p>
+
+            <div class="elemento-sticky">Ex: Position: sticky;</div><br>
+            <hr>
+            <div>
+                <h3>Position: Absolute;</h3>
+                <p>Com essa tag o elemento passa a ignorar o HTML e se posicionar onde colocamos, como no exemplo
+                    abaixo, podendo sobrepor os elementos.</p>
+                <div class="flexgeral">
+                    <div class="eXemplo inline" id="elemento-g">Elemento G</div>
+                    <div class="eXemplo inline" id="elemento-h">Elemento H</div>
+                    <div class="eXemplo inline" id="elemento-i">Elemento I</div>
+                </div><br>
+                <div class="flexgeral01">
+                    <div class="eXemplo inline" id="elemento-k">Elemento G</div>
+                    <div class="eXemplo inline" id="elemento-l">Elemento H</div>
+                    <div class="eXemplo inline" id="elemento-m">Elemento I</div>
+                </div>
+                <br>
+                <div class="backgroundFlex01">
+                    <div id="elemento-pai-01">
+                        <img src="/img/dimitry-anikin-fr__mdilm_8-unsplash.webp" alt="987465">
+                        <h4>Austria</h4>
+                        <h5>Hallstatt</h5>
+                    </div>
+                </div>
+                <div id="elemento-pai">
+                    <p>Elemento J, nesse exemplo, é possivel ver o comportamento do position absolute no elemento filho,
+                        sendo necessario aplicação da tag relative no elemento-pai.</p>
+
+                    <div id="elemento-filho01" class="eXemplo">Elemento-filho 01</div>
+                    <div id="elemento-filho02" class="eXemplo">Elemento-filho 02</div>
+                </div>
+            </div>
+            <div>
+                <h3>Position: Fixed;</h3>
+                <div>
+                    <p>Deixa o elemento fixo na pagina, mesmo voce dando scroll na pagina esse elemento vai continuar
+                        aparecendo, sempre
+                        na mesma posição, na pagina toda, passando por cima dos outros elementos;</p>
+                    <p>Ex: aqueles botoes que ficam no quanto da tela, que fica na tela toda.</p>
+                    <div id="elemento-filho-03" class="eXemplo">Ex: Position: fixed;</div>
+                </div>
+            </div>
+            <hr><br>
+            <div>
+                <h3>Propriedade z-index</h3>
+                <p>z-index, permite alterar as ordens dos elementos sobrepostos.</p>
+                <div class="backgroundFlex01">
+                    <div id="elementoz-pai">
+                        <div id="elementoz-01" class="exemploz">Elemento z-index 01</div>
+                        <div id="elementoz-02" class="exemploz">Elemento z-index 02</div>
+                        <div id="elementoz-03" class="exemploz">Elemento z-index 03</div>
+                        <div id="elementoz-04" class="exemploz">Elemento z-index 04</div>
+                        <div id="elementoz-05" class="exemploz">Elemento z-index 05</div>
+                        <div id="elementoz-06" class="exemploz">Elemento z-index 06</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Flexbox</h1>
+        <p>Permite posicionar os elementos dentro de outro elemento(container);</p>
+        <div>
+            <div class="container-flexbox">
+                <div class="item-container">Item container 01</div>
+                <div class="item-container">Item container 02</div>
+                <div class="item-container">Item container 03</div>
+                <div class="item-container">Item container 04</div>
+                <div class="item-container">Item container 05</div>
+            </div>
+            <p>Os eixos do flexbox, possou 2 eixos, o principal(horizontal) e o transversal(vertical).</p>
+            <br>
+            <div>
+                <div class="container-flexbox" id="container-flexbox-01">
+                    <div class="item-container">Item container 01</div>
+                    <div class="item-container">Item container 02</div>
+                    <div class="item-container">Item container 03</div>
+                    <div class="item-container">Item container 04</div>
+                    <div class="item-container">Item container 05</div>
+                </div>
+                <div class="container-flexbox" id="container-flexbox-02">
+                    <div class="item-container">Item container 01</div>
+                    <div class="item-container">Item container 02</div>
+                    <div class="item-container">Item container 03</div>
+                    <div class="item-container">Item container 04</div>
+                    <div class="item-container">Item container 05</div>
+                </div>
+            </div>
+            <hr>
+            <div class="backgroundFlex">
+                <div class="flex-direction">
+                    <h3>Propriedade do flex-direction;</h3><br>
+                    <p>flex-direction: row;</p>
+                    <p>flex-direction: row-reverse;</p>
+                    <p>flex-direction: column;</p>
+                    <p>flex-direction: column-reverse;</p>
+                </div>
+            </div>
+            <hr><br>
+            <div>
+                <h3>Propriedade do flex-wrap, ele realiza a quebra da linha, permitindo que os items caibam no container
+                    sem quebrar as propriedades.</h3>
+                <div class="backgroundFlex">
+                    <div id="flex-wrap-01">
+                        <div class="item-wrap">Item 01</div>
+                        <div class="item-wrap">Item 02</div>
+                        <div class="item-wrap">Item 03</div>
+                        <div class="item-wrap">Item 04</div>
+                        <div class="item-wrap">Item 05</div>
+                    </div>
+                </div><br><br>
+                <h3>Ex: flex-wrap,</h3>
+                <div class="backgroundFlex">
+                    <div id="flex-wrap-01">
+                        <div class="item-wrap01">Item 01</div>
+                        <div class="item-wrap01">Item 02</div>
+                        <div class="item-wrap01">Item 03</div>
+                        <div class="item-wrap01">Item 04</div>
+                        <div class="item-wrap01">Item 05</div>
+                        <p>left > right | top > bottom</p>
+                    </div>
+                </div><br><br>
+                <h3>Propriedade do flex-flow(aplicado no container(div)), é a soma do flex-direction com o flex-wrap.
+                </h3>
+                <div class="backgroundFlex">
+                    <div id="flex-flow-02">
+                        <div class="item-wrap01">Item 01</div>
+                        <div class="item-wrap01">Item 02</div>
+                        <div class="item-wrap01">Item 03</div>
+                        <div class="item-wrap01">Item 04</div>
+                        <div class="item-wrap01">Item 05</div>
+                        <div class="item-wrap01">Item 06</div>
+                        <div class="item-wrap01">Item 07</div>
+                        <div class="item-wrap01">Item 08</div>
+                        <div class="item-wrap01">Item 09</div>
+                        <p>top > bottom | left > right </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr><br>
+
+        <div>
+            <h3>Justify-content</h3>
+            <div class="backgroundFlex">
+                <div>
+                    <div class="img-justify">
+                        <img src="/img/Justify-content.png" alt="">
+                    </div>
+                    <div class="container-justify" id="container-justify-01">
+                        <div class="item-justify">item01</div>
+                        <div class="item-justify">item02</div>
+                        <div class="item-justify">item03</div>
+                    </div>
+                    <div class="container-justify" id="container-justify-02">
+                        <div class="item-justify">item01</div>
+                        <div class="item-justify">item02</div>
+                        <div class="item-justify">item03</div>
+                    </div>
+                    <div class="container-justify" id="container-justify-03">
+                        <div class="item-justify">item01</div>
+                        <div class="item-justify">item02</div>
+                        <div class="item-justify">item03</div>
+                    </div>
+                    <div class="container-justify" id="container-justify-04">
+                        <div class="item-justify">item01</div>
+                        <div class="item-justify">item02</div>
+                        <div class="item-justify">item03</div>
+                    </div>
+                    <div class="container-justify" id="container-justify-05">
+                        <div class="item-justify">item01</div>
+                        <div class="item-justify">item02</div>
+                        <div class="item-justify">item03</div>
+                    </div>
+                    <div class="container-justify" id="container-justify-06">
+                        <div class="item-justify">item01</div>
+                        <div class="item-justify">item02</div>
+                        <div class="item-justify">item03</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr><br>
+
+        <div>
+            <h3>Alinhamento De Elementos No Eixo Transversal Com Align-Items</h3>
+            <div class="backgroundFlex">
+                <div>
+                    <div class="img-align">
+                        <img src="/img/align-itens.png" alt="">
+                    </div>
+                    <div class="container-align" id="container-align-01">
+                        <div class="item-align item-align-01">Item 01</div>
+                        <div class="item-align item-align-02">Item 02</div>
+                        <div class="item-align item-align-03">Item 03</div>
+                    </div>
+                    <div class="container-align" id="container-align-02">
+                        <div class="item-align item-align-01">Item 01</div>
+                        <div class="item-align item-align-02">Item 02</div>
+                        <div class="item-align item-align-03">Item 03</div>
+                    </div>
+                    <div class="container-align" id="container-align-03">
+                        <div class="item-align item-align-01">Item 01</div>
+                        <div class="item-align item-align-02">Item 02</div>
+                        <div class="item-align item-align-03">Item 03</div>
+                    </div>
+                    <div class="container-align" id="container-align-04">
+                        <div class="item-align item-align-01">Item 01</div>
+                        <div class="item-align item-align-02">Item 02</div>
+                        <div class="item-align item-align-03">Item 03</div>
+                    </div>
+                    <div class="container-align" id="container-align-05">
+                        <div class="item-align item-align-01">Item 01</div>
+                        <div class="item-align item-align-02">Item 02</div>
+                        <div class="item-align item-align-03">Item 03</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr><br>
+
+        <div>
+            <h3>Alinhando As Linhas No Container Com Align-Content</h3>
+            <div class="backgroundFlex">
+                <div class="img-align-content">
+                    <img src="/img/align-content.png" alt="">
+                </div>
+            </div>
+            <div class="backgroundFlexAligh">
+                <div class="container-align01" id="container-align-content-01">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+                    <div class="item-align01 item-align-11">Item 11</div>
+                    <div class="item-align01 item-align-12">Item 12</div>
+                </div>
+                <div class="container-align01" id="container-align-content-02">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+                    <div class="item-align01 item-align-11">Item 11</div>
+                    <div class="item-align01 item-align-12">Item 12</div>
+                </div>
+                <div class="container-align01" id="container-align-content-03">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+                    <div class="item-align01 item-align-11">Item 11</div>
+                    <div class="item-align01 item-align-12">Item 12</div>
+                </div>
+                <div class="container-align01" id="container-align-content-04">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+                    <div class="item-align01 item-align-11">Item 11</div>
+                    <div class="item-align01 item-align-12">Item 12</div>
+                </div>
+                <div class="container-align01" id="container-align-content-05">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+                    <div class="item-align01 item-align-11">Item 11</div>
+                    <div class="item-align01 item-align-12">Item 12</div>
+                </div>
+                <div class="container-align01" id="container-align-content-06">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+                    <div class="item-align01 item-align-11">Item 11</div>
+                    <div class="item-align01 item-align-12">Item 12</div>
+                </div>
+            </div>
+            <div class="backgroundFlexAligh">
+                <div class="container-align01" id="container-align-content-07">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+
+                </div>
+                <div class="container-align01" id="container-align-content-08">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+
+                </div>
+                <div class="container-align01" id="container-align-content-09">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+
+                </div>
+                <div class="container-align01" id="container-align-content-10">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+
+                </div>
+                <div class="container-align01" id="container-align-content-11">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+
+                </div>
+                <div class="container-align01" id="container-align-content-12">
+                    <div class="item-align01 item-align-01">Item 01</div>
+                    <div class="item-align01 item-align-02">Item 02</div>
+                    <div class="item-align01 item-align-03">Item 03</div>
+                    <div class="item-align01 item-align-04">Item 04</div>
+                    <div class="item-align01 item-align-05">Item 05</div>
+                    <div class="item-align01 item-align-06">Item 06</div>
+                    <div class="item-align01 item-align-07">Item 07</div>
+                    <div class="item-align01 item-align-08">Item 08</div>
+                    <div class="item-align01 item-align-09">Item 09</div>
+                    <div class="item-align01 item-align-10">Item 10</div>
+
+                </div>
+
+
+            </div>
+
+            <hr><br>
+
+            <div>
+                <h3>Flexbox - Controlando Os Espaços Entre Os Itens Com Gap</h3>
+                <p>So controla o espaçamento entre os items.</p>
+                <div class="backgroundFlex">
+                    <div>
+                        <div class="img-gap">
+                            <img src="/img/gap.png" alt="">
+                        </div>
+                        <div class="container-align" id="container-gap-01">
+                            <div class="item-align">Item 01</div>
+                            <div class="item-align">Item 02</div>
+                            <div class="item-align">Item 03</div>
+                            <div class="item-align">Item 04</div>
+                            <div class="item-align">Item 05</div>
+                            <div class="item-align">Item 06</div>
+                            <div class="item-align">Item 07</div>
+                            <div class="item-align">Item 08</div>
+                            <div class="item-align">Item 09</div>
+                            <div class="item-align">Item 10</div>
+                            <div class="item-align">Item 11</div>
+                            <div class="item-align">Item 12</div>
+                        </div>
+                        <div class="container-align" id="container-gap-02">
+                            <div class="item-align">Item 01</div>
+                            <div class="item-align">Item 02</div>
+                            <div class="item-align">Item 03</div>
+                            <div class="item-align">Item 04</div>
+                            <div class="item-align">Item 05</div>
+                            <div class="item-align">Item 06</div>
+                            <div class="item-align">Item 07</div>
+                            <div class="item-align">Item 08</div>
+                            <div class="item-align">Item 09</div>
+                            <div class="item-align">Item 10</div>
+                            <div class="item-align">Item 11</div>
+                            <div class="item-align">Item 12</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr><br>
+
+            <div>
+                <h3>Flexbox - Ordenando Os Itens Com A Propriedade Order</h3>
+                <div class="backgroundFlex">
+                    <div>
+                        <div class="img-order">
+                            <img src="/img/ordeer.png" alt="">
+                        </div>
+                        <div class="container-flex" id="container-order-01">
+                            <div class="item-flex order-01">Item 01</div>
+                            <div class="item-flex order-02">Item 02</div>
+                            <div class="item-flex order-03">Item 03</div>
+                            <div class="item-flex order-04">Item 04</div>
+                            <div class="item-flex order-05">Item 05</div>
+                            <div class="item-flex order-06">Item 06</div>
+                            <div class="item-flex order-07">Item 07</div>
+                            <div class="item-flex order-08">Item 08</div>
+                            <div class="item-flex order-09">Item 09</div>
+                            <div class="item-flex order-10">Item 10</div>
+                            <div class="item-flex order-11">Item 11</div>
+                            <div class="item-flex order-12">Item 12</div>
+                        </div>
+                        <div class="container-flex" id="container-order-02">
+                            <div class="item-flex order-01">Item 01</div>
+                            <div class="item-flex order-02">Item 02</div>
+                            <div class="item-flex order-03">Item 03</div>
+                            <div class="item-flex order-04">Item 04</div>
+                            <div class="item-flex order-05">Item 05</div>
+                            <div class="item-flex order-06">Item 06</div>
+                            <div class="item-flex order-07">Item 07</div>
+                            <div class="item-flex order-08">Item 08</div>
+                            <div class="item-flex order-09">Item 09</div>
+                            <div class="item-flex order-10">Item 10</div>
+                            <div class="item-flex order-11">Item 11</div>
+                            <div class="item-flex order-12">Item 12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <div>
+                <h3>Flexbox: flex-grow</h3>
+                <p>Essa tag permite que a div ocupe todo o espaço de forma igual.</p>
+                <div>
+                    <div class="container-flex" id="container-grow-01">
+                        <div class="item-flex grow-01">Item 01</div>
+                        <div class="item-flex grow-01">Item 02</div>
+                        <div class="item-flex grow-01">Item 03</div>
+                    </div>
+                    <div class="container-flex" id="container-grow-02">
+                        <div class="item-flex grow-01">CSS</div>
+                        <div class="item-flex grow-01">Trilha CSS</div>
+                        <div class="item-flex grow-01">Flexbox: Flex-grow;</div>
+                    </div>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <div>
+                <h3>FlexBox: Propriedade Flex-Shrink</h3>
+                <p>Diminui os itens para caber dentro do espaco da div.</p>
+                <div class="backgroundFlex">
+                    <div>
+                        <div class="container-flex" id="container-shrink-01">
+                            <div class="item-flex-shrink shrink-01">Item 01</div>
+                            <div class="item-flex-shrink shrink-01">Item 02Item 02</div>
+                            <div class="item-flex-shrink shrink-01">Item 03</div>
+                            <div class="item-flex-shrink shrink-01">Item 04</div>
+                            <div class="item-flex-shrink shrink-01">Item 05Item 05</div>
+                            <div class="item-flex-shrink shrink-01">Item 06</div>
+                            <div class="item-flex-shrink shrink-01">Item 07</div>
+                        </div>
+                        <div class="container-flex" id="container-shrink-02">
+                            <div class="item-flex-shrink shrink-02">Item 01Item 01Item 01Item 01Item 01Item 01Item
+                                01Item 01Item 01Item 01Item 01Item 01</div>
+                            <div class="item-flex-shrink shrink-02">Item 02</div>
+                            <div class="item-flex-shrink shrink-02">Item 03</div>
+                            <div class="item-flex-shrink shrink-02">Item 04Item 04tem 04</div>
+                            <div class="item-flex-shrink shrink-02">Item 05</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <hr><br>
+
+            <div>
+                <h3>FlexBox: Propriedade Flex-basis</h3>
+                <p>define o tamanho inicial dos itens na div.</p>
+                <div class="backgroundFlexBasis">
+                    <div>
+                        <div class="container-flex" id="container-basis-01">
+                            <div class="item-flex basis-01">Item 01</div>
+                            <div class="item-flex basis-02">Item 02</div>
+                            <div class="item-flex basis-03">Item 03</div>
+                        </div>
+                        <div class="container-flex" id="container-basis-02">
+                            <div class="item-flex basis-01">Css</div>
+                            <div class="item-flex basis-02">Trilha CSS</div>
+                            <div class="item-flex basis-03">Flexbox: flex-basis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <div>
+                <h3>Shorthand Flex</h3>
+                <p>Propriedade Flex, normalmente as propriedades flex-grow, Flex-Shrink e flex-basis não são usadas de
+                    forma individual, mas sim atraves da propriedade abreviada flex;</p>
+                <div class="backgroundFlexFlex">
+                    <div>
+                        <div class="container-flex" id="container-flex-01">
+                            <div class="item-flex flex-01">Item 01</div>
+                            <div class="item-flex flex-01">Item 02</div>
+                            <div class="item-flex flex-01">Item 03</div>
+                        </div>
+                        <div class="container-flex" id="container-flex-02">
+                            <div class="item-flex flex-01">Css</div>
+                            <div class="item-flex flex-01">Trilha CSS</div>
+                            <div class="item-flex flex-01">Flexbox: flex-grow flex-shrink e flex-basis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <div>
+                <h3>Propriedade Align-Self</h3>
+                <p>Nos permite sobreescrever a posição de um item no meio dos outros.</p>
+                <div class="backgroundFlex">
+                    <div>
+                        <div class="container-flex" id="container-align-self-01">
+                            <div class="item-flex align-self-01">Item 01</div>
+                            <div class="item-flex align-self-02">Item 02</div>
+                            <div class="item-flex align-self-03">Item 03</div>
+                        </div>
+                        <div class="container-flex" id="container-align-self-02">
+                            <div class="item-flex align-self-01">Css</div>
+                            <div class="item-flex align-self-02">Trilha CSS</div>
+                            <div class="item-flex align-self-03">Align-Self</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr><br>
+            <div class="backgroundFlex">
+                <div>
+                    <h4>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</h4>
+                    <div class="img-guide">
+                        <img src="/img/css-flexbox-poster.png" alt="">
+                    </div>
+                    <h4>https://origamid.com/projetos/flexbox-guia-completo/</h4>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Dominando Grid Layouts no CSS</h1>
+        <p>CSS GRID é um recurso que permite construir layouts baseados em grades bidimensionais, dividindo a página em
+            regiões e definindo onde cada elemento deve ficar.</p>
+        <p>Nomenclatura:</p>
+        <p><b>grid container:</b> elemento pai que terá a prorpiedade <b>display:flex;</b> especificada. Ele irá
+            "envolver" todos os itens do grid.</p>
+        <p><b>grid item:</b> elementos que são filhos diretos do <b>grid container.</b></p>
+        <p><b>grid columns:</b> as faixas verticais dos itens do grid, são chamadas de colunas.</p>
+        <p><b>grid row:</b> as faixas horizontais dos itens do grid, são chamadas de linhas.</p>
+        <p><b>grid gap:</b> espaços entre as linhas e colunas do grid.</p>
+        <p><b>grid line:</b> divisorias que compõem a estrutura da grade. As estruturas entre as colunas são chamadas de
+            <i>column lines</i> e, as que estão entre as faixas horizontais, são chamadas de <i>row lines</i>.
+        </p>
+        <p><b>grid cell:</b> são celulas, ou seja, cada "quadrado" da grade, que vai entre uma <i>grid line</i> e
+            outras.</p>
+        <p><i>fr:</i>unidade de medida, criada para o css grid, ela representa uma fração do espaço disponivelno
+            container do grid.</p>
+        <div>
+            <div class="containerGrid">
+                <div class="itemExemplo">Display: grid;</div>
+                <div class="itemExemplo">Display: grid;</div>
+                <div class="itemExemplo">Display: grid;</div>
+            </div>
+            <div class="containerGrid">
+                <div class="itemExemplo">Display: grid;</div>
+                <div class="itemExemplo">Display: grid;</div>
+                <div class="itemExemplo">Display: grid;</div>
+            </div>
+        </div>
+        <div>
+            <div class="containerInline-Grid">
+                <div class="itemExemplo">Display: inline-grid;</div>
+                <div class="itemExemplo">Display: inline-grid;</div>
+                <div class="itemExemplo">Display: inline-grid;</div>
+            </div>
+            <div class="containerInline-Grid">
+                <div class="itemExemplo">Display: inline-grid;</div>
+                <div class="itemExemplo">Display: inline-grid;</div>
+                <div class="itemExemplo">Display: inline-grid;</div>
+            </div>
+        </div>
+
+        <hr><br>
+
+
+        <h3>Adicionando colunas e linhas ao Grid</h3>
+        <div>
+            <div class="containerGridColumnLine">
+                <div class="itemExemplo01 columnLine01">grid-template-columns: 400px 400px 400px</div>
+                <div class="itemExemplo01 columnLine02">grid-template-columns: 400px 400px 400px</div>
+                <div class="itemExemplo01 columnLine03">grid-template-columns: 400px 400px 400px</div>
+                <div class="itemExemplo01 columnLine04">grid-template-columns: 400px 400px 400px</div>
+                <div class="itemExemplo01 columnLine05">grid-template-columns: 400px 400px 400px</div>
+                <div class="itemExemplo01 columnLine06">grid-template-columns: 400px 400px 400px</div>
+            </div>
+            <div class="containerGridColumnLine01">
+                <div class="itemExemplo01 columnLine01">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px</div>
+                <div class="itemExemplo01 columnLine02">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+                <div class="itemExemplo01 columnLine03">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+                <div class="itemExemplo01 columnLine04">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+                <div class="itemExemplo01 columnLine05">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+                <div class="itemExemplo01 columnLine06">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+            </div>
+
+            <hr><br>
+
+            <h3>Aplicando a unidade de medida FR</h3>
+            <p>O container se torna responsivo e se divide em partes iguais</p>
+            <p>Exemplo: grid-template-columns: 1fr 1fr 1fr;</p>
+            <div class="containerGridColumnLine02">
+                <div class="itemExemplo01 columnLine01">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px</div>
+                <div class="itemExemplo01 columnLine02">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+                <div class="itemExemplo01 columnLine03">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+                <div class="itemExemplo01 columnLine04">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+                <div class="itemExemplo01 columnLine05">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+                <div class="itemExemplo01 columnLine06">grid-template-columns: 400px 400px 400px; grid-template-rows:
+                    150px 100px;</div>
+            </div>
+
+            <hr><br>
+
+            <h3>Aplicando min-content/max-content e auto no grid-template</h3>
+            <div class="backgroundFlex">
+                <div>
+                    <div class="containerMin-Content01">
+                        <div class="itemExemplo01 min-Content01">min-content</div>
+                        <div class="itemExemplo01 min-Content01">respeitaOtamanhoDaMaiorPalavra</div>
+                        <div class="itemExemplo01 min-Content01">grid-template-columns: min-content min-content
+                            min-content;</div>
+                    </div>
+                    <div class="containerMax-Content01">
+                        <div class="itemExemplo01 max-Content01">max-content</div>
+                        <div class="itemExemplo01 max-Content01">respeitaOtamanhoDaMaiorPalavra</div>
+                        <div class="itemExemplo01 max-Content01">grid-template-columns: max-content max-content
+                            max-content;</div>
+                    </div>
+                    <div class="containerAuto-Content01">
+                        <div class="itemExemplo01 auto-Content01">auto-content</div>
+                        <div class="itemExemplo01 auto-Content01">respeitaOtamanhoDaMaiorPalavra</div>
+                        <div class="itemExemplo01 auto-Content01">grid-template-columns: auto auto auto;</div>
+                    </div>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <h3>Grid implícito e explícito</h3>
+            <p>Grid-auto-flow</p>
+            <div>
+                <div>
+                    <div class="containerGridFlow01">
+                        <div class="itemExemplo01 gridFlow01">Grid auto flow</div>
+                        <div class="itemExemplo01 gridFlow01">Grid auto flow</div>
+                        <div class="itemExemplo01 gridFlow01">Grid auto flow</div>
+                        <div class="itemExemplo01 gridFlow01">Grid auto flow</div>
+                        <div class="itemExemplo01 gridFlow01">Grid auto flow</div>
+                        <div class="itemExemplo01 gridFlow01">Grid auto flow</div>
+                        <div class="itemExemplo01 gridFlow01">Grid auto flow</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr><br>
+
+            <h3>Alocando os itens do Grid nas posições específicas</h3>
+            <div>
+                <div class="containerPositionItem01">
+                    <div class="positionItem01">.item-a</div>
+                </div>
+                <div class="containerPositionItem02">
+                    <div class="positionItem02">.item-b</div>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <h3>Areas do Grid</h3>
+            <p>grid-area: < grid-row-start>/< grid-column-start>/< grid-row-end>/< grid-column-end>
+            </p>
+            <div class="backgroundFlex">
+                <div class="grid-area">
+                    <div class="area01">Header</div>
+                    <div class="area02">Main</div>
+                    <div class="area03">Sidebar</div>
+                    <div class="area04">Footer</div>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <h3>Definindo os espaçamentos dos elementos do Grid</h3>
+            <div class="backgroundFlex">
+                <div class="rowColumnsGap">
+                    <div class="itemGap01"></div>
+                    <div class="itemGap02"></div>
+                    <div class="itemGap03"></div>
+                    <div class="itemGap04"></div>
+                    <div class="itemGap05"></div>
+                    <div class="itemGap06"></div>
+                    <div class="itemGap07"></div>
+                    <div class="itemGap08"></div>
+                    <div class="itemGap09"></div>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <h3>Alinhando os itens com justify-items e align-items</h3>
+            <div class="backgroundFlex">
+                <div>
+                    <div class="justifyAlign Start">
+                        <div class="item001">justify-items: start; align-items: start;</div>
+                        <div class="item002">justify-items: start; align-items: start;</div>
+                        <div class="item003">justify-items: start; align-items: start;</div>
+                    </div>
+                    <div class="justifyAlign Center">
+                        <div class="item001">justify-items: center; align-items: center;</div>
+                        <div class="item002">justify-items: center; align-items: center;</div>
+                        <div class="item003">justify-items: center; align-items: center;</div>
+                    </div>
+                    <div class="justifyAlign End">
+                        <div class="item001">justify-items: end; align-items: end;</div>
+                        <div class="item002">justify-items: end; align-items: end;</div>
+                        <div class="item003">justify-items: end; align-items: end;</div>
+                    </div>
+                    <div class="justifyAlign Stretch">
+                        <div class="item001">justify-items: stretch; align-items: stretch;</div>
+                        <div class="item002">justify-items: stretch; align-items: stretch;</div>
+                        <div class="item003">justify-items: stretch; align-items: stretch;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr><br>
+
+        <h3>Alinhando o conteúdo do Grid com justify-content e align-content</h3>
+        <div class="backgroundFlex">
+            <div>
+                <div class="gridJustify-content jStart">
+                    <div class="item0001">justify-content: start;</div>
+                    <div class="item0002">justify-content: start;</div>
+                    <div class="item0003">justify-content: start;</div>
+                    <div class="item0004">justify-content: start;</div>
+                    <div class="item0005">justify-content: start;</div>
+                    <div class="item0006">justify-content: start;</div>
+                </div>
+                <div class="gridJustify-content jCenter">
+                    <div class="item0001">justify-content: center;</div>
+                    <div class="item0002">justify-content: center;</div>
+                    <div class="item0003">justify-content: center;</div>
+                    <div class="item0004">justify-content: center;</div>
+                    <div class="item0005">justify-content: center;</div>
+                    <div class="item0006">justify-content: center;</div>
+                </div>
+                <div class="gridJustify-content jEnd">
+                    <div class="item0001">justify-content: end;</div>
+                    <div class="item0002">justify-content: end;</div>
+                    <div class="item0003">justify-content: end;</div>
+                    <div class="item0004">justify-content: end;</div>
+                    <div class="item0005">justify-content: end;</div>
+                    <div class="item0006">justify-content: end;</div>
+                </div>
+                <div class="gridJustify-content jStretch">
+                    <div class="item0001">justify-content: stretch;</div>
+                    <div class="item0002">justify-content: stretch;</div>
+                    <div class="item0003">justify-content: stretch;</div>
+                    <div class="item0004">justify-content: stretch;</div>
+                    <div class="item0005">justify-content: stretch;</div>
+                    <div class="item0006">justify-content: stretch;</div>
+                </div>
+                <div class="gridJustify-content jSpace-around">
+                    <div class="item0001">justify-content: space-around;</div>
+                    <div class="item0002">justify-content: space-around;</div>
+                    <div class="item0003">justify-content: space-around;</div>
+                    <div class="item0004">justify-content: space-around;</div>
+                    <div class="item0005">justify-content: space-around;</div>
+                    <div class="item0006">justify-content: space-around;</div>
+                </div>
+                <div class="gridJustify-content jSpace-between">
+                    <div class="item0001">justify-content: space-between;</div>
+                    <div class="item0002">justify-content: space-between;</div>
+                    <div class="item0003">justify-content: space-between;</div>
+                    <div class="item0004">justify-content: space-between;</div>
+                    <div class="item0005">justify-content: space-between;</div>
+                    <div class="item0006">justify-content: space-between;</div>
+                </div>
+                <div class="gridJustify-content jSpace-around">
+                    <div class="item0001">justify-content: space-evenly;</div>
+                    <div class="item0002">justify-content: space-evenly;</div>
+                    <div class="item0003">justify-content: space-evenly;</div>
+                    <div class="item0004">justify-content: space-evenly;</div>
+                    <div class="item0005">justify-content: space-evenly;</div>
+                    <div class="item0006">justify-content: space-evenly;</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h3>Align-Content</h3>
+        <div class="backgroundFlex">
+            <div>
+                <div class="gridAlign-content aStart">
+                    <div class="item00001">align-content: start;</div>
+                    <div class="item00002">align-content: start;</div>
+                    <div class="item00003">align-content: start;</div>
+                    <div class="item00004">align-content: start;</div>
+                    <div class="item00005">align-content: start;</div>
+                    <div class="item00006">align-content: start;</div>
+                </div>
+                <div class="gridAlign-content aCenter">
+                    <div class="item00001">align-content: center;</div>
+                    <div class="item00002">align-content: center;</div>
+                    <div class="item00003">align-content: center;</div>
+                    <div class="item00004">align-content: center;</div>
+                    <div class="item00005">align-content: center;</div>
+                    <div class="item00006">align-content: center;</div>
+                </div>
+                <div class="gridAlign-content aEnd">
+                    <div class="item00001">align-content: end;</div>
+                    <div class="item00002">align-content: end;</div>
+                    <div class="item00003">align-content: end;</div>
+                    <div class="item00004">align-content: end;</div>
+                    <div class="item00005">align-content: end;</div>
+                    <div class="item00006">align-content: end;</div>
+                </div>
+                <div class="gridAlign-content aStretch">
+                    <div class="item00001">align-content: stretch;</div>
+                    <div class="item00002">align-content: stretch;</div>
+                    <div class="item00003">align-content: stretch;</div>
+                    <div class="item00004">align-content: stretch;</div>
+                    <div class="item00005">align-content: stretch;</div>
+                    <div class="item00006">align-content: stretch;</div>
+                </div>
+                <div class="gridAlign-content aSpace-around">
+                    <div class="item00001">align-content: space-around;</div>
+                    <div class="item00002">align-content: space-around;</div>
+                    <div class="item00003">align-content: space-around;</div>
+                    <div class="item00004">align-content: space-around;</div>
+                    <div class="item00005">align-content: space-around;</div>
+                    <div class="item00006">align-content: space-around;</div>
+                </div>
+                <div class="gridAlign-content aSpace-between">
+                    <div class="item00001">align-content: space-between;</div>
+                    <div class="item00002">align-content: space-between;</div>
+                    <div class="item00003">align-content: space-between;</div>
+                    <div class="item00004">align-content: space-between;</div>
+                    <div class="item00005">align-content: space-between;</div>
+                    <div class="item00006">align-content: space-between;</div>
+                </div>
+                <div class="gridAlign-content aSpace-evenly">
+                    <div class="item00001">align-content: space-evenly;</div>
+                    <div class="item00002">align-content: space-evenly;</div>
+                    <div class="item00003">align-content: space-evenly;</div>
+                    <div class="item00004">align-content: space-evenly;</div>
+                    <div class="item00005">align-content: space-evenly;</div>
+                    <div class="item00006">align-content: space-evenly;</div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr><br>
+
+        <h3>Alinhando itens específicos com justify-self e align-self</h3>
+        <p>justify-self: alinha o item horizontalmente.</p>
+        <p>align-self: alinha o item verticalmente.</p>
+        <div class="backgroundFlex">
+            <div>
+                <div class="gridJustifyAlign-self">
+                    <div class="itemSelf item000001">justify-self: start;</div>
+                    <div class="itemSelf item000002">justify-self: center;</div>
+                    <div class="itemSelf item000003">justify-self: end;</div>
+                    <div class="itemSelf item000004">justify-self: stretch;</div>
+                </div>
+            </div>
+        </div>
+        <div class="backgroundFlex">
+            <div>
+                <div class="gridJustifyAlign-self">
+                    <div class="itemSelf item0000001">align-self: start;</div>
+                    <div class="itemSelf item0000002">align-self: center;</div>
+                    <div class="itemSelf item0000003">align-self: end;</div>
+                    <div class="itemSelf item0000004">align-self: stretch;</div>
+                    <div class="itemSelf item0000001">align-self: start;</div>
+                    <div class="itemSelf item0000002">align-self: center;</div>
+                    <div class="itemSelf item0000003">align-self: end;</div>
+                    <div class="itemSelf item0000004">align-self: stretch;</div>
+                </div>
+            </div>
+        </div>
+
+        <hr><br>
+
+        <div class="backgroundFlex">
+            <div>
+                <div class="img-guide">
+                    <img src="/img/css-grid-poster.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div>
+        <h1>Responsividade</h1>
+        <div>
+            <h3>Layouts Flexiveis</h3><br>
+            <p>Layout de multi colunas</p><br>
+            <div>
+                <div class="responsividadeMultiColunas">
+                    <h4>Home - Canção de Edward Sharpe and the Magnetic Zeros</h4>
+                    Alabama, Arkansas
+                    I do love my ma and pa
+                    Not that way that I do love you
+                    Well, holy moly, me oh my
+                    You're the apple of my eye
+                    Girl, I've never loved one like you
+                    Man, oh man, you're my best friend
+                    I scream it to the nothingness
+                    There ain't nothing that I need
+                    Well, hot and heavy, pumpkin pie
+                    Chocolate candy, Jesus Christ
+                    Ain't nothing please me more than you
+                    Oh, home, let me come home
+                    Home is wherever I'm with you
+                    Oh, home, let me come home
+                    Home is wherever I'm with you
+                    La, la, la, la, take me home
+                    (Daddy) Mother, I'm coming home
+                    I'll follow you into the park
+                    Through the jungle, through the dark
+                    Girl, I never loved one like you (hey)
+                    Moats and boats and waterfalls
+                    Alleyways and pay phone calls
+                    I've been everywhere (hey) with you
+                    That's true, laugh until we think we'll die
+                    Barefoot on a summer night
+                    Never could be sweeter than with you (hey)
+                    And in the streets you run a-free
+                    Like it's only you and me
+                    Geez, you're something to see
+                    Oh, home, let me come home
+                    Home is wherever I'm with you
+                    Oh, home, let me come home
+                    Home is wherever I'm with you
+                    La, la, la, la, take me home
+                    (Daddy) Mother, I'm coming home
+
+                </div>
+            </div>
+
+            <hr><br>
+
+            <h3 class="respoFlex">Flexbox Responsivo</h3><br>
+            <div class="flexboxResposivo">
+                <div class="flexRespCard">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repellat eaque eum! Perspiciatis
+                    voluptate quasi eligendi quaerat perferendis consequuntur molestiae aliquid repellendus consequatur
+                    libero necessitatibus quisquam, sunt distinctio tempora officiis?
+                </div>
+                <div class="flexRespCard">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repellat eaque eum! Perspiciatis
+                    voluptate quasi eligendi quaerat perferendis consequuntur molestiae aliquid repellendus consequatur
+                    libero necessitatibus quisquam, sunt distinctio tempora officiis?
+                </div>
+                <div class="flexRespCard">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repellat eaque eum! Perspiciatis
+                    voluptate quasi eligendi quaerat perferendis consequuntur molestiae aliquid repellendus consequatur
+                    libero necessitatibus quisquam, sunt distinctio tempora officiis?
+                </div>
+            </div>
+            <br>
+            <main>
+                <h3>Flexbox Responsivo: Galeria de Imagens</h3>
+                <div class="flexGallery">
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                    <div class="flexImage-card">
+                        <img src="https://source.unsplash.com/random/200x200" alt="">
+                    </div>
+                </div>
+            </main>
+
+            <hr><br>
+
+            <h3>Grid Flexivel</h3>
+            <div class="gridResp">
+                <div class="gridRespHeader">Header content</div>
+                <div class="gridRespNav">
+                    <li>Menu 01</li>
+                    <li>Menu 02</li>
+                    <li>Menu 03</li>
+                    <li>Menu 04</li>
+                    <li>Menu 05</li>
+                </div>
+                <div class="gridRespMain">Main content</div>
+                <div class="gridRespContent01">Content01</div>
+                <div class="gridRespContent02">Content02</div>
+                <div class="gridRespContent03">Content03</div>
+                <div class="gridRespFooter">Footer</div>
+            </div>
+
+            <hr><br>
+
+            <h3>MEDIA QUERIES</h3>
+            <p>Estrutura : @media screen (min-width: 320px) and (max-widht: 768px)</p><br>
+            <div class="mediaQueries">Media type:
+                <li><b>All:</b> Para todos os dispositivos.</li>
+                <li><b>Screen:</b>Para monitores ou outros dispositivos com telas coloridas e com resolução adequada.
+                </li>
+                <li><b>Handheld:</b> Para dispositivos de mão. Normalmente com telas pequenas e banda limitada.</li>
+                <li><b>Embossed:</b> Para dispositivos que “imprimem” em braille.</li>
+                <li><b>Tty:</b> Para dispositivos que utilizam uma grade fixa para exibição de caracteres, como por
+                    exemplo,
+                    teletypes, terminais, dispositivos portáteis com display limitado.</li>
+                <li><b>Print:</b> Para impressão em papel.</li>
+                <li><b>Braille:</b> Para dispositivos táteis.</li>
+                <li><b>Projection:</b> Para apresentações, como PowerPoint.</li>
+                <li><b>TV:</b> Para dispositivos como televisores, ou seja, com baixa resolução, quantidade de cores e
+                    scroll
+                    limitado.</li>
+                <li><b>Speech:</b> Para sintetizadores de voz</li>
+            </div><br>
+
+            <p>Media features</p>
+            <p>Configura quais recursos de midia se quer combinar para aplicar determinado estilos.</p>
+            <div class="mediaQueries">
+                <li><b>min-width/min-height/max-width/max-height:</b>detecta a largura e altura da viewport;</li>
+                <li><b>orientation:</b>detecta se o dispositivo esta em modo retrato ou paisagem;</li>
+                <li><b>hover:</b>indica que a pagina esta sendo acessada atraves de um mecanismo de ponteiro, como um
+                    mouse;</li>
+                <li><b>pointer:</b> detecta qua preciso e o ponteiro, ajuda a detectatar o touchscreen, mouse, etc.</li>
+            </div><br>
+
+            <p>Operadores</p>
+            <p>É possivel combinar, atraves de operadores logicos, as medias features para atender as condiçoes para
+                aplicar os estilos.</p>
+            <div class="mediaQueries">
+                <li><b>AND:</b>deve atender a todas media features.</li>
+                <li><b>OR:</b>deve atender, no minino, uma das media features.</li>
+                <li><b>NOT:</b>nega as condiçoes aplicadas, invertendo todo o significado do media query.</li>
+            </div>
+
+
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div><!--           Pseudo elementos          -->
+
+
+        <h3>Pseudo - elementos</h3>
+
+
+        <div><!--  first-letter   / altera a primeira letra dos textos e paragrafos-->
+            <h4>::first-letter</h4>
+            <p>Com esse pseudo-elementos é possivel alterar a primeira letra de todo os site, segue abaixo o tipo de
+                alteração que essa propriedade aceita:
+            <div class="first-latterTag">
+                <li class="first-latter01"><b>color</b></li>
+                <li class="first-latter02"><b>background</b></li>
+                <li class="first-latter03"><b>margin</b></li>
+                <li class="first-latter04"><b>padding</b></li>
+                <li class="first-latter05"><b>boder</b></li>
+                <li class="first-latter06"><b>font</b></li>
+            </div>
+            Esse pseudo-elemento consegue aplicar as Tag's acima na primeira letra dos elementos.
+            </p>
+        </div>
+
+        <hr><br>
+
+        <div><!--  first-line  / altera a primeira linha dos textos e paragrafos -->
+            <h4>::first-line</h4>
+            <p>Com esse pseudo-elementos é possivel alterar a primeira linha de todo os site, segue abaixo o tipo de
+                alteração que essa propriedade aceita:
+            <div class="first-lineTag">
+                <li class="first-line01"><b>color</b></li>
+                <li class="first-line02"><b>background</b></li>
+                <li class="first-line03"><b>font</b></li>
+            </div>
+            <p>Ex:</p>
+            <p class="first-line01">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas deleniti veritatis
+                molestias maiores perspiciatis libero ipsa maxime veniam accusantium ipsum quam quasi pariatur odio
+                neque tenetur cumque, enim soluta iusto!</p>
+            <p class="first-line02">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, impedit beatae rerum
+                culpa et officiis fugiat voluptatibus dolorum quod numquam voluptas veritatis, ab quasi hic autem
+                maiores eaque nam. Cum. </p>
+            <p class="first-line03">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea repellat voluptatem
+                magnam doloremque nemo velit qui laudantium culpa optio aliquid eius inventore aut laboriosam
+                repellendus, ut fuga maiores maxime quisquam?</p>
+        </div>
+
+        <hr><br>
+
+        <div>
+            <!--  backdrop  / altera o background de uma tag, ex: video fullscreen no celular, ele altera a cor das tarjas que estão em cima e embaixo. -->
+            <h4><code>::backdrop</code></h4>
+            <p>Esse elemento altera o background(tarjas) de um video em mobile.</p>
+            <video controls class="backdropVideoTest">
+                <source
+                    src="/img/Steve Jobs - Tudo que você chama de vida foi criado por pessoas que não são mais espertas que você!” (360p_30fps_H264-128kbit_AAC).mp4">
+            </video>
+        </div>
+
+        <hr><br>
+
+        <div><!--  marker  / altera os topicos ou numeros de uma lista ou então a flecha de um elemento -->
+            <h4>::marker</h4>
+            <p>Altera os topicos ou numeros de uma lista ou então a flecha de um elemento</p>
+            <details>
+                <summary class="makerTag01">Propriedades aceitas:</summary>
+            </details>
+            <div class="makerTag">
+                <li class="makerTag02">color</li>
+                <li class="makerTag03">content</li>
+                <li class="makerTag04">white-space</li>
+                <li class="makerTag05">font</li>
+                <li class="makerTag06">animation</li>
+                <li class="makerTag07">transition</li>
+                <p>Sites que retirei os simbolos: https://fsymbols.com/pt/</p>
+            </div>
+
+        </div>
+
+        <hr><br>
+
+        <div> <!--  placeholder  / É uma dica para ajudar no preenchimento de algum campo de formulario -->
+            <h4>::placeholder</h4>
+            <p>é uma dica para ajudar no preenchimento de algum campo de formulario</p>
+            <p>Propriedades aceitas:</p>
+            <div class="placeholderTag">
+                <li>color</li>
+                <li>font</li>
+                <li>background</li>
+                <li>text</li>
+            </div>
+            <p>Ex:</p>
+            <label for="nome">Nome:</label>
+            <input name="nome" type="text" placeholder="Ex: Fulano de Tal">
+
+            <label for="senha">Senha:</label>
+            <input name="nome" type="password" placeholder="Minimo de 10 caracteres">
+        </div>
+
+        <hr><br>
+
+        <div><!--  selection / estilizara a seleção de textos no navegador. -->
+            <h4>::selection</h4>
+            <p>estilizara a seleção de textos no navegador</p>
+            <p>Proriedades aceitas:</p>
+            <div class="selectionTag">
+                <li>color</li>
+                <li>background</li>
+                <li>text</li>
+            </div>
+            <p>Ex:</p>
+            <p class="selectionTag01">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa maxime eum amet
+                eligendi? Amet, magni vero dignissimos debitis sapiente.</p>
+            <p class="selectionTag02">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa maxime eum amet
+                eligendi? Amet, magni vero dignissimos debitis sapiente.</p>
+            <p class="selectionTag03">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa maxime eum amet
+                eligendi? Amet, magni vero dignissimos debitis sapiente.</p>
+        </div>
+
+        <hr><br>
+
+        <div><!--  file-selector-button / permite estilizara o button de seleção de arquivos no navegador. -->
+            <h4>::file-selector-button</h4>
+            <p>permite estilizara o button de seleção de arquivos no navegado</p>
+            <p>Ex:</p>
+            <form class="FSBTag">
+                <label class="FSBTag01" for="fileUpload">Upload de arquivos:</label>
+                <input class="FSBTag02" name="fileUpload" type="file">
+            </form>
+        </div>
+
+        <hr><br>
+
+        <div>
+            <!--  before e after / permite colocar seletores antes e depois dos textos e adicionar sobreposição sobre imagens. -->
+            <h4>:: before e ::after</h4>
+            <p>permite colocar seletores antes e depois dos textos e adicionar sobreposição sobre imagens</p>
+            <br>
+            <p>Ex: seletor antes e depois dos textos</p>
+            <p class="beforeTag">
+                <span>::before - Exemplo 01 - Exemplo 02</span>
+            </p>
+            <p class="afterTag">
+                <span>::after - Exemplo 01 - Exemplo 02</span>
+            </p>
+            <br>
+            <p>Ex: sobrepor imgs</p>
+            <div class="beforeAfterTagImg">
+                <div>
+                    <div class="beforeAfterCard-image"></div>
+                </div>
+                <div>
+                    <div class="beforeAfterCard-image02"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <hr><br>
+
+    <div><!--           Pseudo classes         -->
+        <h3>Pseudo-classe</h3>
+
+        <br>
+
+        <div><!--  hover   / altera estiliza botton, estiliza ate uma div.-->
+            <h4>:hover</h4>
+            <p>altera estiliza botton, estiliza ate uma div</p>
+            <p>Ex de estilização de um button</p>
+            <div>
+                <button class="hoverTag">Testar o :hover, clique aqui meu Chapa! </button>
+            </div><br>
+            <p>Ex de estilização de uma DIV</p>
+            <div class="hoverTag01">
+                <div class="hoverTag02">
+                    <button class="hoverTag">Testar o :hover, clique aqui meu Chapa! </button>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div><!--  active   / ele estiliza um button ou um href quando se clica nele.-->
+            <h4>:active</h4><br>
+            <p>ele estiliza um button ou um href quando se clica nele.</p>
+            <div class="activeTag">
+                <button class="activeTag02">Test :Active, clique aqui meu chapa!</button><br><br>
+                <a class="activeTag03" href="http://dio.me">Site da DIO</a>
+            </div>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div><!--  focus, focus-within e focus-visible   / ele estiliza os elementos para o usuario dar mais atenção.-->
+            <h4>:focus, :focus-within e :focus-visible</h4>
+            <p>ele estiliza os elementos para o usuario dar mais atenção.</p>
+            <form>
+                <p>Faça seu pedido! Escolha o sabor do sorvete:</p>
+                <label class="focusTag">
+                    <p> Nome completo:</p>
+                    <input class="focusTag01" name="nome" type="text">
+                </label>
+                <label class="focusTag">
+                    <p>Sabor do sorvete: </p>
+                    <select class="focusTag02" name="Sabor">
+                        <option value="chocolate">Chocolate</option>
+                        <option value="morango">Morango</option>
+                        <option value="abacaxi">Abacaxi</option>
+                    </select>
+
+                </label>
+                <button class="focusTag03">Finalizar seu pedido!</button>
+            </form>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div><!--  target   / ele direciona e estiliza o paragrafro.-->
+            <h4>:target</h4>
+            <p>ele direciona e estiliza o paragrafro</p>
+            <div class="targetTag">
+                <ol class="targetTag01">
+                    <li><a href="#p1">Pular para o primeiro paragrafo.</a></li>
+                    <li><a href="#p2">Pular para o segundo paragrafo.</a></li>
+                    <li><a href="#p3">Pular para o terceiro paragrafo.</a></li>
+                </ol>
+                <p class="targetTag02" id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto esse
+                    libero reiciendis cum dignissimos illo nam est velit quae natus, eum aperiam fugit autem unde
+                    similique provident. Illo, placeat ea.</p>
+                <p class="targetTag02" id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga
+                    error hic perspiciatis nihil! Harum minus at error illum earum maiores, optio in fuga quo sit?
+                    Commodi dignissimos accusantium aliquid.</p>
+                <p class="targetTag02" id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque architecto
+                    culpa corporis laudantium nulla atque quas molestiae adipisci officiis quia ex magnam, facilis odit
+                    rerum accusantium facere veritatis aut. Inventore.</p>
+            </div>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div><!--  enabled e disabled   / ele habilita e desabilita uma função para o usuario.-->
+            <h4>enabled e disabled</h4>
+            <p>ele habilita e desabilita uma função para o usuario</p>
+            <div class="enabledDisabled01">
+                <div class="enabledDisabled">
+                    <button>Botão habilitado</button>
+                    <button disabled>Botão desabilitado</button>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div><!--  link e visited   / muda a cor dos link visitados.-->
+            <h4>link e visited</h4>
+            <p> muda a cor dos link visitados</p>
+            <div class="linkVisitedTag">
+                <div class="linkVisitedTag01">
+                    <a class="linkVisitedTag03" href="https://web.dio.me/home">Digital Innovation One</a>
+                    <a class="linkVisitedTag03" href="https://www.youtube.com/">Youtube</a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div><!--  checked   / muda a cor do check do formulario.-->
+            <h4>checked e indeterminate</h4>
+            <p> muda a cor do check do formulario</p>
+            <div class="checkedIndeterminate">
+                <div class="checkedIndeterminate01">
+                    <input class="checkedIndeterminate02" name="task-01" type="checkbox">
+                    <label for="task-01">Tarefa 01</label>
+                </div>
+                <div class="checkedIndeterminate01">
+                    <input class="checkedIndeterminate02" name="task-02" type="checkbox">
+                    <label for="task-02">Tarefa 02</label>
+                </div>
+                <div class="checkedIndeterminate01">
+                    <input class="checkedIndeterminate02" name="task-03" type="checkbox">
+                    <label for="task-03">Tarefa 03</label>
+                </div>
+                <div class="checkedIndeterminate01">
+                    <input class="checkedIndeterminate02" name="task-04" type="checkbox">
+                    <label for="task-04">Tarefa 04</label>
+                </div>
+                <div class="checkedIndeterminate01">
+                    <input class="checkedIndeterminate02" name="task-05" type="checkbox">
+                    <label for="task-05">Tarefa 05</label>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div><!-- valid e invalid, in-range e out-ofrange   / Serve para validar um formulario.-->
+            <h4>valid e invalid, in-range e out-ofrange</h4>
+            <p>Serve para validar um formulario
+            </p>
+            <div><br>
+                <form class="testPseudoClass">
+                    <p>Faça sua compra:</p>
+                    <label for="email" required>E-mail</label>
+                    <input class="testPseudoClass02" type="email" name="email">
+                    <span class="error">E-mail invalido</span>
+
+                    <label for="codigo-produto">Código do produto:</label>
+                    <input class="testPseudoClass02" name="codigo" type="number" min="1000">
+                    <span class="error">codigo do produto invalido</span>
+
+                    <label for="cupom">Cupom de desconto:</label>
+                    <input class="testPseudoClass02" type="cupom" type="text" pattern="[a-z]+"
+                        placeholder="Apenas letras minusculas">
+                    <span class="error">cupom invalido</span>
+
+                    <label for="data-nascimento">Data de nascimento</label>
+                    <input class="testPseudoClass02" type="date" name="data-nascimento" min="1962-01-01"
+                        max="2004-12-31">
+                    <span class="error">data invalido</span>
+
+                    <label for="quantidade">Quantidade:</label>
+                    <input class="testPseudoClass02" name="amount" type="number" min="3" max="10">
+                    <span class="error">quantidade invalido</span>
+
+                    <label>
+                        <input class="testPseudoClass02" type="checkbox" required>
+                        <p>Li e aceito os termos de uso!</p>
+                    </label>
+
+                    <button type="submit">Comprar</button>
+                </form>
+
+            </div>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div> <!--  :required e :optional   / estilizar os campos obrigatorios e os opcional no formulario.-->
+            <h4>:required e :optional</h4>
+            <p>estilizar os campos obrigatorios e os opcional no formulario</p>
+            <div><br>
+                <form class="testRequiredOptional">
+                    <p>Faça sua compra:</p>
+                    <label for="email" required>E-mail</label>
+                    <input class="testRequiredOptional02" type="email" name="email" required>
+
+
+                    <label for="codigo-produto">Código do produto:</label>
+                    <input class="testRequiredOptional02" name="codigo" type="number" min="1000" required>
+
+
+                    <label for="cupom">Cupom de desconto:</label>
+                    <input class="testRequiredOptional02" type="cupom" type="text" pattern="[a-z]+"
+                        placeholder="Apenas letras minusculas">
+
+
+                    <label for="data-nascimento">Data de nascimento</label>
+                    <input class="testRequiredOptional02" type="date" name="data-nascimento" min="1962-01-01"
+                        max="2004-12-31" required>
+
+
+                    <label for="quantidade">Quantidade:</label>
+                    <input class="testRequiredOptional02" name="amount" type="number" min="3" max="10" required>
+
+
+                    <button type="submit">Comprar</button>
+                </form>
+            </div>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div>
+            <!--  autofill e  -webkit-autofill  / Serve para indicar para o usuario quando um valor é preenchido de forma automatica.-->
+            <h4>:autofill e :-webkit-autofill</h4>
+            <p>Serve para indicar para o usuario quando um valor é preenchido de forma automatica.</p>
+            <div><br>
+                <form class="testAutofill">
+                    <p>Faça seu login:</p>
+                    <label for="email">E-mail</label>
+                    <input class="testAutofill02" type="email" name="email" required>
+
+                    <label for="password">Senha:</label>
+                    <input class="testAutofill02 type=" password" name="senha" required>
+
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div><!--  root   / ele é igual a tag html, aplica estilização na raiz da pagina.-->
+            <h4>:root</h4>
+            <p>ele é igual a tag html, aplica estilização na raiz da pagina</p>
+            <p>basta colocar :root no css, e aplicar as tags necessarias e vai alterar toda a pagina do site.</p>
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div class="nthTest"> <!--  :nth-child   / Estiliza os elementos filhos.-->
+            <h4>:nth-child </h4>
+            <p>Estiliza os elementos filhos.</p>
+            <div class="nthTest1">
+                <p class="nthTest01">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laborum minus suscipit impedit
+                    esse qui tenetur cumque vero in ducimus mollitia quisquam harum alias sunt rem, labore similique
+                    repellendus fugit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias modi harum laudantium eum, earum
+                    sunt corporis dignissimos unde animi ipsam ut officiis, ab molestiae omnis. Modi recusandae ab odio
+                    neque?</p>
+                <p class="nthTest01">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="nthTestlist">
+                <ul class="nthTestlist-01">
+                    <li>Item 01</li>
+                    <li>Item 02</li>
+                    <li>Item 03</li>
+                    <li>Item 04</li>
+                    <li>Item 05</li>
+                    <li>Item 06</li>
+                    <li>Item 07</li>
+                    <li>Item 08</li>
+                    <li>Item 09</li>
+                    <li>Item 10</li>
+                </ul>
+            </div>
+            <div class="nthTestlist">
+                <ul class="nthTestlist-02">
+                    <li>Categoria 01</li>
+                    <li>Categoria 02</li>
+                    <li>Categoria 03</li>
+                    <li>Categoria 04</li>
+                    <li>Categoria 05</li>
+                    <li>Categoria 06</li>
+                    <li>Categoria 07</li>
+                    <li>Categoria 08</li>
+                    <li>Categoria 09</li>
+                    <li>Categoria 10</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr><br>
+
+
+        <div>
+
+        </div>
+
+    </div>
+
+    <!------------------  Transformações 2D   ------------------>
+    <div class="tranformacoes2D"><br>
+        <h1>Transformações 2D</h1><br>
+
+        <div><!--  translate()   / Move os itens no eixo X e Y -->
+            <h2>translate()</h2>
+            <p>Move os itens no eixo X e Y</p>
+            <div class="translateTag">
+                <div class="translateTag01"></div>
+                <div class="translateTag02"></div>
+            </div>
+
+        </div>
+        <hr><br>
+
+        <div><!--  rotate()   / Rotaciona os itens no eixo X e Y -->
+            <h2>rotate()</h2>
+            <p>Rotaciona os itens no eixo X e Y</p>
+            <div class="rotateTag">
+                <div class="rotateTag01"></div>
+                <div class="rotateTag02"></div>
+            </div>
+        </div>
+        <hr><br>
+
+        <div><!--  rotateX() e  rotateY()   / Rotaciona os itens no eixo X e Y -->
+            <h2>rotateX() e rotateY()</h2>
+            <p>Rotaciona os itens no eixo X e Y em 3D</p>
+            <div class="rotateXYTag">
+                <div class="rotateXTag01"></div>
+                <div class="rotateYTag02"></div>
+                <div class="rotateXTag03"></div>
+                <div class="rotateYTag04"></div>
+            </div>
+        </div>
+        <hr><br>
+
+        <div><!--  scale()  / Aumenta e diminui o tamanho de um elemento. -->
+            <h2>scale()</h2>
+            <p>Aumenta e diminui o tamanho de um elemento.</p>
+            <div class="scaleTag">
+                <div class="scaleTag01"></div>
+                <div class="scaleTag02"></div>
+                <div class="scaleTag03"></div>
+                <div class="scaleTag04"></div>
+            </div>
+        </div>
+        <hr><br>
+
+        <div><!--  skew()  / Distorce um elemento. -->
+            <h2>skew()</h2>
+            <p>Distorce um elemento.</p>
+            <div class="skewTag">
+                <div class="skewTagGenerica" id="skewXTag01"></div>
+                <div class="skewTagGenerica" id="skewXTag02"></div>
+                <div class="skewTagGenerica" id="skewYTag03"></div>
+                <div class="skewTagGenerica" id="skewYTag04"></div>
+                <div class="skewTagGenerica" id="skewXYTag05"></div>
+                <div class="skewTagGenerica" id="skewXYTag06"></div>
+                <div class="skewTagGenerica" id="skewTag07"></div>
+            </div>
+        </div>
+        <hr><br>
+
+        <div><!--  matrix()  / É a soma do translateX, translateY, scaleX, scaleY, skewX e skewY. -->
+            <h2>matrix()</h2>
+            <p>É a soma do translateX, translateY, scaleX, scaleY, skewX e skewY.</p>
+            <div class="matrixTag">
+                <div class="matrixTagGenerica" id="matrixScaleXTag01"></div>
+                <div class="matrixTagGenerica" id="matrixSkewYTag02"></div>
+                <div class="matrixTagGenerica" id="matrixSkewXTag03"></div>
+                <div class="matrixTagGenerica" id="matrixScaleYTag04"></div>
+                <div class="matrixTagGenerica" id="matrixTranslateXTag05"></div>
+                <div class="matrixTagGenerica" id="matrixTranslateYTag06"></div>
+            </div>
+        </div><br>
+    </div>
+
+    <!------------------  Transformações 3D   ------------------>
+    <div class="tranformacoes3D"><br>
+        <h1>Transformações 3D</h1>
+
+        <div><!--  Perspectiva  / Muda a perspectiva da div. ou img, dando um efeiro 3D -->
+            <h2>Perspectiva</h2>
+            <p>Muda a perspectiva da div. ou img, dando um efeiro 3D</p>
+            <div class="perpectivaTag">
+                <div class="perpectivaTag02">
+                    <div class="perpectivaTag01">
+                    </div>
+                </div>
+                <div class="perpectivaTag03">
+                    <div class="perpectivaTag04">
+                    </div>
+                </div>
+                <div class="perpectivaTag05">
+                    <div class="perpectivaTag06">
+                    </div>
+                </div>
+                <div class="perpectivaTag07">
+                    <div class="perpectivaTag08">
+                    </div>
+                </div>
+                <div class="perpectivaTag09">
+                    <div class="perpectivaTag10">
+                    </div>
+                </div>
+                <div class="perpectivaTag11">
+                    <div class="perpectivaTag12">
+                    </div>
+                </div>
+                <div class="perpectivaTag13">
+                    <div class="perpectivaTag14">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <hr>
+
+        <div><!--  Rotate Z  / Altera a rotação do eixo Z, podendo ser combinado com o eixo X -->
+            <h2>Rotate Z</h2>
+            <p>Altera a rotação do eixo Z, podendo ser combinado com o eixo X
+            <p>
+
+            <div class="rotateZTag">
+                <div class="rotateZTag02">
+                    <div class="rotateZTag01">
+                    </div>
+                </div>
+                <div class="rotateZTag03">
+                    <div class="rotateZTag04">
+                    </div>
+                </div>
+                <div class="rotateZTag05">
+                    <div class="rotateZTag06">
+                    </div>
+                </div>
+                <div class="rotateZTag07">
+                    <div class="rotateZTag08">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <hr>
+
+        <div><!--  Escalando elementos de forma tridimensional  / Altera a rotação e da um efeito de zoom na div. -->
+            <h2>Escalando elementos de forma tridimensional</h2>
+            <p>Altera a rotação e da um efeito de zoom na div.
+            <p>
+
+            <div class="EscalandoTag">
+                <div class="EscalandoTag02">
+                    <div class="EscalandoTag01">
+                    </div>
+                </div>
+                <div class="EscalandoTag03">
+                    <div class="EscalandoTag04">
+                    </div>
+                </div>
+                <div class="EscalandoTag05">
+                    <div class="EscalandoTag06">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div><!--  transform-style  / Produz um efeito 3D nas divs. -->
+            <h2>transform-style</h2>
+            <p>Produz um efeito 3D nas divs.
+            <p>
+
+            <div class="transform-styleTag">
+                <div class="transform-styleTag01">
+                </div>
+                <div class="transform-styleTag01">
+                </div>
+            </div>
+        </div><br>
+    </div>
+
+    <!------------------  Animações   ------------------>
+    <div class="animaçoes"><br>
+        <h1>Animações</h1>
+        <hr>
+
+        <div><!--  transition / Produz um efeito de transição nas divs. -->
+            <h2>Transition</h2>
+            <p> Produz um efeito de transição nas divs.</p>
+
+            <div class="transitionTag">
+                <div id="transitionTag00001" class="transitionTag01">
+                    <p>Hey!</p>
+                </div>
+                <div id="transitionTag00002" class="transitionTag01">
+                    <p>Hey!</p>
+                </div>
+                <div id="transitionTag00003" class="transitionTag01">
+                    <p>Hey!</p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="transition-timingTag">
+                <h2>Transition Timing</h2>
+                <div id="transition-timingTag02" class="transition-timingTag01">Ease!</div>
+                <div id="transition-timingTag03" class="transition-timingTag01">Linear!</div>
+                <div id="transition-timingTag04" class="transition-timingTag01">Ease-in!</div>
+                <div id="transition-timingTag05" class="transition-timingTag01">Ease-out!</div>
+                <div id="transition-timingTag06" class="transition-timingTag01">Ease-in-out!</div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
